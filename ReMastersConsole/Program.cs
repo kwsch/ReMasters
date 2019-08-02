@@ -21,7 +21,16 @@ namespace ReMastersConsole
                 OutputPath = @"D:\masterdump",
             };
 
-            paths.DumpGameData();
+            var settings = new DumpSettings(paths)
+            {
+                DumpStringsDL = true,
+                DumpStringsAPK = true,
+
+                DumpResources = true,
+                DumpProto = true,
+            };
+
+            settings.DumpGameData();
         }
     }
 }

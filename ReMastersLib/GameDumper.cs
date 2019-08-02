@@ -46,35 +46,25 @@ namespace ReMastersLib
             AssetShard = new ABND(data);
         }
 
-        /// <summary>
-        /// Dumps all data to the specified path.
-        /// </summary>
-        /// <param name="outRoot">Path where all dumped data will reside.</param>
-        public void DumpAll(string outRoot)
+        public void InitializeShardData(string outRoot)
         {
             Directory.CreateDirectory(outRoot);
-
-            DumpMessagesAPK(outRoot);
-
             // Process the asset database shard info, and load the unpacked files
             DumpABND(AssetShard, outRoot);
             LoadResourceDB(Path.Combine(outRoot, "resource_location.asdb"));
             LoadFileDB(Path.Combine(outRoot, "file_location.asdb"));
             // don't care about archive_info.asdb
             // don't care about bundle_header_hash.asdb
-
-            DumpResources(outRoot);
-            DumpMessagesDownload(outRoot);
         }
 
-        private void DumpMessagesAPK(string outRoot)
+        public void DumpMessagesAPK(string outRoot)
         {
             var messages = Path.Combine(BasePath, @"assets\resources\assets\Messages");
             var outPath = Path.Combine(outRoot, "lsd_apk.txt");
             LSDDumper.Dump(messages, outPath);
         }
 
-        private void DumpMessagesDownload(string outRoot)
+        public void DumpMessagesDownload(string outRoot)
         {
             var messages = outRoot;
             var outPath = Path.Combine(outRoot, "lsd_dl.txt");
@@ -111,6 +101,35 @@ namespace ReMastersLib
                 DumpABND(abnd, outPath);
 
                 processed.Add(fn);
+            }
+        }
+
+        public void DumpProto(string outRoot)
+        {
+            var pdf = Path.Combine(outRoot, "protodump");
+            Directory.CreateDirectory(pdf);
+
+            var types = ProtoTableDumper.GetProtoTypes();
+            foreach (var t in types)
+            {
+                var name = t.Name.Replace("Table", string.Empty);
+                var filename = $"{name}.pb";
+                var path = Path.Combine(outRoot, @"db\master\pb\", filename);
+                if (!File.Exists(path))
+                {
+                    Debug.WriteLine($"Couldn't find proto data file: {name}");
+                    continue;
+                }
+                var data = File.ReadAllBytes(path);
+
+                var result = ProtoTableDumper.GetProtoString(t, data);
+                if (result == null)
+                {
+                    Debug.WriteLine($"Bad conversion for {name}, skipping.");
+                    continue;
+                }
+                var outpath = Path.Combine(pdf, $"{name}.json");
+                File.WriteAllText(outpath, result);
             }
         }
 

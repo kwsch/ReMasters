@@ -1,6 +1,7 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
 using Newtonsoft.Json;
@@ -13,10 +14,9 @@ namespace ReMastersLib
         /// <summary>
         /// Converts the <see cref="message"/> to a string with newlines separating each declaration for easy analysis.
         /// </summary>
-        /// <typeparam name="T">Type of message</typeparam>
         /// <param name="message">Decoded proto message data</param>
         /// <returns>Single line string ready for writing to a file</returns>
-        public static string DumpAll<T>(this T message) where T : IMessage<T>
+        public static string DumpAll(this IMessage message)
         {
             var s = new JsonFormatter.Settings(true);
             var f = new JsonFormatter(s);
@@ -39,5 +39,21 @@ namespace ReMastersLib
         }
 
         private static string Prettify(string json) => JToken.Parse(json).ToString(Formatting.Indented);
+
+        public static IEnumerable<Type> GetProtoTypes()
+        {
+            var type = typeof(IMessage);
+            var types = Assembly.GetAssembly(typeof(ProtoTableDumper)).DefinedTypes
+                .Where(p => type.IsAssignableFrom(p) && p.Name.EndsWith("Table"));
+            return types;
+        }
+
+        public static string GetProtoString(Type t, byte[] data)
+        {
+            var method = t.GetProperty("Parser");
+            var arr = (MessageParser)method?.GetValue(null);
+            var table = arr?.ParseFrom(data);
+            return table?.DumpAll();
+        }
     }
 }
