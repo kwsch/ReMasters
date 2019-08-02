@@ -104,7 +104,7 @@ namespace ReMastersLib
             }
         }
 
-        public void DumpProto(string outRoot)
+        public void DumpProto(string outRoot, bool tableLayout = true)
         {
             var pdf = Path.Combine(outRoot, "protodump");
             Directory.CreateDirectory(pdf);
@@ -115,6 +115,7 @@ namespace ReMastersLib
                 var name = t.Name.Replace("Table", string.Empty);
                 var filename = $"{name}.pb";
                 var path = Path.Combine(outRoot, @"db\master\pb\", filename);
+                var outpath = Path.Combine(pdf, $"{name}.json");
                 if (!File.Exists(path))
                 {
                     Debug.WriteLine($"Couldn't find proto data file: {name}");
@@ -122,14 +123,26 @@ namespace ReMastersLib
                 }
                 var data = File.ReadAllBytes(path);
 
-                var result = ProtoTableDumper.GetProtoString(t, data);
-                if (result == null)
+                if (tableLayout)
                 {
-                    Debug.WriteLine($"Bad conversion for {name}, skipping.");
-                    continue;
+                    var result = ProtoTableDumper.GetProtoStrings(t, data);
+                    if (result == null)
+                    {
+                        Debug.WriteLine($"Bad conversion for {name}, skipping.");
+                        continue;
+                    }
+                    File.WriteAllLines(outpath, result);
                 }
-                var outpath = Path.Combine(pdf, $"{name}.json");
-                File.WriteAllText(outpath, result);
+                else
+                {
+                    var result = ProtoTableDumper.GetProtoString(t, data);
+                    if (result == null)
+                    {
+                        Debug.WriteLine($"Bad conversion for {name}, skipping.");
+                        continue;
+                    }
+                    File.WriteAllText(outpath, result);
+                }
             }
         }
 

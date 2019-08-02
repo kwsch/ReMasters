@@ -30,7 +30,7 @@ namespace ReMastersLib
         /// <typeparam name="T">Type of message</typeparam>
         /// <param name="messages">Decoded proto message data table</param>
         /// <returns>Single line string ready for writing to a file</returns>
-        public static IEnumerable<string> DumpAll<T>(this RepeatedField<T> messages) where T : IMessage<T>
+        public static IEnumerable<string> DumpAllLines(this IEnumerable<IMessage> messages)
         {
             var s = new JsonFormatter.Settings(true);
             var f = new JsonFormatter(s);
@@ -50,10 +50,26 @@ namespace ReMastersLib
 
         public static string GetProtoString(Type t, byte[] data)
         {
-            var method = t.GetProperty("Parser");
-            var arr = (MessageParser)method?.GetValue(null);
-            var table = arr?.ParseFrom(data);
+            var table = GetProtoData(t, data);
             return table?.DumpAll();
+        }
+
+        private static IMessage GetProtoData(Type t, byte[] data)
+        {
+            var method = t.GetProperty("Parser");
+            var arr = (MessageParser) method?.GetValue(null);
+            return arr?.ParseFrom(data);
+        }
+
+        public static IEnumerable<string> GetProtoStrings(Type t, byte[] data)
+        {
+            var table = GetProtoData(t, data);
+            var ep = t.GetProperty("Entries");
+            if (ep == null)
+                return null;
+            var entries = ep.GetValue(table);
+            var result = (IEnumerable<IMessage>)entries;
+            return DumpAllLines(result);
         }
     }
 }
