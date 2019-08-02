@@ -1,3 +1,4 @@
+using System.Linq;
 using ReMastersLib;
 using Xunit;
 using FluentAssertions;
@@ -32,6 +33,9 @@ namespace ReMastersTest
 
             var dump = table.DumpAll();
             dump.Length.Should().BeGreaterThan(9000, "expected data in the table!");
+
+            var dump2 = table.Entries.DumpAll();
+            dump2.Any().Should().BeTrue("expected data in the single line per-item table!");
         }
     }
 }
