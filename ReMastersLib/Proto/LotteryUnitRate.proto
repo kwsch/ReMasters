@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message LotteryUnitRate {
+    string lottery_name = 1;
+    uint64 character_id = 2;
+    uint32 drop_rate = 3;
+}
+
+message LotteryUnitRateTable {
+    repeated LotteryUnitRate entries = 1;
+}

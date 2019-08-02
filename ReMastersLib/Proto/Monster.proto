@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message Monster {
+    uint64 trainer_id = 1;
+    uint32 monster_id = 2;
+    uint32 sync_move_id = 3;
+    repeated uint32 hp_values = 4;
+    repeated uint32 atk_values = 5;
+    repeated uint32 def_values = 6;
+    repeated uint32 spa_values = 7;
+    repeated uint32 spd_values = 8;
+    repeated uint32 spe_values = 9;
+}
+
+message MonsterTable {
+    repeated Monster entries = 1;
+}
