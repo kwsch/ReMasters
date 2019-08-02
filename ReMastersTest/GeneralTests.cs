@@ -30,7 +30,7 @@ namespace ReMastersTest
             var table = MonsterTable.Parser.ParseFrom(data);
             table.Entries.Count.Should().Be(0x4E, "expected data!");
 
-            var dump = ProtoTableDumper.DumpAll(table);
+            var dump = table.DumpAll();
             dump.Length.Should().BeGreaterThan(9000, "expected data in the table!");
         }
     }
