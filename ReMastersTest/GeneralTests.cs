@@ -21,5 +21,14 @@ namespace ReMastersTest
             d0.Should().NotBeNull("expected a valid data result");
             d0.Length.Should().Be(f0.DecompressedLength, "expected specified length");
         }
+
+        [Theory]
+        [InlineData("Monster")]
+        public static void TestProto(string file)
+        {
+            var data = (byte[])Resources.ResourceManager.GetObject(file);
+            var table = MonsterTable.Parser.ParseFrom(data);
+            table.Entries.Count.Should().Be(0x4E, "expected data!");
+        }
     }
 }

@@ -79,5 +79,15 @@ namespace ReMastersTest.Properties {
                 return ((byte[])(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Monster {
+            get {
+                object obj = ResourceManager.GetObject("Monster", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
