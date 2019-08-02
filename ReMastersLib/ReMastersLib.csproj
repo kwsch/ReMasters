@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -9,8 +9,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.8.0" />
+    <PackageReference Include="Grpc" Version="1.22.0" />
+    <PackageReference Include="Grpc.Core" Version="1.22.0" />
+    <PackageReference Include="Grpc.Tools" Version="1.22.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="K4os.Compression.LZ4" Version="1.1.11" />
+    <PackageReference Include="protobuf-net" Version="2.4.0" />
+    <PackageReference Include="System.Interactive.Async" Version="3.2.0" />
     <PackageReference Include="Waher.Security.ChaChaPoly" Version="1.0.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Protobuf Include="**/*.proto" OutputDir="%(Relativedir)" CompileOutputs="false" GrpcServices="None" />
   </ItemGroup>
 
 </Project>
