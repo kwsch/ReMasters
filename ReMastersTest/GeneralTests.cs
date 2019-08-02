@@ -29,6 +29,9 @@ namespace ReMastersTest
             var data = (byte[])Resources.ResourceManager.GetObject(file);
             var table = MonsterTable.Parser.ParseFrom(data);
             table.Entries.Count.Should().Be(0x4E, "expected data!");
+
+            var dump = ProtoTableDumper.DumpAll(table);
+            dump.Length.Should().BeGreaterThan(9000, "expected data in the table!");
         }
     }
 }

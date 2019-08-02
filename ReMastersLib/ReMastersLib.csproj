@@ -17,6 +17,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="K4os.Compression.LZ4" Version="1.1.11" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="protobuf-net" Version="2.4.0" />
     <PackageReference Include="System.Interactive.Async" Version="3.2.0" />
     <PackageReference Include="Waher.Security.ChaChaPoly" Version="1.0.0" />
