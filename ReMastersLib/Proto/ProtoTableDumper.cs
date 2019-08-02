@@ -35,7 +35,10 @@ namespace ReMastersLib
             var s = new JsonFormatter.Settings(true);
             var f = new JsonFormatter(s);
 
-            return messages.Select(z => f.Format(z));
+            yield return "{ \"entries\": [";
+            foreach (var m in messages)
+                yield return f.Format(m) + ",";
+            yield return "]}";
         }
 
         private static string Prettify(string json) => JToken.Parse(json).ToString(Formatting.Indented);
