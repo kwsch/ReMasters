@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message BadgeItem {
+    uint64 unknown1 = 1;
+    uint32 badge_id = 2;
+    string badge_name = 3;
+    uint32 unknown2 = 4;
+}
+
+message BadgeItemTable {
+    repeated BadgeItem entries = 1;
+}

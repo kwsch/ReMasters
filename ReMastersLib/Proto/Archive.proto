@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message Archive {
+    string name = 1;
+    uint32 unk2 = 2;
+    string none = 3;
+    string lang = 4;
+	uint32 unk5 = 5;
+}
+
+message ArchiveTable {
+    repeated Archive entries = 1;
+}

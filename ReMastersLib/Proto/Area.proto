@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message Area {
+    uint64 unk1 = 1;
+    uint64 unk2 = 2;
+    string name = 3;
+    string desc = 4;
+    string icon = 5;
+    string position = 6;
+    string button = 7;
+    string effect = 8;
+    string lbdat = 9;
+}
+
+message AreaTable {
+    repeated Area entries = 1;
+}
