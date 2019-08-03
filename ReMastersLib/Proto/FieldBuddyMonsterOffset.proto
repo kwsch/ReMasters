@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message FieldBuddyMonsterOffset {
+    string trainer = 1;
+    string monster = 2;
+    uint32 unk3 = 3;
+    int32  unk4 = 4;
+    uint32 unk5 = 5;
+    int32  unk6 = 6;
+    int32  unk7 = 7;
+	string number = 8;
+	string empty = 9;
+}
+
+message FieldBuddyMonsterOffsetTable {
+    repeated FieldBuddyMonsterOffset entries = 1;
+}

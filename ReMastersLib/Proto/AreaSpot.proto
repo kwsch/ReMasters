@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message AreaSpot {
+    uint32 u1 = 1;
+    uint32 u2 = 2;
+    string name = 3;
+    string u4 = 4;
+    string u5 = 5;
+    string tex_big = 6;
+    string tex_small = 7;
+}
+
+message AreaSpotTable {
+    repeated AreaSpot entries = 1;
+}

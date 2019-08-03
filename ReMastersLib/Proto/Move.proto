@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message Move {
+	uint32 MoveID = 1;
+    Category u2 = 2;
+	uint32 u3 = 3;
+	uint32 u4 = 4;
+	uint32 u5 = 5;
+	Types Type = 6;
+	uint32 u7 = 7;
+	uint32 u8 = 8;
+	uint32 Drain = 9;
+	uint32 Power = 10;
+	uint32 Accuracy = 11;
+	uint32 u12 = 12;
+}
+
+enum Category {
+    NoCategory = 0;
+	Physical = 1;
+	Special = 2;
+	Status = 3;
+}
+
+enum Types {
+	NoType = 0;
+	Normal = 1;
+	Fire = 2;
+	Water = 3;
+	Electric = 4;
+	Grass = 5;
+	Ice = 6;
+	Fighting = 7;
+	Poison = 8;
+	Ground = 9;
+	Flying = 10;
+	Psychic = 11;
+	Bug = 12;
+	Rock = 13;
+	Ghost = 14;
+	Dragon = 15;
+	Dark = 16;
+	Steel = 17;
+	Fairy = 18;
+}
+
+message MoveTable {
+    repeated Move entries = 1;
+}
