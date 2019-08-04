@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message TrainerLevel {
+    uint32 level = 1;
+    uint32 required_exp = 2;
+}
+
+message TrainerLevelTable {
+    repeated TrainerLevel entries = 1;
+}

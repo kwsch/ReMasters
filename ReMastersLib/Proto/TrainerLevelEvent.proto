@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message TrainerLevelEvent {
+    uint32 level = 1;
+	uint64 quest = 2;
+	uint32 exp = 3;
+	uint32 u4 = 4;
+	uint64 quest2 = 5;
+}
+
+message TrainerLevelEventTable {
+    repeated TrainerLevelEvent entries = 1;
+}
