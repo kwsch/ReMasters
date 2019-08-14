@@ -4,30 +4,25 @@ package ReMastersLib;
 
 message Move {
 	uint32 MoveID = 1;
-    Category Category = 2;
+    Categories Category = 2;
 	uint32 u3 = 3;
-	User User = 4;
-	Group Group = 5;
+	Users User = 4;
+	Groups Group = 5;
 	Types Type = 6;
-	Target Target = 7;
+	Targets Target = 7;
 	uint32 u8 = 8;
 	uint32 Drain = 9;
 	uint32 Power = 10;
 	uint32 Accuracy = 11;
-	uint32 u12 = 12;
+	uint32 Use = 12;
 }
 
-enum Category {
+enum Categories {
     NoCategory = 0;
 	Physical = 1;
 	Special = 2;
 	Status = 3;
-	Unity = 4;
-}
-
-enum User {
-    Pokemon = 0;
-    Trainer = 1;
+	UnityMove = 4;
 }
 
 enum Types {
@@ -52,11 +47,12 @@ enum Types {
 	Fairy = 18;
 }
 
-message MoveTable {
-    repeated Move entries = 1;
+enum Users {
+    Pokemon = 0;
+    Trainer = 1;
 }
 
-enum Group {
+enum Groups {
     None = 0;
     Unknown1 = 1;
     Regular = 2;
@@ -64,7 +60,7 @@ enum Group {
     Unity = 4;
 }
 
-enum Target {
+enum Targets {
     AllySingle = 0;
     AllyAll = 1;
     OpponentSingle = 2;
@@ -73,4 +69,8 @@ enum Target {
     AllyField = 7;
     OpponentField = 8;
     EntireField = 9;
+}
+
+message MoveTable {
+    repeated Move entries = 1;
 }
