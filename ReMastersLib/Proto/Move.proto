@@ -66,6 +66,8 @@ enum Targets {
     OpponentSingle = 2;
     OpponentAll = 3;
     Self = 4;
+    AllyRandom = 5;
+    OpponentRandom = 6;
     AllyField = 7;
     OpponentField = 8;
     EntireField = 9;
