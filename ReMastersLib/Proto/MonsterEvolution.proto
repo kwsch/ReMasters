@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message MonsterEvolution {
+    uint64 evolution_id = 1;
+    uint64 form_1_id = 2;
+    uint64 form_2_id = 3;
+    uint64 form_3_id = 4;
+	int32 u5 = 5;
+	int32 u6 = 6;
+	int32 u7 = 7;
+	int32 u8 = 8;
+	int32 u9 = 9;
+	int32 u10 = 10;
+	int32 u11 = 11;
+	int32 u12 = 12;
+	int32 u13 = 13;
+	int32 u14 = 14;
+	int32 u15 = 15;
+	int32 u16 = 16;
+	int32 u17 = 17;
+	int32 u18 = 18;
+	int32 u19 = 19;
+	int32 u20 = 20;
+}
+
+message MonsterEvolutionTable {
+    repeated MonsterEvolution entries = 1;
+}
