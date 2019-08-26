@@ -15,6 +15,7 @@ message Move {
 	uint32 Power = 10;
 	uint32 Accuracy = 11;
 	uint32 Use = 12;
+	Tags Tag = 13;
 }
 
 enum Categories {
@@ -73,6 +74,23 @@ enum Targets {
     EntireField = 9;
 }
 
+enum Tags {
+    none = 0;
+	ForcedSwitch = 1;
+	SuddenSwitch = 2;
+	QuickMove = 4;
+	SureHit = 8;
+	na = 16;
+	OkWhileFrozen = 32;
+	OkWhileSleep = 64;
+	OnlyWhileAsleep = 128;
+	Heals = 256;
+	Absorbs = 512;
+	Continues = 1024;
+	Recoil = 2048;
+}
+
 message MoveTable {
     repeated Move entries = 1;
 }
+
