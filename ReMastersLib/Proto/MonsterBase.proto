@@ -3,13 +3,13 @@ syntax = "proto3";
 package ReMastersLib;
 
 message MonsterBase {
-    uint64 monster_id = 1;
-    uint32 monster_name_id = 2;
-    uint32 dex_number = 3;
+	uint64 monster_id = 1;
+	string monster_name_id = 2;
+	uint32 dex_number = 3;
 	uint32 u4 = 4;
 	uint32 u5 = 5;
-    string name_jp = 6;
-    uint32 u7 = 7;
+	string name_jp = 6;
+	uint32 u7 = 7;
 	uint32 u8 = 8;
 	uint32 u9 = 9;
 	uint32 strength = 10;
