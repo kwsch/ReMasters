@@ -3,10 +3,10 @@ syntax = "proto3";
 package ReMastersLib;
 
 message MonsterEvolution {
-    uint64 evolution_id = 1;
-    uint64 form_1_id = 2;
-    uint64 form_2_id = 3;
-    uint64 form_3_id = 4;
+	uint64 evolution_id = 1;
+	uint64 character_id = 2;
+	uint64 trainer_id_current = 3;
+	uint64 trainer_id_next = 4;
 	int32 u5 = 5;
 	int32 u6 = 6;
 	int32 u7 = 7;
