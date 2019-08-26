@@ -3,7 +3,7 @@ syntax = "proto3";
 package ReMastersLib;
 
 message MonsterVariation {
-    uint64 monster_id = 1;
+    uint64 trainer_id = 1;
     uint64 form = 2;
     string monster_name_id = 3;
     uint32 atk_scale = 4;
