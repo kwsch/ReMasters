@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message DeckItemParam {
+    uint64 deckItemParam_id = 1;
+	BoostStat Boost = 2;
+	int32 Lv1_boost = 3;
+	int32 Lv3_boost = 4;
+	int32 Lv6_boost = 5;
+	int32 Lv9_boost = 6;
+	int32 Lv12_boost = 7;
+	int32 Lv15_boost = 8;
+
+}
+
+
+enum BoostStat {
+
+	none = 0;
+	HP = 1;
+	ATK = 2;
+	DEF = 3;
+	SPA = 4;
+	SPD = 5;
+	SPE = 6;
+
+
+}
+
+
+message DeckItemParamTable {
+    repeated DeckItemParam entries = 1;
+}
