@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message DeckItem {
+    uint64 item_id = 1;
+    int32 item_subtype_id = 2;
+	string image_id = 3;
+	EquipmentTypes equipment_type = 4;
+	int32 u5 = 5;
+	int32 Type = 6;
+	int32 rarity = 7;
+	int32 deckItemParam_id = 8;
+	int32 u9 = 9;
+
+}
+
+enum EquipmentTypes {
+
+	other = 0;
+	Bracelet= 1;
+	Bandana = 2;
+	Pin = 3;
+
+
+}
+
+z
+message DeckItemTable {
+    repeated DeckItem entries = 1;
+}
