@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message BattleRewardPreset {
+    uint32 dropTable_id = 1;
+    uint32 u2 = 2;
+    uint32 item_prob = 3;
+    repeated int64 item_id = 4;
+    repeated uint32 item_count = 5;
+    uint32 u6 = 6;
+    uint32 u7 = 7;
+}
+
+message BattleRewardPresetTable {
+    repeated BattleRewardPreset entries = 1;
+}
