@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message BattleReward {
+    uint32 battlereward_id = 1;
+    uint32 reward_xp = 2;
+    uint32 reward_coin = 3;
+    uint32  u4 = 4;
+    repeated uint32 dropTable_id = 5;
+}
+
+message BattleRewardTable {
+    repeated BattleReward entries = 1;
+}
