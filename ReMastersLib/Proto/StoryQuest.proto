@@ -4,29 +4,51 @@ package ReMastersLib;
 
 message StoryQuest {
 	uint64 quest_id = 1;
-    string quest_title = 2;
-    uint64 quest_id2 = 3;
-    int64 u4 = 4;
-	uint64 u05 = 5;
-	uint64 u06 = 6;
-	uint64 quest_id3 = 7;
-	uint64 u08 = 8;
-	uint64 u09 = 9;
-	string u10 = 10;
-	uint64 u11 = 11;
-	uint64 u12 = 12;
-	uint64 u13 = 13;
-	string u14 = 14;
-	uint64 u15 = 15;
-	uint64 u16 = 16;
-	uint64 u17 = 17;
-	uint64 u18 = 18;
-	uint64 u19 = 19;
-	uint64 u20 = 20;
-	uint64 u21 = 21;
-	uint64 u22 = 22;
-	uint64 quest_id4 = 23;
+    string quest_name_string_id = 2;
+    uint64 field_id = 3;
+    int64 required_condition_id = 4;
+	uint64 sort_by = 5;
+	uint64 area_spot_id = 6;
+	uint64 quest_reward_id = 7;
+	uint64 quest_group_id = 8;
+	int32 field_type = 9;
+	string schedule_keyword = 10;
+	int64 play_count_limit = 11;
+	Toggle chapter_open_animation = 12;
+	Difficulties quest_difficulty = 13;
+	string week_schedule_keyword = 14;
+	Toggle debug = 15;
+	int64 debug_category = 16;
+	int32 reward_type = 17;
+	uint64 reward_item_id = 18;
+	int64 chara_quest_list_item_id = 19;
+	Toggle is_evolution_quest = 20;
+	QuestType quest_type = 21;
+	Toggle is_search_quest = 22;
+	uint64 next_quest_id = 23;
 	uint64 u24 = 24;
+}
+
+enum Difficulties {
+    None = 0;
+	Normal = 1;
+	Hard = 2;
+	VeryHard = 3;
+}
+
+
+
+enum QuestType {
+    MainStory = 0;
+	TrainingArea = 1;
+	SyncPairStories = 2;
+	Events = 3;
+}
+
+enum Toggle {
+	false = 0;
+	true = 1;
+
 }
 
 message StoryQuestTable {
