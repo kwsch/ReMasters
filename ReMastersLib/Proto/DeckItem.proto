@@ -25,7 +25,7 @@ enum EquipmentTypes {
 
 }
 
-z
+
 message DeckItemTable {
     repeated DeckItem entries = 1;
 }
