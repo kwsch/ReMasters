@@ -1,0 +1,109 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message BattleNPCUnit {
+    uint64 enemy_id = 1;
+    int32 u2 = 2;
+    int32 u3 = 3;
+	int32 u4 = 4;
+	string trainer_name_id = 5;
+	string pokemon_name_id = 6;
+	enemyRoles role_id = 7;
+	int32 u8 = 8;
+	int32 move_1_id = 9; 
+	int32 move_2_id = 10;
+	int32 move_3_id = 11;
+	int32 move_4_id = 12;
+	int32 move_5_id = 13;
+	int32 move_6_id = 14;
+	int32 move_1_num = 15;
+	int32 move_2_num = 16;
+	int32 move_3_num = 17;
+	int32 move_4_num = 18;
+	int32 move_5_num = 19;
+	int32 move_6_num = 20;
+	int32 sync_move_id = 21;
+	int32 level = 22;
+	int32 passive_1_id = 23;
+	int32 passive_2_id = 24;
+	int32 u25 = 25;
+	int32 u26 = 26;
+	int32 u27 = 27;
+	int32 u28 = 28;
+	int32 u29 = 29;
+	int32 u30 = 30;
+	int32 u31 = 31;
+	int32 u32 = 32;
+	int32 scale_hp = 33;
+	int32 scale_atk = 34;
+	int32 scale_def = 35;
+	int32 scale_spa = 36;
+	int32 scale_spd = 37;
+	int32 scale_spe = 38;
+	int32 weak_type_id = 39;
+	int32 state_1 = 40;
+	int32 state_2 = 41;
+	int32 u42 = 42;
+	int32 u43 = 43;
+	int32 u44 = 44;
+	int32 u45 = 45;
+	int32 u46 = 46;
+	int32 u47 = 47;
+	int32 u48 = 48;
+	int32 u49 = 49;
+	int32 u50 = 50;
+	int32 u51 = 51;
+	int32 u52 = 52;
+	int32 u53 = 53;
+	int32 u54 = 54;
+	int32 u55 = 55;
+	int32 u56 = 56;
+	int32 u57 = 57;
+	int32 u58 = 58;
+	int32 u59 = 59;
+	int32 u60 = 60;
+	int32 u61 = 61;
+	int32 u62 = 62;
+	int32 u63 = 63;
+	int32 u64 = 64;
+	int32 u65 = 65;
+	int32 u66 = 66;
+	int32 u67 = 67;
+	int32 u68 = 68;
+	int32 u69 = 69;
+	int32 u70 = 70;
+	int32 u71 = 71;
+	int32 u72 = 72;
+	int32 u73 = 73;
+	int32 u74 = 74;
+	int32 u75 = 75;
+	int32 u76 = 76;
+	int32 u77 = 77;
+	int32 u78 = 78;
+	int32 u79 = 79;
+	int32 u80 = 80;
+	int32 u81 = 81;
+	int32 u82 = 82;
+	int32 u83 = 83;
+	int32 u84 = 84;
+	int32 u85 = 85;
+	int32 u86 = 86;
+	int32 u87 = 87;
+	int32 u88 = 88;
+	int32 u89 = 89;
+	int32 u90 = 90;
+	int32 u91 = 91;
+}
+
+enum enemyRoles {
+	StrikePhysical = 0;
+	StrikeSpecial = 1;
+	Support = 2;
+	Tech = 3;
+}
+
+message BattleNPCUnitTable {
+    repeated BattleNPCUnit entries = 1;
+}
+
