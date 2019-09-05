@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message BattleParameter {
+    uint64 team_id = 1;
+    string battle_name_jp = 2;
+    int32 u3 = 3;
+	int32 u4 = 4;
+	int32 u5 = 5;
+	int32 u6 = 6;
+	int32 u7 = 7;
+	int32 u8 = 8;
+	int32 u9 = 9;
+	int32 u10 = 10;
+	int32 u11 = 11;
+	int32 u12 = 12;
+	int32 u13 = 13;
+	int32 u14 = 14;
+	int32 u15 = 15;
+	int32 u16 = 16;
+	int32 enemy_1_id = 17;
+	int32 enemy_2_id = 18;
+	int32 enemy_3_id = 19;
+	int32 background_id = 20;
+	string icon = 21;
+	int32 u22 = 22;
+	int32 u23 = 23;
+	int32 u24 = 24;
+	int32 u25 = 25;
+	int32 u26 = 26;
+	int32 u27 = 27;
+
+}
+
+message BattleParameterTable {
+    repeated BattleParameter entries = 1;
+}
