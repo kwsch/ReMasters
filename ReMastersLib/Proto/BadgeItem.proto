@@ -3,10 +3,10 @@ syntax = "proto3";
 package ReMastersLib;
 
 message BadgeItem {
-    uint64 unknown1 = 1;
-    uint32 badge_id = 2;
+    uint64 badge_item_id = 1;		// bardge_item_name_xx.lsd
+    uint32 badge_number = 2;
     string badge_name = 3;
-    uint32 unknown2 = 4;
+    uint32 trainer_base_id = 4;		// TrainerBase.pb
 }
 
 message BadgeItemTable {

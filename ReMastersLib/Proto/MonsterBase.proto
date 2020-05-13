@@ -3,20 +3,24 @@ syntax = "proto3";
 package ReMastersLib;
 
 message MonsterBase {
-	uint64 monster_id = 1;
-	string monster_name_id = 2;
-	uint32 dex_number = 3;
-	uint32 u4 = 4;
-	uint32 u5 = 5;
-	string name_jp = 6;
-	uint32 u7 = 7;
-	uint32 u8 = 8;
-	uint32 u9 = 9;
-	uint32 strength = 10;
-	uint32 u11 = 11;
-	uint32 u12 = 12;
-	uint32 u13 = 13;
-	uint32 u14 = 14;
+	int32 monster_base_id = 1;
+	string actor_id = 2;
+	int32 actor_number = 3;		// not actual dex numbers for Gen 6/7
+	int32 actor_variant = 4;
+	int32 u5 = 5;
+	string jp_name = 6;
+	int32 u7 = 7;
+	int32 gender = 8;
+	int32 u9 = 9;
+	int32 strength = 10;
+	int32 u11 = 11;
+
+	// If this passive is set, the game displays it above the others
+	int32 form_passive_id = 12;	// passive_skill_name_xx.lsd
+
+	int32 u13 = 13;
+	int32 u14 = 14;
+	int32 form_id = 15;			// monster_form_xx.json
 }
 
 message MonsterBaseTable {

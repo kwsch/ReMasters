@@ -3,9 +3,10 @@ syntax = "proto3";
 package ReMastersLib;
 
 message FieldTalkVoice {
-    string u1 = 1;
+    string field_talk_voice_id = 1;
     string u2 = 2;
-    bool u3 = 3;
+    string u3 = 3;
+    bool u4 = 4;
 }
 
 message FieldTalkVoiceTable {

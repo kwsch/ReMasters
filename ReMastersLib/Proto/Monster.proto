@@ -3,9 +3,9 @@ syntax = "proto3";
 package ReMastersLib;
 
 message Monster {
-    uint64 trainer_id = 1;
-    uint32 monster_id = 2;
-    uint32 sync_move_id = 3;
+    uint64 monster_id = 1;
+    uint32 monster_base_id = 2;         // MonsterBase.pb / monster_name_xx.lsd
+    uint32 sync_move_id = 3;            // Move.pb
     repeated uint32 hp_values = 4;
     repeated uint32 atk_values = 5;
     repeated uint32 def_values = 6;

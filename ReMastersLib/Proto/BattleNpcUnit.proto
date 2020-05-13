@@ -2,48 +2,58 @@ syntax = "proto3";
 
 package ReMastersLib;
 
-message BattleNPCUnit {
-    uint64 enemy_id = 1;
-    int32 u2 = 2;
-    int32 u3 = 3;
+message BattleNpcUnit {
+	int32 npc_unit_id = 1;
+	string u2 = 2;
+	int32 u3 = 3;
 	int32 u4 = 4;
-	string trainer_name_id = 5;
-	string pokemon_name_id = 6;
-	enemyRoles role_id = 7;
+	string trainer_actor_id = 5;
+	string monster_actor_id = 6;
+	Role role = 7;
 	int32 u8 = 8;
-	int32 move_1_id = 9; 
+
+	// Move.pb
+	int32 move_1_id = 9;
 	int32 move_2_id = 10;
 	int32 move_3_id = 11;
 	int32 move_4_id = 12;
 	int32 move_5_id = 13;
 	int32 move_6_id = 14;
-	int32 move_1_num = 15;
-	int32 move_2_num = 16;
-	int32 move_3_num = 17;
-	int32 move_4_num = 18;
-	int32 move_5_num = 19;
-	int32 move_6_num = 20;
-	int32 sync_move_id = 21;
+
+	int32 move_1_uses = 15;
+	int32 move_2_uses = 16;
+	int32 move_3_uses = 17;
+	int32 move_4_uses = 18;
+	int32 move_5_uses = 19;
+	int32 move_6_uses = 20;
+
+	int32 sync_move_id = 21;	// Move.pb
 	int32 level = 22;
+
+	// passive_skill_xx_xx.lsd
 	int32 passive_1_id = 23;
 	int32 passive_2_id = 24;
-	int32 u25 = 25;
-	int32 u26 = 26;
-	int32 u27 = 27;
+	int32 passive_3_id = 25;
+	int32 passive_4_id = 26;
+	int32 passive_5_id = 27;
+
 	int32 u28 = 28;
 	int32 u29 = 29;
 	int32 u30 = 30;
 	int32 u31 = 31;
 	int32 u32 = 32;
-	int32 scale_hp = 33;
-	int32 scale_atk = 34;
-	int32 scale_def = 35;
-	int32 scale_spa = 36;
-	int32 scale_spd = 37;
-	int32 scale_spe = 38;
-	int32 weak_type_id = 39;
+
+	int32 hp_scale = 33;
+	int32 atk_scale = 34;
+	int32 def_scale = 35;
+	int32 spa_scale = 36;
+	int32 spd_scale = 37;
+	int32 spe_scale = 38;
+	
+	int32 weak_type = 39;
 	int32 state_1 = 40;
 	int32 state_2 = 41;
+
 	int32 u42 = 42;
 	int32 u43 = 43;
 	int32 u44 = 44;
@@ -96,14 +106,14 @@ message BattleNPCUnit {
 	int32 u91 = 91;
 }
 
-enum enemyRoles {
+
+enum Role {
 	StrikePhysical = 0;
 	StrikeSpecial = 1;
 	Support = 2;
 	Tech = 3;
 }
 
-message BattleNPCUnitTable {
-    repeated BattleNPCUnit entries = 1;
+message BattleNpcUnitTable {
+	repeated BattleNpcUnit entries = 1;
 }
-
