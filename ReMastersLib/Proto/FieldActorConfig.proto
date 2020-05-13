@@ -1,0 +1,11 @@
+syntax = "proto3";
+package ReMastersLib;
+
+message FieldActorConfig {
+	string actor_id = 1;
+	string encounter_bgm_id = 2;
+}
+
+message FieldActorConfigTable {
+	repeated FieldActorConfig entries = 1;
+}

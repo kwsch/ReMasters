@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message ItemSet {
+	uint64 item_set_id = 1;
+	int64 item_1 = 2;				// Item.pb
+	uint32 item_1_quantity = 3;
+	int64 item_2 = 4;
+	uint32 item_2_quantity = 5;
+	int64 item_3 = 6;
+	uint32 item_3_quantity = 7;
+	int64 item_4 = 8;
+	uint32 item_4_quantity = 9;
+	int64 item_5 = 10;
+	uint32 item_5_quantity = 11;
+	int64 item_6 = 12;
+	uint32 item_6_quantity = 13;
+	int64 item_7 = 14;
+	uint32 item_7_quantity = 15;
+	int64 item_8 = 16;
+	uint32 item_8_quantity = 17;
+	int64 item_9 = 18;
+	uint32 item_9_quantity = 19;
+	int64 item_10 = 20;
+	uint32 item_10_quantity = 21;
+}
+
+message ItemSetTable {
+	repeated ItemSet entries = 1;
+}

@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message Mission {
+	int32 mission_id = 1;
+	int32 mission_group_id = 2;			// MissionGroup.pb
+	int32 u3 = 3;
+	repeated int64 parameters = 4;
+	/*
+	u3 = 5:		StoryQuest.pb
+	u3 = 14:	Trainer.pb (characterId)
+	*/
+	repeated int32 objectives = 5;
+	string schedule_id = 6;				// Schedule.pb
+	int32 u7 = 7;
+	int32 u8 = 8;
+	int32 u9 = 9;
+	repeated int64 item_set_ids = 10;	// ItemSet.pb
+	int32 number = 11;
+	int32 requirement_id = 12;			// MissionRequirementCategory.pb
+	string u13 = 13;
+	string u14 = 14;
+}
+
+message MissionTable {
+	repeated Mission entries = 1;
+}

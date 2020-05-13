@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message QuestReward {
+	uint64 story_quest_id = 1;		// StoryQuest.pb
+	uint32 u2 = 2;
+	uint64 item_set_id = 3;			// ItemSet.pb
+}
+
+message QuestRewardTable {
+	repeated QuestReward entries = 1;
+}

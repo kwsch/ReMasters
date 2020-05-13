@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message BGMReplace {
+	uint32 bgm_replace_id = 1;
+	string bgm_id_old = 2;
+	string bgm_id_new = 3;
+	string schedule_id = 4;		// Schedule.pb
+}
+
+message BGMReplaceTable {
+    repeated BGMReplace entries = 1;
+}

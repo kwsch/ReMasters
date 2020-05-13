@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message Potential {
+	int32 potential_id = 1;		// passive_skill_name_xx.lsd / passive_skill_description_xx.lsd
+	int32 rarity = 2;
+}
+
+message PotentialTable {
+	repeated Potential entries = 1;
+}

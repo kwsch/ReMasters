@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message PassiveTypeRank {
+	int32 u1 = 1;
+	int32 u2 = 2;
+	int32 passive_1_id = 3;		// passive_skill_name_xx.lsd / passive_skill_description_xx.lsd
+	int32 passive_2_id = 4;
+	int32 passive_3_id = 5;
+	int32 passive_4_id = 6;
+}
+
+message PassiveTypeRankTable {
+	repeated PassiveTypeRank entries = 1;
+}

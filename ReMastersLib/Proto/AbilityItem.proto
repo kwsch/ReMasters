@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message AbilityItem {
+	int64 item_id = 1;			// Item.pb
+	int64 trainer_id = 2;		// Trainer.pb / 0 = Co-op Sync Orb
+}
+
+message AbilityItemTable {
+	repeated AbilityItem entries = 1;
+}

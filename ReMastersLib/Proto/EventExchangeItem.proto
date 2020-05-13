@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message EventExchangeItem {
+	int64 item_id = 1;			// Item.pb / event_item_name_xx.lsd
+	int32 description_id = 2;	// event_item_description_xx.lsd
+	string image_id = 3;		// ui/image/Item
+	int32 u4 = 4;				// Type?
+	int64 story_quest_id = 5;	// StoryQuest.pb
+	int64 trainer_id = 6;		// Trainer.pb
+	string schedule_id = 7;		// Schedule.pb
+}
+
+message EventExchangeItemTable {
+	repeated EventExchangeItem entries = 1;
+}

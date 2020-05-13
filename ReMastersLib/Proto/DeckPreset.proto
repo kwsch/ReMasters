@@ -1,0 +1,50 @@
+syntax = "proto3";
+package ReMastersLib;
+
+message DeckPreset {
+	int32 deck_preset_id = 1;
+
+	int64 character_1_id = 2;	// Trainer.pb
+	int64 trainer_1_id = 3;		// Monster.pb
+	// Stats?
+	int32 u4 = 4;
+	int32 u5 = 5;
+	int32 u6 = 6;
+	int32 u7 = 7;
+	int32 u8 = 8;
+	int32 u9 = 9;
+
+	int64 character_2_id = 12;	// Trainer.pb
+	int64 trainer_2_id = 13;	// Monster.pb
+	// Stats?        
+	int32 u14 = 14;
+	int32 u15 = 15;
+	int32 u16 = 16;
+	int32 u17 = 17;
+	int32 u18 = 18;
+	int32 u19 = 19;
+
+	int64 character_3_id = 22;	// Trainer.pb
+	int64 trainer_3_id = 23;	// Monster.pb
+	// Stats? 
+	int32 u24 = 24;
+	int32 u25 = 25;
+	int32 u26 = 26;
+	int32 u27 = 27;
+	int32 u28 = 28;
+	int32 u29 = 29;
+
+	int64 item_1_id = 32;	 	// DeckItem.pb / deck_item_name_xx.lsd
+	int32 u33 = 33;
+	int32 u34 = 34;
+	int64 item_2_id = 35;	 	// DeckItem.pb / deck_item_name_xx.lsd
+	int32 u36 = 36;
+	int32 u37 = 37;
+	int64 item_3_id = 38;	 	// DeckItem.pb / deck_item_name_xx.lsd
+	int32 u39 = 39;
+	int32 u40 = 40;
+}
+
+message DeckPresetTable {
+	repeated DeckPreset entries = 1;
+}

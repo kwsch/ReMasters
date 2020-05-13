@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message ItemExchange {
+	int32 item_exchange_id = 1;
+	int32 item_exchange_group_id = 2;	// ItemExchangeGroup.pb
+	int64 item_set_id = 3;				// ItemSet.pb
+	int64 item_id = 4;					// Item.pb
+	int32 quantity = 5;
+	string schedule_id = 6;				// Schedule.pb
+	int32 limit = 7;
+	int32 u8 = 8;
+	int32 u9 = 9;
+	int32 u10 = 10;
+	int64 u11 = 11;
+}
+
+message ItemExchangeTable {
+	repeated ItemExchange entries = 1;
+}

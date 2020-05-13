@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message EventQuestGroup {
+	int64 quest_group_id = 1;
+	string u2 = 2;
+	int32 banner_id = 3;		// Banner.pb
+	int32 u4 = 4;
+	string schedule_id = 5;		// Schedule.pb
+	int32 u6 = 6;				// boolean?
+	string u7 = 7;
+	int32 u8 = 8;
+	string bgm_id = 9;
+	int32 u10 = 10;				// boolean?
+}
+
+message EventQuestGroupTable {
+	repeated EventQuestGroup entries = 1;
+}

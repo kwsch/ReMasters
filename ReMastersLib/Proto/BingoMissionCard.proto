@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message BingoMissionCard {
+	int32 bingo_mission_card_id = 1;
+	int32 number = 2;
+	int32 mission_id = 3;				// Mission.pb
+}
+
+message BingoMissionCardTable {
+	repeated BingoMissionCard entries = 1;
+}

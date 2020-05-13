@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message BoxSearchStep {
+	int32 box_search_id = 1;	// BoxSearch.pb
+	int32 step = 2;
+	int32 u3 = 3;
+}
+
+message BoxSearchStepTable {
+	repeated BoxSearchStep entries = 1;
+}

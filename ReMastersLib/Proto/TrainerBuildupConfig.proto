@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message TrainerBuildupConfig {
+	int32 trainer_buildup_config_id = 1;
+	int32 nb_powerups = 2;
+}
+
+message TrainerBuildupConfigTable {
+	repeated TrainerBuildupConfig entries = 1;
+}

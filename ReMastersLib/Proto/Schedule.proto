@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message Schedule {
+    string schedule_id = 1;
+    uint64 start_date = 2;
+    uint64 end_date = 3;
+}
+
+message ScheduleTable {
+    repeated Schedule entries = 1;
+}

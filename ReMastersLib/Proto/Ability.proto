@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message Ability {
+	int64 ability_id = 1;
+	int32 type = 2;			// ability_description_xx.lsd
+	/*
+		1 to 6: stat boosts
+		7: passive
+		8: additional move effect
+		9: move power boost
+		10: move accuracy boost
+	*/
+	int32 passive_id = 3;	// passive_skill_name_xx.lsd / passive_skill_description_xx.lsd
+	int32 move_id = 4;		// Move.pb / move_name_xx.lsd / move_description_xx.lsd
+	int32 value = 5;		// stat boost given by the ability if applicable
+	int32 u6 = 6;
+}
+
+message AbilityTable {
+	repeated Ability entries = 1;
+}

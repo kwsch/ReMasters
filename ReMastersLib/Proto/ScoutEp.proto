@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message ScoutEp {
+	string scout_ep_id = 1;
+	string scout_id = 2;
+	int32 u3 = 3;
+	string text_id = 4;			// shop_xx.lsd
+	int32 gem_type = 5; 		// 1: Non paid, 2: Paid
+	int32 cost = 6;
+	int32 scout_quantity = 7;
+	int32 u8 = 8;
+	int64 item_set_id = 9;		// ItemSet.pb
+}
+
+message ScoutEpTable {
+	repeated ScoutEp entries = 1;
+}

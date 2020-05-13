@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message LoginBonusReward {
+	string reward_id = 1;
+	int32 day = 2;
+	uint64 item_set_id = 3;		// ItemSet.pb
+	uint32 u4 = 4;
+}
+
+message LoginBonusRewardTable {
+	repeated LoginBonusReward entries = 1;
+}

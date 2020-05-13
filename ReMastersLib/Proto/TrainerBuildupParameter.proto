@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message TrainerBuildupParameter {
+	int64 trainer_id = 1;					// Trainer.pb
+	int32 trainer_buildup_config_id = 2;	// TrainerBuildupConfig.pb
+	int32 hp = 3;
+	int32 atk = 4;
+	int32 def = 5;
+	int32 spa = 6;
+	int32 spd = 7;
+	int32 spe = 8;
+}
+
+message TrainerBuildupParameterTable {
+	repeated TrainerBuildupParameter entries = 1;
+}

@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message BingoMissionGroup {
+	int32 bingo_mission_group_id = 1;
+	int32 u2 = 2;
+	string schedule_id = 3;							// Schedule.pb
+	
+	// These two might be inversed but there's no way to
+	// actually know since they have the same value
+	int32 bingo_mission_card_id = 4;				// BingoMissionCard.pb
+	int32 bingo_mission_reward_id = 5;				// BingoMissionReward.pb
+
+	int32 u6 = 6;
+	int32 banner_id = 7;							// Banner.pb
+	int32 u8 = 8;
+	int32 prev_bingo_mission_group_id = 9;			// id of the bingo that needs to be finished before
+	int32 bingo_mission_group_permission_id = 10;	// bingo_mission_group_permission_xx.lsd
+	int32 u11 = 11;									// boolean?
+	int32 u12 = 12;									// boolean?
+}
+
+message BingoMissionGroupTable {
+	repeated BingoMissionGroup entries = 1;
+}

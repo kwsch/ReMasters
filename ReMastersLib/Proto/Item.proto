@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message Item {
+	uint64 item_id = 1;
+	/*
+		sub_category = 1:	Trainer.pb
+		sub_category = 3:	StoryQuest.pb
+		sub_category = 4:	other_item_name_xx.lsd
+		sub_category = 5:	???
+		sub_category = 6:	???
+		sub_category = 41:	other_item_name_xx.lsd
+		sub_category = 45:	other_item_name_xx.lsd
+		sub_category = 51:	breakthrough_item_name_xx.lsd
+		sub_category = 52:	training_item_name_xx.lsd
+		sub_category = 53:	other_item_name_xx.lsd
+		sub_category = 54:	potential_item_name_xx.lsd
+		sub_category = 55:	???
+		sub_category = 56:	AbilityItem.pb
+		sub_category = 61:	MonsterEvolution.pb
+		sub_category = 65:	other_item_name_xx.lsd
+		sub_category = 66:	other_item_name_xx.lsd
+		sub_category = 67:	other_item_name_xx.lsd
+		sub_category = 73:	bardge_item_name_xx.lsd
+		sub_category = 74:	villa_item_description_xx.lsd
+		sub_category = 75:	event_item_name_xx.lsd
+		sub_category = 81:	deck_item_name_xx.lsd
+		sub_category = 82:	deck_item_lvup_item_name_xx.lsd
+		sub_category = 91:	???
+	*/
+	uint32 sub_category = 2;
+	/*
+		1:	Sync Pairs
+		3:	Area Info
+		4:	Coins
+		5:	???
+		6:	???
+		41:	Gems
+		45:	Daily Voucher / Pearl / Big Pearl
+		51:	Level Cap Items
+		52:	Level-Up Manuals
+		53:	Sync Move Level-up
+		55:	Star Power-Up?
+		56:	Sync Orbs
+		61:	Evolution
+		65:	Replay Ticket
+		66:	Evolution Shard / Crystal
+		67:	Move Jauge Slot
+		73:	Badges
+		74: Villa Treats
+		75:	Event Items
+		81:	Gear
+		82:	Gear-Upgrade Items
+		91:	???
+	*/
+}
+
+message ItemTable {
+	repeated Item entries = 1;
+}

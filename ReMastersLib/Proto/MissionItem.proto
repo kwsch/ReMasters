@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message MissionItem {
+	uint64 item_id = 1;		// Item.pb
+	uint32 u2 = 2;	
+	uint32 u3 = 3;
+}
+
+message MissionItemTable {
+    repeated MissionItem entries = 1;
+}

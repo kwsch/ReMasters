@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message VillaGrade {
+	int64 quest_group_id = 1;			// VillaQuestGroup.pb
+	int32 hall = 2;
+	int64 story_quest_id = 3;			// StoryQuest.pb / StoryQuestDetail.pb
+	int64 milestone_item_set_id = 4;	// ItemSet.pb
+	int64 villa_bonus_zone_id = 5;		// VillaBonusZone.pb
+	bool is_milestone = 6;
+}
+
+message VillaGradeTable {
+	repeated VillaGrade entries = 1;
+}

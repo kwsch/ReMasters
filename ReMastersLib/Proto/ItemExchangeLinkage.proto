@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message ItemExchangeLinkage {
+	int32 item_exchange_group_id = 1;	// ItemExchangeGroup.pb
+	int32 quest_group_id = 2;			// EventQuestGroup.pb (and more?)
+}
+
+message ItemExchangeLinkageTable {
+	repeated ItemExchangeLinkage entries = 1;
+}

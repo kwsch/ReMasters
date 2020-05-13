@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message LoginBonus {
+	string login_bonus_id = 1;
+	string reward_id = 2;				// LoginBonusReward.pb
+	uint32 type = 3;
+	/*
+		0 = General Log-In Bonus
+		1 = Other Login Bonuses
+		2 = Compensation
+	*/
+	string login_bonus_name_id = 4;		// login_bonus_name_xx.lsd
+	int32 banner_id = 5;				// Banner.pb
+	uint32 start_date = 6;
+	uint32 end_date = 7;
+}
+
+message LoginBonusTable {
+	repeated LoginBonus entries = 1;
+}

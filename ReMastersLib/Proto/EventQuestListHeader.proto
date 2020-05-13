@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message EventQuestListHeader {
+	int32 quest_group_id = 1;		// EventQuestGroup.pb
+	int64 item_id = 2;				// item required to obtain the legendary pair's area info
+	int32 quantity = 3;				// quantity of ^
+	int64 story_quest_id = 4;		// story_quest_id of the final
+	int32 title_text_id = 5;		// event_legend_header_title_xx.lsd
+	int32 desc_text_id = 6;			// event_legend_header_description_xx.lsd
+	string image_id = 7;			// ui/image/Event/Legend
+}
+
+message EventQuestListHeaderTable {
+	repeated EventQuestListHeader entries = 1;
+}

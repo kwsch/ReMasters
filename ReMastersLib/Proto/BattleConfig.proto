@@ -1,0 +1,12 @@
+syntax = "proto3";
+package ReMastersLib;
+
+message BattleConfig {
+	string battle_parameter_id = 1;
+	int64 value = 2;
+	string coords = 3;
+}
+
+message BattleConfigTable {
+	repeated BattleConfig entries = 1;
+}

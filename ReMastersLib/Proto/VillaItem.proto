@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message VillaItem {
+	int64 item_id = 1;		// Item.pb
+	int64 u2 = 2;			// same as item_id
+	string image_id = 3;	// ui/image/Item
+	int32 rarity = 4;
+	int32 u5 = 5;
+}
+
+message VillaItemTable {
+	repeated VillaItem entries = 1;
+}

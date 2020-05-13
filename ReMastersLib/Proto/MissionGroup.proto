@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message MissionGroup {
+	int32 mission_group_id = 1;
+	string schedule_id = 2;		// Schedule.pb
+	int32 u3 = 3;
+	int32 u4 = 4;
+	int32 u5 = 5;
+	int32 u6 = 6;
+	int64 item_set_id = 7;		// ItemSet.pb
+	int32 banner_id = 8;		// Banner.pb
+	int32 u9 = 9;
+	int32 u10 = 10;
+}
+
+message MissionGroupTable {
+	repeated MissionGroup entries = 1;
+}

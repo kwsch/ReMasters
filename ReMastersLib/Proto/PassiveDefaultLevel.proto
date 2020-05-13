@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message PassiveDefaultLevel {
+	int32 u1 = 1;
+	int32 u2 = 2;
+	int32 u3 = 3;
+	int32 u4 = 4;
+	int32 u5 = 5;
+	int32 u6 = 6;
+	int32 u7 = 7;
+	int32 u8 = 8;
+	int32 u9 = 9;
+	int32 u10 = 10;
+	int32 u11 = 11;
+	int32 u12 = 12;
+	int32 u13 = 13;
+}
+
+message PassiveDefaultLevelTable {
+	repeated PassiveDefaultLevel entries = 1;
+}

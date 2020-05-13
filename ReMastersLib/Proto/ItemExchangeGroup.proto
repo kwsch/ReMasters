@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message ItemExchangeGroup {
+	int32 item_exchange_group_id = 1;
+	int32 u2 = 2;						// boolean?
+	string schedule_id = 3;				// Schedule.pb
+	int32 banner_id = 4;				// Banner.pb
+	int32 u5 = 5;						// EventQuestGroup.pb ?
+}
+
+message ItemExchangeGroupTable {
+	repeated ItemExchangeGroup entries = 1;
+}
