@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message BoxSearch {
+	int32 box_search_id = 1;	// BoxSearch.pb
+	string schedule_id = 2;		// Schedule.pb
+	int64 item_id = 3;			// EventExchangeItem.pb
+	int32 banner_id = 4;		// Banner.pb
+	string u5 = 5;
+	string text_id = 6;			// box_scout_description_xx.lsd
+	int32 u7 = 7;				// number of scouted items?
+	int32 u8 = 8;
+}
+
+message BoxSearchTable {
+	repeated BoxSearch entries = 1;
+}

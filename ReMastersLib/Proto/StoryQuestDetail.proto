@@ -3,21 +3,19 @@ syntax = "proto3";
 package ReMastersLib;
 
 message StoryQuestDetail {
-    uint64 quest_id = 1;
-    repeated int32 u2 = 2;
-    Subtypes quest_subtype = 3;
-	repeated uint64 battle_id = 4;
+    uint64 story_quest_id = 1;			// StoryQuest.pb
+    repeated int32 weak_types = 2;		// motif_type_name_xx.lsd
+    Subtype quest_subtype = 3;
+	repeated uint64 battle_ids = 4;
 	repeated int64 u5 = 5;
 	string background = 6;
 }
 
-
-enum Subtypes {
+enum Subtype {
     Story = 0;
-	other = 1;
+	Other = 1;
 	Battle = 2;
 }
-
 
 message StoryQuestDetailTable {
     repeated StoryQuestDetail entries = 1;

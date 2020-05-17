@@ -24,24 +24,32 @@ namespace ReMastersLib {
     static MoveReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBQcm90by9Nb3ZlLnByb3RvEgxSZU1hc3RlcnNMaWIi1gEKBE1vdmUSDgoG",
-            "TW92ZUlEGAEgASgNEiIKAnUyGAIgASgOMhYuUmVNYXN0ZXJzTGliLkNhdGVn",
-            "b3J5EgoKAnUzGAMgASgNEgoKAnU0GAQgASgNEgoKAnU1GAUgASgNEiEKBFR5",
-            "cGUYBiABKA4yEy5SZU1hc3RlcnNMaWIuVHlwZXMSCgoCdTcYByABKA0SCgoC",
-            "dTgYCCABKA0SDQoFRHJhaW4YCSABKA0SDQoFUG93ZXIYCiABKA0SEAoIQWNj",
-            "dXJhY3kYCyABKA0SCwoDdTEyGAwgASgNIjAKCU1vdmVUYWJsZRIjCgdlbnRy",
-            "aWVzGAEgAygLMhIuUmVNYXN0ZXJzTGliLk1vdmUqQQoIQ2F0ZWdvcnkSDgoK",
-            "Tm9DYXRlZ29yeRAAEgwKCFBoeXNpY2FsEAESCwoHU3BlY2lhbBACEgoKBlN0",
-            "YXR1cxADKt8BCgVUeXBlcxIKCgZOb1R5cGUQABIKCgZOb3JtYWwQARIICgRG",
-            "aXJlEAISCQoFV2F0ZXIQAxIMCghFbGVjdHJpYxAEEgkKBUdyYXNzEAUSBwoD",
-            "SWNlEAYSDAoIRmlnaHRpbmcQBxIKCgZQb2lzb24QCBIKCgZHcm91bmQQCRIK",
-            "CgZGbHlpbmcQChILCgdQc3ljaGljEAsSBwoDQnVnEAwSCAoEUm9jaxANEgkK",
-            "BUdob3N0EA4SCgoGRHJhZ29uEA8SCAoERGFyaxAQEgkKBVN0ZWVsEBESCQoF",
-            "RmFpcnkQEmIGcHJvdG8z"));
+            "ChBQcm90by9Nb3ZlLnByb3RvEgxSZU1hc3RlcnNMaWIiuAIKBE1vdmUSDwoH",
+            "bW92ZV9pZBgBIAEoDRIoCghjYXRlZ29yeRgCIAEoDjIWLlJlTWFzdGVyc0xp",
+            "Yi5DYXRlZ29yeRIKCgJ1MxgDIAEoDRIgCgR1c2VyGAQgASgOMhIuUmVNYXN0",
+            "ZXJzTGliLlVzZXISIgoFZ3JvdXAYBSABKA4yEy5SZU1hc3RlcnNMaWIuR3Jv",
+            "dXASDAoEdHlwZRgGIAEoDRIkCgZ0YXJnZXQYByABKA4yFC5SZU1hc3RlcnNM",
+            "aWIuVGFyZ2V0EgoKAnU4GAggASgNEhMKC2dhdWdlX2RyYWluGAkgASgNEg0K",
+            "BXBvd2VyGAogASgNEhAKCGFjY3VyYWN5GAsgASgNEgwKBHVzZXMYDCABKA0S",
+            "HwoEdGFncxgNIAEoDjIRLlJlTWFzdGVyc0xpYi5UYWciMAoJTW92ZVRhYmxl",
+            "EiMKB2VudHJpZXMYASADKAsyEi5SZU1hc3RlcnNMaWIuTW92ZSpQCghDYXRl",
+            "Z29yeRIOCgpOb0NhdGVnb3J5EAASDAoIUGh5c2ljYWwQARILCgdTcGVjaWFs",
+            "EAISCgoGU3RhdHVzEAMSDQoJVW5pdHlNb3ZlEAQqIAoEVXNlchILCgdQb2tl",
+            "bW9uEAASCwoHVHJhaW5lchABKkEKBUdyb3VwEggKBE5vbmUQABIMCghVbmtu",
+            "b3duMRABEgsKB1JlZ3VsYXIQAhIICgRTeW5jEAMSCQoFVW5pdHkQBCqrAQoG",
+            "VGFyZ2V0Eg4KCkFsbHlTaW5nbGUQABILCgdBbGx5QWxsEAESEgoOT3Bwb25l",
+            "bnRTaW5nbGUQAhIPCgtPcHBvbmVudEFsbBADEggKBFNlbGYQBBIOCgpBbGx5",
+            "UmFuZG9tEAUSEgoOT3Bwb25lbnRSYW5kb20QBhINCglBbGx5RmllbGQQBxIR",
+            "Cg1PcHBvbmVudEZpZWxkEAgSDwoLRW50aXJlRmllbGQQCSrJAQoDVGFnEggK",
+            "BG5vbmUQABIQCgxGb3JjZWRTd2l0Y2gQARIQCgxTdWRkZW5Td2l0Y2gQAhIN",
+            "CglRdWlja01vdmUQBBILCgdTdXJlSGl0EAgSBgoCbmEQEBIRCg1Pa1doaWxl",
+            "RnJvemVuECASEAoMT2tXaGlsZVNsZWVwEEASFAoPT25seVdoaWxlQXNsZWVw",
+            "EIABEgoKBUhlYWxzEIACEgwKB0Fic29yYnMQgAQSDgoJQ29udGludWVzEIAI",
+            "EgsKBlJlY29pbBCAEGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::ReMastersLib.Category), typeof(global::ReMastersLib.Types), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.Move), global::ReMastersLib.Move.Parser, new[]{ "MoveID", "U2", "U3", "U4", "U5", "Type", "U7", "U8", "Drain", "Power", "Accuracy", "U12" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::ReMastersLib.Category), typeof(global::ReMastersLib.User), typeof(global::ReMastersLib.Group), typeof(global::ReMastersLib.Target), typeof(global::ReMastersLib.Tag), }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.Move), global::ReMastersLib.Move.Parser, new[]{ "MoveId", "Category", "U3", "User", "Group", "Type", "Target", "U8", "GaugeDrain", "Power", "Accuracy", "Uses", "Tags" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.MoveTable), global::ReMastersLib.MoveTable.Parser, new[]{ "Entries" }, null, null, null)
           }));
     }
@@ -54,28 +62,49 @@ namespace ReMastersLib {
     [pbr::OriginalName("Physical")] Physical = 1,
     [pbr::OriginalName("Special")] Special = 2,
     [pbr::OriginalName("Status")] Status = 3,
+    [pbr::OriginalName("UnityMove")] UnityMove = 4,
   }
 
-  public enum Types {
-    [pbr::OriginalName("NoType")] NoType = 0,
-    [pbr::OriginalName("Normal")] Normal = 1,
-    [pbr::OriginalName("Fire")] Fire = 2,
-    [pbr::OriginalName("Water")] Water = 3,
-    [pbr::OriginalName("Electric")] Electric = 4,
-    [pbr::OriginalName("Grass")] Grass = 5,
-    [pbr::OriginalName("Ice")] Ice = 6,
-    [pbr::OriginalName("Fighting")] Fighting = 7,
-    [pbr::OriginalName("Poison")] Poison = 8,
-    [pbr::OriginalName("Ground")] Ground = 9,
-    [pbr::OriginalName("Flying")] Flying = 10,
-    [pbr::OriginalName("Psychic")] Psychic = 11,
-    [pbr::OriginalName("Bug")] Bug = 12,
-    [pbr::OriginalName("Rock")] Rock = 13,
-    [pbr::OriginalName("Ghost")] Ghost = 14,
-    [pbr::OriginalName("Dragon")] Dragon = 15,
-    [pbr::OriginalName("Dark")] Dark = 16,
-    [pbr::OriginalName("Steel")] Steel = 17,
-    [pbr::OriginalName("Fairy")] Fairy = 18,
+  public enum User {
+    [pbr::OriginalName("Pokemon")] Pokemon = 0,
+    [pbr::OriginalName("Trainer")] Trainer = 1,
+  }
+
+  public enum Group {
+    [pbr::OriginalName("None")] None = 0,
+    [pbr::OriginalName("Unknown1")] Unknown1 = 1,
+    [pbr::OriginalName("Regular")] Regular = 2,
+    [pbr::OriginalName("Sync")] Sync = 3,
+    [pbr::OriginalName("Unity")] Unity = 4,
+  }
+
+  public enum Target {
+    [pbr::OriginalName("AllySingle")] AllySingle = 0,
+    [pbr::OriginalName("AllyAll")] AllyAll = 1,
+    [pbr::OriginalName("OpponentSingle")] OpponentSingle = 2,
+    [pbr::OriginalName("OpponentAll")] OpponentAll = 3,
+    [pbr::OriginalName("Self")] Self = 4,
+    [pbr::OriginalName("AllyRandom")] AllyRandom = 5,
+    [pbr::OriginalName("OpponentRandom")] OpponentRandom = 6,
+    [pbr::OriginalName("AllyField")] AllyField = 7,
+    [pbr::OriginalName("OpponentField")] OpponentField = 8,
+    [pbr::OriginalName("EntireField")] EntireField = 9,
+  }
+
+  public enum Tag {
+    [pbr::OriginalName("none")] None = 0,
+    [pbr::OriginalName("ForcedSwitch")] ForcedSwitch = 1,
+    [pbr::OriginalName("SuddenSwitch")] SuddenSwitch = 2,
+    [pbr::OriginalName("QuickMove")] QuickMove = 4,
+    [pbr::OriginalName("SureHit")] SureHit = 8,
+    [pbr::OriginalName("na")] Na = 16,
+    [pbr::OriginalName("OkWhileFrozen")] OkWhileFrozen = 32,
+    [pbr::OriginalName("OkWhileSleep")] OkWhileSleep = 64,
+    [pbr::OriginalName("OnlyWhileAsleep")] OnlyWhileAsleep = 128,
+    [pbr::OriginalName("Heals")] Heals = 256,
+    [pbr::OriginalName("Absorbs")] Absorbs = 512,
+    [pbr::OriginalName("Continues")] Continues = 1024,
+    [pbr::OriginalName("Recoil")] Recoil = 2048,
   }
 
   #endregion
@@ -106,18 +135,19 @@ namespace ReMastersLib {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Move(Move other) : this() {
-      moveID_ = other.moveID_;
-      u2_ = other.u2_;
+      moveId_ = other.moveId_;
+      category_ = other.category_;
       u3_ = other.u3_;
-      u4_ = other.u4_;
-      u5_ = other.u5_;
+      user_ = other.user_;
+      group_ = other.group_;
       type_ = other.type_;
-      u7_ = other.u7_;
+      target_ = other.target_;
       u8_ = other.u8_;
-      drain_ = other.drain_;
+      gaugeDrain_ = other.gaugeDrain_;
       power_ = other.power_;
       accuracy_ = other.accuracy_;
-      u12_ = other.u12_;
+      uses_ = other.uses_;
+      tags_ = other.tags_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -126,25 +156,25 @@ namespace ReMastersLib {
       return new Move(this);
     }
 
-    /// <summary>Field number for the "MoveID" field.</summary>
-    public const int MoveIDFieldNumber = 1;
-    private uint moveID_;
+    /// <summary>Field number for the "move_id" field.</summary>
+    public const int MoveIdFieldNumber = 1;
+    private uint moveId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint MoveID {
-      get { return moveID_; }
+    public uint MoveId {
+      get { return moveId_; }
       set {
-        moveID_ = value;
+        moveId_ = value;
       }
     }
 
-    /// <summary>Field number for the "u2" field.</summary>
-    public const int U2FieldNumber = 2;
-    private global::ReMastersLib.Category u2_ = 0;
+    /// <summary>Field number for the "category" field.</summary>
+    public const int CategoryFieldNumber = 2;
+    private global::ReMastersLib.Category category_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::ReMastersLib.Category U2 {
-      get { return u2_; }
+    public global::ReMastersLib.Category Category {
+      get { return category_; }
       set {
-        u2_ = value;
+        category_ = value;
       }
     }
 
@@ -159,47 +189,53 @@ namespace ReMastersLib {
       }
     }
 
-    /// <summary>Field number for the "u4" field.</summary>
-    public const int U4FieldNumber = 4;
-    private uint u4_;
+    /// <summary>Field number for the "user" field.</summary>
+    public const int UserFieldNumber = 4;
+    private global::ReMastersLib.User user_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint U4 {
-      get { return u4_; }
+    public global::ReMastersLib.User User {
+      get { return user_; }
       set {
-        u4_ = value;
+        user_ = value;
       }
     }
 
-    /// <summary>Field number for the "u5" field.</summary>
-    public const int U5FieldNumber = 5;
-    private uint u5_;
+    /// <summary>Field number for the "group" field.</summary>
+    public const int GroupFieldNumber = 5;
+    private global::ReMastersLib.Group group_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint U5 {
-      get { return u5_; }
+    public global::ReMastersLib.Group Group {
+      get { return group_; }
       set {
-        u5_ = value;
+        group_ = value;
       }
     }
 
-    /// <summary>Field number for the "Type" field.</summary>
+    /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 6;
-    private global::ReMastersLib.Types type_ = 0;
+    private uint type_;
+    /// <summary>
+    /// motif_type_name_xx.lsd
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::ReMastersLib.Types Type {
+    public uint Type {
       get { return type_; }
       set {
         type_ = value;
       }
     }
 
-    /// <summary>Field number for the "u7" field.</summary>
-    public const int U7FieldNumber = 7;
-    private uint u7_;
+    /// <summary>Field number for the "target" field.</summary>
+    public const int TargetFieldNumber = 7;
+    private global::ReMastersLib.Target target_ = 0;
+    /// <summary>
+    /// move_target_type_xx.lsd
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint U7 {
-      get { return u7_; }
+    public global::ReMastersLib.Target Target {
+      get { return target_; }
       set {
-        u7_ = value;
+        target_ = value;
       }
     }
 
@@ -214,18 +250,18 @@ namespace ReMastersLib {
       }
     }
 
-    /// <summary>Field number for the "Drain" field.</summary>
-    public const int DrainFieldNumber = 9;
-    private uint drain_;
+    /// <summary>Field number for the "gauge_drain" field.</summary>
+    public const int GaugeDrainFieldNumber = 9;
+    private uint gaugeDrain_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Drain {
-      get { return drain_; }
+    public uint GaugeDrain {
+      get { return gaugeDrain_; }
       set {
-        drain_ = value;
+        gaugeDrain_ = value;
       }
     }
 
-    /// <summary>Field number for the "Power" field.</summary>
+    /// <summary>Field number for the "power" field.</summary>
     public const int PowerFieldNumber = 10;
     private uint power_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -236,7 +272,7 @@ namespace ReMastersLib {
       }
     }
 
-    /// <summary>Field number for the "Accuracy" field.</summary>
+    /// <summary>Field number for the "accuracy" field.</summary>
     public const int AccuracyFieldNumber = 11;
     private uint accuracy_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -247,14 +283,31 @@ namespace ReMastersLib {
       }
     }
 
-    /// <summary>Field number for the "u12" field.</summary>
-    public const int U12FieldNumber = 12;
-    private uint u12_;
+    /// <summary>Field number for the "uses" field.</summary>
+    public const int UsesFieldNumber = 12;
+    private uint uses_;
+    /// <summary>
+    /// 0 = unlimited
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint U12 {
-      get { return u12_; }
+    public uint Uses {
+      get { return uses_; }
       set {
-        u12_ = value;
+        uses_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "tags" field.</summary>
+    public const int TagsFieldNumber = 13;
+    private global::ReMastersLib.Tag tags_ = 0;
+    /// <summary>
+    /// move_tag_xx.lsd
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::ReMastersLib.Tag Tags {
+      get { return tags_; }
+      set {
+        tags_ = value;
       }
     }
 
@@ -271,36 +324,38 @@ namespace ReMastersLib {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MoveID != other.MoveID) return false;
-      if (U2 != other.U2) return false;
+      if (MoveId != other.MoveId) return false;
+      if (Category != other.Category) return false;
       if (U3 != other.U3) return false;
-      if (U4 != other.U4) return false;
-      if (U5 != other.U5) return false;
+      if (User != other.User) return false;
+      if (Group != other.Group) return false;
       if (Type != other.Type) return false;
-      if (U7 != other.U7) return false;
+      if (Target != other.Target) return false;
       if (U8 != other.U8) return false;
-      if (Drain != other.Drain) return false;
+      if (GaugeDrain != other.GaugeDrain) return false;
       if (Power != other.Power) return false;
       if (Accuracy != other.Accuracy) return false;
-      if (U12 != other.U12) return false;
+      if (Uses != other.Uses) return false;
+      if (Tags != other.Tags) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (MoveID != 0) hash ^= MoveID.GetHashCode();
-      if (U2 != 0) hash ^= U2.GetHashCode();
+      if (MoveId != 0) hash ^= MoveId.GetHashCode();
+      if (Category != 0) hash ^= Category.GetHashCode();
       if (U3 != 0) hash ^= U3.GetHashCode();
-      if (U4 != 0) hash ^= U4.GetHashCode();
-      if (U5 != 0) hash ^= U5.GetHashCode();
+      if (User != 0) hash ^= User.GetHashCode();
+      if (Group != 0) hash ^= Group.GetHashCode();
       if (Type != 0) hash ^= Type.GetHashCode();
-      if (U7 != 0) hash ^= U7.GetHashCode();
+      if (Target != 0) hash ^= Target.GetHashCode();
       if (U8 != 0) hash ^= U8.GetHashCode();
-      if (Drain != 0) hash ^= Drain.GetHashCode();
+      if (GaugeDrain != 0) hash ^= GaugeDrain.GetHashCode();
       if (Power != 0) hash ^= Power.GetHashCode();
       if (Accuracy != 0) hash ^= Accuracy.GetHashCode();
-      if (U12 != 0) hash ^= U12.GetHashCode();
+      if (Uses != 0) hash ^= Uses.GetHashCode();
+      if (Tags != 0) hash ^= Tags.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -314,41 +369,41 @@ namespace ReMastersLib {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (MoveID != 0) {
+      if (MoveId != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(MoveID);
+        output.WriteUInt32(MoveId);
       }
-      if (U2 != 0) {
+      if (Category != 0) {
         output.WriteRawTag(16);
-        output.WriteEnum((int) U2);
+        output.WriteEnum((int) Category);
       }
       if (U3 != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(U3);
       }
-      if (U4 != 0) {
+      if (User != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(U4);
+        output.WriteEnum((int) User);
       }
-      if (U5 != 0) {
+      if (Group != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(U5);
+        output.WriteEnum((int) Group);
       }
       if (Type != 0) {
         output.WriteRawTag(48);
-        output.WriteEnum((int) Type);
+        output.WriteUInt32(Type);
       }
-      if (U7 != 0) {
+      if (Target != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(U7);
+        output.WriteEnum((int) Target);
       }
       if (U8 != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(U8);
       }
-      if (Drain != 0) {
+      if (GaugeDrain != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(Drain);
+        output.WriteUInt32(GaugeDrain);
       }
       if (Power != 0) {
         output.WriteRawTag(80);
@@ -358,9 +413,13 @@ namespace ReMastersLib {
         output.WriteRawTag(88);
         output.WriteUInt32(Accuracy);
       }
-      if (U12 != 0) {
+      if (Uses != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(U12);
+        output.WriteUInt32(Uses);
+      }
+      if (Tags != 0) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Tags);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -370,32 +429,32 @@ namespace ReMastersLib {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (MoveID != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MoveID);
+      if (MoveId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MoveId);
       }
-      if (U2 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) U2);
+      if (Category != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Category);
       }
       if (U3 != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(U3);
       }
-      if (U4 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(U4);
+      if (User != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) User);
       }
-      if (U5 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(U5);
+      if (Group != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Group);
       }
       if (Type != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Type);
       }
-      if (U7 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(U7);
+      if (Target != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Target);
       }
       if (U8 != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(U8);
       }
-      if (Drain != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Drain);
+      if (GaugeDrain != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GaugeDrain);
       }
       if (Power != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Power);
@@ -403,8 +462,11 @@ namespace ReMastersLib {
       if (Accuracy != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Accuracy);
       }
-      if (U12 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(U12);
+      if (Uses != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uses);
+      }
+      if (Tags != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Tags);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -417,32 +479,32 @@ namespace ReMastersLib {
       if (other == null) {
         return;
       }
-      if (other.MoveID != 0) {
-        MoveID = other.MoveID;
+      if (other.MoveId != 0) {
+        MoveId = other.MoveId;
       }
-      if (other.U2 != 0) {
-        U2 = other.U2;
+      if (other.Category != 0) {
+        Category = other.Category;
       }
       if (other.U3 != 0) {
         U3 = other.U3;
       }
-      if (other.U4 != 0) {
-        U4 = other.U4;
+      if (other.User != 0) {
+        User = other.User;
       }
-      if (other.U5 != 0) {
-        U5 = other.U5;
+      if (other.Group != 0) {
+        Group = other.Group;
       }
       if (other.Type != 0) {
         Type = other.Type;
       }
-      if (other.U7 != 0) {
-        U7 = other.U7;
+      if (other.Target != 0) {
+        Target = other.Target;
       }
       if (other.U8 != 0) {
         U8 = other.U8;
       }
-      if (other.Drain != 0) {
-        Drain = other.Drain;
+      if (other.GaugeDrain != 0) {
+        GaugeDrain = other.GaugeDrain;
       }
       if (other.Power != 0) {
         Power = other.Power;
@@ -450,8 +512,11 @@ namespace ReMastersLib {
       if (other.Accuracy != 0) {
         Accuracy = other.Accuracy;
       }
-      if (other.U12 != 0) {
-        U12 = other.U12;
+      if (other.Uses != 0) {
+        Uses = other.Uses;
+      }
+      if (other.Tags != 0) {
+        Tags = other.Tags;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -465,11 +530,11 @@ namespace ReMastersLib {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            MoveID = input.ReadUInt32();
+            MoveId = input.ReadUInt32();
             break;
           }
           case 16: {
-            U2 = (global::ReMastersLib.Category) input.ReadEnum();
+            category_ = (global::ReMastersLib.Category) input.ReadEnum();
             break;
           }
           case 24: {
@@ -477,19 +542,19 @@ namespace ReMastersLib {
             break;
           }
           case 32: {
-            U4 = input.ReadUInt32();
+            user_ = (global::ReMastersLib.User) input.ReadEnum();
             break;
           }
           case 40: {
-            U5 = input.ReadUInt32();
+            group_ = (global::ReMastersLib.Group) input.ReadEnum();
             break;
           }
           case 48: {
-            Type = (global::ReMastersLib.Types) input.ReadEnum();
+            Type = input.ReadUInt32();
             break;
           }
           case 56: {
-            U7 = input.ReadUInt32();
+            target_ = (global::ReMastersLib.Target) input.ReadEnum();
             break;
           }
           case 64: {
@@ -497,7 +562,7 @@ namespace ReMastersLib {
             break;
           }
           case 72: {
-            Drain = input.ReadUInt32();
+            GaugeDrain = input.ReadUInt32();
             break;
           }
           case 80: {
@@ -509,7 +574,11 @@ namespace ReMastersLib {
             break;
           }
           case 96: {
-            U12 = input.ReadUInt32();
+            Uses = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            tags_ = (global::ReMastersLib.Tag) input.ReadEnum();
             break;
           }
         }

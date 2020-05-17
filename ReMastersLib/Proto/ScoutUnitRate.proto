@@ -1,0 +1,21 @@
+// The corresponding .pb file is named LotteryUnitRate in 1.0.0
+syntax = "proto3";
+
+package ReMastersLib;
+
+message ScoutUnitRate {
+	string scout_name = 1;
+	uint64 trainer_id = 2;
+	uint32 drop_rate = 3;
+	uint32 display_order = 4;	// the greater this value is, the higher
+								// the character is displayed in the
+								// "Offering Rates" list
+
+	uint32 u5 = 5;		// 1 for Christmas Rosa/Siebold in their banners
+						// and Whitney in the tutorial banner,
+						// not set otherwise
+}
+
+message ScoutUnitRateTable {
+	repeated ScoutUnitRate entries = 1;
+}

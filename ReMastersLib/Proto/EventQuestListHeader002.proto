@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message EventQuestListHeader002 {
+	int32 quest_group_id = 1;		// EventQuestGroup.pb
+	int32 box_search_id = 2;		// BoxSearch.pb
+	int32 title_text_id = 3;		// event_legend_header_title_xx.lsd
+	int32 desc_text_id = 4;			// event_legend_header_description_xx.lsd
+	string image_id = 5;			// ui/image/Event/Legend
+}
+
+message EventQuestListHeader002Table {
+	repeated EventQuestListHeader002 entries = 1;
+}

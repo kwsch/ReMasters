@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message Scout {
+	string scout_id = 1;
+	string banner_id_string = 2;	// Banner.pb
+	uint32 type = 3;
+	/*
+		0 = Tutorial Scout
+		1 = Spotlight Scout
+		2 = 5* Guaranteed Scout
+		5 = Poké Fair Scout
+		6 = Featured Type Scout
+		7 = Seasonal Scout
+		8 = 5* Select Special Scout
+
+	*/
+	string schedule_id = 4;		// Schedule.pb
+	uint64 u5 = 5;
+	uint32 u6 = 6;
+	uint32 u7 = 7;
+	uint32 banner_id = 8;		// Banner.pb
+	string u9 = 9;
+}
+
+message ScoutTable {
+	repeated Scout entries = 1;
+}

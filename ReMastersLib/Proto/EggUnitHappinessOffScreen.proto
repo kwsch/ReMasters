@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message EggUnitHappinessOffScreen {
+	string actor_id = 1;
+	int32 u2 = 2;
+	int32 u3 = 3;
+	int32 u4 = 4;
+	int32 u5 = 5;
+	int32 u6 = 6;
+}
+
+message EggUnitHappinessOffScreenTable {
+	repeated EggUnitHappinessOffScreen entries = 1;
+}

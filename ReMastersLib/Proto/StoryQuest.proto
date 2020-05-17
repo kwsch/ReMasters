@@ -3,40 +3,43 @@ syntax = "proto3";
 package ReMastersLib;
 
 message StoryQuest {
-	uint64 quest_id = 1;
-    string quest_name_string_id = 2;
+	uint64 story_quest_id = 1;
+    string quest_name_id = 2;				// story_quest_name_xx.lsd
     uint64 field_id = 3;
     int64 required_condition_id = 4;
 	uint64 sort_by = 5;
 	uint64 area_spot_id = 6;
-	uint64 quest_reward_id = 7;
+	uint64 item_set_id = 7;					// ItemSet.pb (First-time rewards)
 	uint64 quest_group_id = 8;
 	int32 field_type = 9;
-	string schedule_keyword = 10;
+	string schedule_id = 10;				// Schedule.pb
 	int64 play_count_limit = 11;
-	Toggle chapter_open_animation = 12;
-	Difficulties quest_difficulty = 13;
+	bool chapter_open_animation = 12;
+	Difficulty difficulty = 13;
 	string week_schedule_keyword = 14;
-	Toggle debug = 15;
+	bool debug = 15;
 	int64 debug_category = 16;
 	int32 reward_type = 17;
-	uint64 reward_item_id = 18;
+	int64 showcased_item_id = 18;			// Item.pb
 	int64 chara_quest_list_item_id = 19;
-	Toggle is_evolution_quest = 20;
+	bool is_evolution_quest = 20;
 	QuestType quest_type = 21;
-	Toggle is_search_quest = 22;
+	bool is_search_quest = 22;
 	uint64 next_quest_id = 23;
 	uint64 u24 = 24;
+	uint64 u25 = 25;
+	uint64 u26 = 26;
+	uint64 u27 = 27;
 }
 
-enum Difficulties {
+enum Difficulty {
     None = 0;
 	Normal = 1;
 	Hard = 2;
 	VeryHard = 3;
+	SuperHard = 4;
+	UltraHard = 5;
 }
-
-
 
 enum QuestType {
     MainStory = 0;
@@ -45,11 +48,6 @@ enum QuestType {
 	Events = 3;
 }
 
-enum Toggle {
-	false = 0;
-	true = 1;
-
-}
 
 message StoryQuestTable {
     repeated StoryQuest entries = 1;

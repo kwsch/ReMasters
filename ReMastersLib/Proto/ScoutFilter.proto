@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message ScoutFilter {
+	string scout_id = 1;		// Scout.pb
+	string u2 = 2;
+	bool is_paid_only = 3;
+}
+
+message ScoutFilterTable {
+	repeated ScoutFilter entries = 1;
+}

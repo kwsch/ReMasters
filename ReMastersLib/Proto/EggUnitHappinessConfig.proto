@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message EggUnitHappinessConfig {
+	int32 happiness = 1;
+	int32 nb_treats = 2;
+}
+
+message EggUnitHappinessConfigTable {
+	repeated EggUnitHappinessConfig entries = 1;
+}

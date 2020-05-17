@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message ScoutPickup {
+	string scout_id = 1;	// Scout.pb
+	int64 trainer_id = 2;	// Trainer.pb
+	string text_id = 3;		// lottery_pickup_description_xx.lsd / scout_pickup_description_xx.lsd
+	int32 priority = 4;		// from 10 to lower values
+}
+
+message ScoutPickupTable {
+	repeated ScoutPickup entries = 1;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message TrainerBuildupItem {
+	int64 item_id = 1;						// Item.pb
+	int32 trainer_buildup_config_id = 2;	// TrainerBuildupConfig.pb
+	string schedule_id = 3;					// Schedule.pb
+	string u4 = 4;
+	int64 trainer_id = 5;					// Trainer.pb
+}
+
+message TrainerBuildupItemTable {
+	repeated TrainerBuildupItem entries = 1;
+}

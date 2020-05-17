@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message TrainerAbility {
+	int64 trainer_id = 1;	// Trainer.pb
+	int32 max_energy = 2;
+}
+
+message TrainerAbilityTable {
+	repeated TrainerAbility entries = 1;
+}

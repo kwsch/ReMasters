@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message TreatItem {
+	int64 item_id = 1;		// Item.pb
+	int32 affinity = 2;		// EggUnitHappinessConfig.pb
+	string image_id = 3;	// ui/image/Item
+	int32 u4 = 4;
+	int32 u5 = 5;
+}
+
+message TreatItemTable {
+	repeated TreatItem entries = 1;
+}

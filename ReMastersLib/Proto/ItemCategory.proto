@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message ItemCategory {
+	uint32 item_category_id = 1;			// item_category_name_xx.lsd
+	repeated uint32 subcategories = 2;		// Item.pb (sub_category)
+	/*
+		item_category_id = 1:
+			51 : breakthrough_item_name_xx.lsd
+			52 : training_item_name_de.lsd
+		item_category_id = 2:
+			...
+	*/
+}
+
+message ItemCategoryTable {
+	repeated ItemCategory entries = 1;
+}

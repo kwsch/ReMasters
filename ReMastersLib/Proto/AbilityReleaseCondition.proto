@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message AbilityReleaseCondition {
+	int32 condition_id = 1;
+	int32 type = 2;				// ability_release_condition_xx.lsd
+	int32 parameter = 3;		// required # of tiles, sync move level... 
+}
+
+message AbilityReleaseConditionTable {
+	repeated AbilityReleaseCondition entries = 1;
+}

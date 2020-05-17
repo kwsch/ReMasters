@@ -24,14 +24,15 @@ namespace ReMastersLib {
     static TrainerLevelReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhQcm90by9UcmFpbmVyTGV2ZWwucHJvdG8SDFJlTWFzdGVyc0xpYiIzCgxU",
-            "cmFpbmVyTGV2ZWwSDQoFbGV2ZWwYASABKA0SFAoMcmVxdWlyZWRfZXhwGAIg",
-            "ASgNIkAKEVRyYWluZXJMZXZlbFRhYmxlEisKB2VudHJpZXMYASADKAsyGi5S",
-            "ZU1hc3RlcnNMaWIuVHJhaW5lckxldmVsYgZwcm90bzM="));
+            "ChhQcm90by9UcmFpbmVyTGV2ZWwucHJvdG8SDFJlTWFzdGVyc0xpYiJlCgxU",
+            "cmFpbmVyTGV2ZWwSDQoFbGV2ZWwYASABKA0SCgoCdTIYAiABKA0SCgoCdTMY",
+            "AyABKA0SCgoCdTQYBCABKA0SCgoCdTUYBSABKA0SCgoCdTYYBiABKA0SCgoC",
+            "dTcYByABKA0iQAoRVHJhaW5lckxldmVsVGFibGUSKwoHZW50cmllcxgBIAMo",
+            "CzIaLlJlTWFzdGVyc0xpYi5UcmFpbmVyTGV2ZWxiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.TrainerLevel), global::ReMastersLib.TrainerLevel.Parser, new[]{ "Level", "RequiredExp" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.TrainerLevel), global::ReMastersLib.TrainerLevel.Parser, new[]{ "Level", "U2", "U3", "U4", "U5", "U6", "U7" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.TrainerLevelTable), global::ReMastersLib.TrainerLevelTable.Parser, new[]{ "Entries" }, null, null, null)
           }));
     }
@@ -65,7 +66,12 @@ namespace ReMastersLib {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TrainerLevel(TrainerLevel other) : this() {
       level_ = other.level_;
-      requiredExp_ = other.requiredExp_;
+      u2_ = other.u2_;
+      u3_ = other.u3_;
+      u4_ = other.u4_;
+      u5_ = other.u5_;
+      u6_ = other.u6_;
+      u7_ = other.u7_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,14 +91,69 @@ namespace ReMastersLib {
       }
     }
 
-    /// <summary>Field number for the "required_exp" field.</summary>
-    public const int RequiredExpFieldNumber = 2;
-    private uint requiredExp_;
+    /// <summary>Field number for the "u2" field.</summary>
+    public const int U2FieldNumber = 2;
+    private uint u2_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint RequiredExp {
-      get { return requiredExp_; }
+    public uint U2 {
+      get { return u2_; }
       set {
-        requiredExp_ = value;
+        u2_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u3" field.</summary>
+    public const int U3FieldNumber = 3;
+    private uint u3_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint U3 {
+      get { return u3_; }
+      set {
+        u3_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u4" field.</summary>
+    public const int U4FieldNumber = 4;
+    private uint u4_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint U4 {
+      get { return u4_; }
+      set {
+        u4_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u5" field.</summary>
+    public const int U5FieldNumber = 5;
+    private uint u5_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint U5 {
+      get { return u5_; }
+      set {
+        u5_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u6" field.</summary>
+    public const int U6FieldNumber = 6;
+    private uint u6_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint U6 {
+      get { return u6_; }
+      set {
+        u6_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u7" field.</summary>
+    public const int U7FieldNumber = 7;
+    private uint u7_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint U7 {
+      get { return u7_; }
+      set {
+        u7_ = value;
       }
     }
 
@@ -110,7 +171,12 @@ namespace ReMastersLib {
         return true;
       }
       if (Level != other.Level) return false;
-      if (RequiredExp != other.RequiredExp) return false;
+      if (U2 != other.U2) return false;
+      if (U3 != other.U3) return false;
+      if (U4 != other.U4) return false;
+      if (U5 != other.U5) return false;
+      if (U6 != other.U6) return false;
+      if (U7 != other.U7) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,7 +184,12 @@ namespace ReMastersLib {
     public override int GetHashCode() {
       int hash = 1;
       if (Level != 0) hash ^= Level.GetHashCode();
-      if (RequiredExp != 0) hash ^= RequiredExp.GetHashCode();
+      if (U2 != 0) hash ^= U2.GetHashCode();
+      if (U3 != 0) hash ^= U3.GetHashCode();
+      if (U4 != 0) hash ^= U4.GetHashCode();
+      if (U5 != 0) hash ^= U5.GetHashCode();
+      if (U6 != 0) hash ^= U6.GetHashCode();
+      if (U7 != 0) hash ^= U7.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +207,29 @@ namespace ReMastersLib {
         output.WriteRawTag(8);
         output.WriteUInt32(Level);
       }
-      if (RequiredExp != 0) {
+      if (U2 != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(RequiredExp);
+        output.WriteUInt32(U2);
+      }
+      if (U3 != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(U3);
+      }
+      if (U4 != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(U4);
+      }
+      if (U5 != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(U5);
+      }
+      if (U6 != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(U6);
+      }
+      if (U7 != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(U7);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -151,8 +242,23 @@ namespace ReMastersLib {
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
-      if (RequiredExp != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RequiredExp);
+      if (U2 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(U2);
+      }
+      if (U3 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(U3);
+      }
+      if (U4 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(U4);
+      }
+      if (U5 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(U5);
+      }
+      if (U6 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(U6);
+      }
+      if (U7 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(U7);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -168,8 +274,23 @@ namespace ReMastersLib {
       if (other.Level != 0) {
         Level = other.Level;
       }
-      if (other.RequiredExp != 0) {
-        RequiredExp = other.RequiredExp;
+      if (other.U2 != 0) {
+        U2 = other.U2;
+      }
+      if (other.U3 != 0) {
+        U3 = other.U3;
+      }
+      if (other.U4 != 0) {
+        U4 = other.U4;
+      }
+      if (other.U5 != 0) {
+        U5 = other.U5;
+      }
+      if (other.U6 != 0) {
+        U6 = other.U6;
+      }
+      if (other.U7 != 0) {
+        U7 = other.U7;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -187,7 +308,27 @@ namespace ReMastersLib {
             break;
           }
           case 16: {
-            RequiredExp = input.ReadUInt32();
+            U2 = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            U3 = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            U4 = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            U5 = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            U6 = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            U7 = input.ReadUInt32();
             break;
           }
         }

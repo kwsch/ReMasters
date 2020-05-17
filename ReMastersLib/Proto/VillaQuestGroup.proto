@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message VillaQuestGroup {
+	int64 quest_group_id = 1;
+	string schedule_id = 2;		// Schedule.pb
+	string u3 = 3;
+	int64 item_set_id = 4;		// ItemSet.pb / Items given at the start of a villa challenge
+}
+
+message VillaQuestGroupTable {
+	repeated VillaQuestGroup entries = 1;
+}

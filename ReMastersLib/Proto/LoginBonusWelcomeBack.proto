@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message LoginBonusWelcomeBack {
+	string login_bonus_id = 1;		// LoginBonus.pb
+	string schedule_id = 2;			// Schedule.pb
+	uint32 u3 = 3;
+	uint64 item_set_id = 4;			// ItemSet.pb
+}
+
+message LoginBonusWelcomeBackTable {
+    repeated LoginBonusWelcomeBack entries = 1;
+}

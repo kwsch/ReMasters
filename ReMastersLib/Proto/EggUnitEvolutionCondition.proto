@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message EggUnitEvolutionCondition {
+	int64 monster_evolution_id = 1;		// MonsterEvolution.pb
+	int32 level = 2;
+	int64 item_set_id = 3;				// Required evolution items / ItemSet.pb
+}
+
+message EggUnitEvolutionConditionTable {
+	repeated EggUnitEvolutionCondition entries = 1;
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message BingoMissionReward {
+	int32 bingo_mission_reward_id = 1;
+	int32 nb_lines = 2;					// 0 = bingo blackout
+	int64 item_set_id = 3;				// ItemSet.pb
+}
+
+message BingoMissionRewardTable {
+	repeated BingoMissionReward entries = 1;
+}

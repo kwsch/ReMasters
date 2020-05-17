@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message BoxSearchItem {
+	int32 box_search_id = 1;	// BoxSearch.pb
+	int32 step = 2;
+	int64 order = 3;
+	bool is_grand_prize = 4;
+	int64 item_set_id = 5;		// ItemSet.pb
+	int32 quantity = 6;
+}
+
+message BoxSearchItemTable {
+	repeated BoxSearchItem entries = 1;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message PassiveSkillExtra {
+	int32 passive_id = 1;	// passive_skill_name_xx.lsd / passive_skill_description_xx.lsd
+	int32 u2 = 2;
+	int32 u3 = 3;
+	int32 type = 4;
+}
+
+message PassiveSkillExtraTable {
+	repeated PassiveSkillExtra entries = 1;
+}

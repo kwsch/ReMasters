@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message MissionRequirementCategory {
+	int32 requirement_id = 1;
+	int32 u2 = 2;
+	int32 u3 = 3;
+}
+
+message MissionRequirementCategoryTable {
+	repeated MissionRequirementCategory entries = 1;
+}

@@ -24,17 +24,17 @@ namespace ReMastersLib {
     static MonsterReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNQcm90by9Nb25zdGVyLnByb3RvEgxSZU1hc3RlcnNMaWIivgEKB01vbnN0",
-            "ZXISEgoKdHJhaW5lcl9pZBgBIAEoBBISCgptb25zdGVyX2lkGAIgASgNEhQK",
-            "DHN5bmNfbW92ZV9pZBgDIAEoDRIRCglocF92YWx1ZXMYBCADKA0SEgoKYXRr",
-            "X3ZhbHVlcxgFIAMoDRISCgpkZWZfdmFsdWVzGAYgAygNEhIKCnNwYV92YWx1",
-            "ZXMYByADKA0SEgoKc3BkX3ZhbHVlcxgIIAMoDRISCgpzcGVfdmFsdWVzGAkg",
-            "AygNIjYKDE1vbnN0ZXJUYWJsZRImCgdlbnRyaWVzGAEgAygLMhUuUmVNYXN0",
-            "ZXJzTGliLk1vbnN0ZXJiBnByb3RvMw=="));
+            "ChNQcm90by9Nb25zdGVyLnByb3RvEgxSZU1hc3RlcnNMaWIiwwEKB01vbnN0",
+            "ZXISEgoKbW9uc3Rlcl9pZBgBIAEoBBIXCg9tb25zdGVyX2Jhc2VfaWQYAiAB",
+            "KA0SFAoMc3luY19tb3ZlX2lkGAMgASgNEhEKCWhwX3ZhbHVlcxgEIAMoDRIS",
+            "CgphdGtfdmFsdWVzGAUgAygNEhIKCmRlZl92YWx1ZXMYBiADKA0SEgoKc3Bh",
+            "X3ZhbHVlcxgHIAMoDRISCgpzcGRfdmFsdWVzGAggAygNEhIKCnNwZV92YWx1",
+            "ZXMYCSADKA0iNgoMTW9uc3RlclRhYmxlEiYKB2VudHJpZXMYASADKAsyFS5S",
+            "ZU1hc3RlcnNMaWIuTW9uc3RlcmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.Monster), global::ReMastersLib.Monster.Parser, new[]{ "TrainerId", "MonsterId", "SyncMoveId", "HpValues", "AtkValues", "DefValues", "SpaValues", "SpdValues", "SpeValues" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.Monster), global::ReMastersLib.Monster.Parser, new[]{ "MonsterId", "MonsterBaseId", "SyncMoveId", "HpValues", "AtkValues", "DefValues", "SpaValues", "SpdValues", "SpeValues" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.MonsterTable), global::ReMastersLib.MonsterTable.Parser, new[]{ "Entries" }, null, null, null)
           }));
     }
@@ -67,8 +67,8 @@ namespace ReMastersLib {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Monster(Monster other) : this() {
-      trainerId_ = other.trainerId_;
       monsterId_ = other.monsterId_;
+      monsterBaseId_ = other.monsterBaseId_;
       syncMoveId_ = other.syncMoveId_;
       hpValues_ = other.hpValues_.Clone();
       atkValues_ = other.atkValues_.Clone();
@@ -84,31 +84,37 @@ namespace ReMastersLib {
       return new Monster(this);
     }
 
-    /// <summary>Field number for the "trainer_id" field.</summary>
-    public const int TrainerIdFieldNumber = 1;
-    private ulong trainerId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong TrainerId {
-      get { return trainerId_; }
-      set {
-        trainerId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "monster_id" field.</summary>
-    public const int MonsterIdFieldNumber = 2;
-    private uint monsterId_;
+    public const int MonsterIdFieldNumber = 1;
+    private ulong monsterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint MonsterId {
+    public ulong MonsterId {
       get { return monsterId_; }
       set {
         monsterId_ = value;
       }
     }
 
+    /// <summary>Field number for the "monster_base_id" field.</summary>
+    public const int MonsterBaseIdFieldNumber = 2;
+    private uint monsterBaseId_;
+    /// <summary>
+    /// MonsterBase.pb / monster_name_xx.lsd
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint MonsterBaseId {
+      get { return monsterBaseId_; }
+      set {
+        monsterBaseId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "sync_move_id" field.</summary>
     public const int SyncMoveIdFieldNumber = 3;
     private uint syncMoveId_;
+    /// <summary>
+    /// Move.pb
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint SyncMoveId {
       get { return syncMoveId_; }
@@ -190,8 +196,8 @@ namespace ReMastersLib {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TrainerId != other.TrainerId) return false;
       if (MonsterId != other.MonsterId) return false;
+      if (MonsterBaseId != other.MonsterBaseId) return false;
       if (SyncMoveId != other.SyncMoveId) return false;
       if(!hpValues_.Equals(other.hpValues_)) return false;
       if(!atkValues_.Equals(other.atkValues_)) return false;
@@ -205,8 +211,8 @@ namespace ReMastersLib {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (TrainerId != 0UL) hash ^= TrainerId.GetHashCode();
-      if (MonsterId != 0) hash ^= MonsterId.GetHashCode();
+      if (MonsterId != 0UL) hash ^= MonsterId.GetHashCode();
+      if (MonsterBaseId != 0) hash ^= MonsterBaseId.GetHashCode();
       if (SyncMoveId != 0) hash ^= SyncMoveId.GetHashCode();
       hash ^= hpValues_.GetHashCode();
       hash ^= atkValues_.GetHashCode();
@@ -227,13 +233,13 @@ namespace ReMastersLib {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (TrainerId != 0UL) {
+      if (MonsterId != 0UL) {
         output.WriteRawTag(8);
-        output.WriteUInt64(TrainerId);
+        output.WriteUInt64(MonsterId);
       }
-      if (MonsterId != 0) {
+      if (MonsterBaseId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(MonsterId);
+        output.WriteUInt32(MonsterBaseId);
       }
       if (SyncMoveId != 0) {
         output.WriteRawTag(24);
@@ -253,11 +259,11 @@ namespace ReMastersLib {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (TrainerId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TrainerId);
+      if (MonsterId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(MonsterId);
       }
-      if (MonsterId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MonsterId);
+      if (MonsterBaseId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MonsterBaseId);
       }
       if (SyncMoveId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SyncMoveId);
@@ -279,11 +285,11 @@ namespace ReMastersLib {
       if (other == null) {
         return;
       }
-      if (other.TrainerId != 0UL) {
-        TrainerId = other.TrainerId;
-      }
-      if (other.MonsterId != 0) {
+      if (other.MonsterId != 0UL) {
         MonsterId = other.MonsterId;
+      }
+      if (other.MonsterBaseId != 0) {
+        MonsterBaseId = other.MonsterBaseId;
       }
       if (other.SyncMoveId != 0) {
         SyncMoveId = other.SyncMoveId;
@@ -306,11 +312,11 @@ namespace ReMastersLib {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            TrainerId = input.ReadUInt64();
+            MonsterId = input.ReadUInt64();
             break;
           }
           case 16: {
-            MonsterId = input.ReadUInt32();
+            MonsterBaseId = input.ReadUInt32();
             break;
           }
           case 24: {

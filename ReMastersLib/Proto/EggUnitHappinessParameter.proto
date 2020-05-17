@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message EggUnitHappinessParameter {
+	int64 trainer_id = 1;
+	int32 happiness = 2;	// EggUnitHappinessConfig.pb
+	int32 hp = 3;
+	int32 atk = 4;
+	int32 def = 5;
+	int32 spa = 6;
+	int32 spd = 7;
+	int32 spe = 8;
+}
+
+message EggUnitHappinessParameterTable {
+	repeated EggUnitHappinessParameter entries = 1;
+}

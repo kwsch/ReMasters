@@ -24,27 +24,56 @@ namespace ReMastersLib {
     static StoryQuestReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQcm90by9TdG9yeVF1ZXN0LnByb3RvEgxSZU1hc3RlcnNMaWIi4gIKClN0",
-            "b3J5UXVlc3QSEAoIcXVlc3RfaWQYASABKAQSEwoLcXVlc3RfdGl0bGUYAiAB",
-            "KAkSEQoJcXVlc3RfaWQyGAMgASgEEgoKAnU0GAQgASgDEgsKA3UwNRgFIAEo",
-            "BBILCgN1MDYYBiABKAQSEQoJcXVlc3RfaWQzGAcgASgEEgsKA3UwOBgIIAEo",
-            "BBILCgN1MDkYCSABKAQSCwoDdTEwGAogASgJEgsKA3UxMRgLIAEoBBILCgN1",
-            "MTIYDCABKAQSCwoDdTEzGA0gASgEEgsKA3UxNBgOIAEoCRILCgN1MTUYDyAB",
-            "KAQSCwoDdTE2GBAgASgEEgsKA3UxNxgRIAEoBBILCgN1MTgYEiABKAQSCwoD",
-            "dTE5GBMgASgEEgsKA3UyMBgUIAEoBBILCgN1MjEYFSABKAQSCwoDdTIyGBYg",
-            "ASgEEhEKCXF1ZXN0X2lkNBgXIAEoBBILCgN1MjQYGCABKAQiPAoPU3RvcnlR",
-            "dWVzdFRhYmxlEikKB2VudHJpZXMYASADKAsyGC5SZU1hc3RlcnNMaWIuU3Rv",
-            "cnlRdWVzdGIGcHJvdG8z"));
+            "ChZQcm90by9TdG9yeVF1ZXN0LnByb3RvEgxSZU1hc3RlcnNMaWIilgUKClN0",
+            "b3J5UXVlc3QSFgoOc3RvcnlfcXVlc3RfaWQYASABKAQSFQoNcXVlc3RfbmFt",
+            "ZV9pZBgCIAEoCRIQCghmaWVsZF9pZBgDIAEoBBIdChVyZXF1aXJlZF9jb25k",
+            "aXRpb25faWQYBCABKAMSDwoHc29ydF9ieRgFIAEoBBIUCgxhcmVhX3Nwb3Rf",
+            "aWQYBiABKAQSEwoLaXRlbV9zZXRfaWQYByABKAQSFgoOcXVlc3RfZ3JvdXBf",
+            "aWQYCCABKAQSEgoKZmllbGRfdHlwZRgJIAEoBRITCgtzY2hlZHVsZV9pZBgK",
+            "IAEoCRIYChBwbGF5X2NvdW50X2xpbWl0GAsgASgDEh4KFmNoYXB0ZXJfb3Bl",
+            "bl9hbmltYXRpb24YDCABKAgSLAoKZGlmZmljdWx0eRgNIAEoDjIYLlJlTWFz",
+            "dGVyc0xpYi5EaWZmaWN1bHR5Eh0KFXdlZWtfc2NoZWR1bGVfa2V5d29yZBgO",
+            "IAEoCRINCgVkZWJ1ZxgPIAEoCBIWCg5kZWJ1Z19jYXRlZ29yeRgQIAEoAxIT",
+            "CgtyZXdhcmRfdHlwZRgRIAEoBRIZChFzaG93Y2FzZWRfaXRlbV9pZBgSIAEo",
+            "AxIgChhjaGFyYV9xdWVzdF9saXN0X2l0ZW1faWQYEyABKAMSGgoSaXNfZXZv",
+            "bHV0aW9uX3F1ZXN0GBQgASgIEisKCnF1ZXN0X3R5cGUYFSABKA4yFy5SZU1h",
+            "c3RlcnNMaWIuUXVlc3RUeXBlEhcKD2lzX3NlYXJjaF9xdWVzdBgWIAEoCBIV",
+            "Cg1uZXh0X3F1ZXN0X2lkGBcgASgEEgsKA3UyNBgYIAEoBBILCgN1MjUYGSAB",
+            "KAQSCwoDdTI2GBogASgEEgsKA3UyNxgbIAEoBCI8Cg9TdG9yeVF1ZXN0VGFi",
+            "bGUSKQoHZW50cmllcxgBIAMoCzIYLlJlTWFzdGVyc0xpYi5TdG9yeVF1ZXN0",
+            "KlgKCkRpZmZpY3VsdHkSCAoETm9uZRAAEgoKBk5vcm1hbBABEggKBEhhcmQQ",
+            "AhIMCghWZXJ5SGFyZBADEg0KCVN1cGVySGFyZBAEEg0KCVVsdHJhSGFyZBAF",
+            "Kk0KCVF1ZXN0VHlwZRINCglNYWluU3RvcnkQABIQCgxUcmFpbmluZ0FyZWEQ",
+            "ARITCg9TeW5jUGFpclN0b3JpZXMQAhIKCgZFdmVudHMQA2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.StoryQuest), global::ReMastersLib.StoryQuest.Parser, new[]{ "QuestId", "QuestTitle", "QuestId2", "U4", "U05", "U06", "QuestId3", "U08", "U09", "U10", "U11", "U12", "U13", "U14", "U15", "U16", "U17", "U18", "U19", "U20", "U21", "U22", "QuestId4", "U24" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::ReMastersLib.Difficulty), typeof(global::ReMastersLib.QuestType), }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.StoryQuest), global::ReMastersLib.StoryQuest.Parser, new[]{ "StoryQuestId", "QuestNameId", "FieldId", "RequiredConditionId", "SortBy", "AreaSpotId", "ItemSetId", "QuestGroupId", "FieldType", "ScheduleId", "PlayCountLimit", "ChapterOpenAnimation", "Difficulty", "WeekScheduleKeyword", "Debug", "DebugCategory", "RewardType", "ShowcasedItemId", "CharaQuestListItemId", "IsEvolutionQuest", "QuestType", "IsSearchQuest", "NextQuestId", "U24", "U25", "U26", "U27" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.StoryQuestTable), global::ReMastersLib.StoryQuestTable.Parser, new[]{ "Entries" }, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  public enum Difficulty {
+    [pbr::OriginalName("None")] None = 0,
+    [pbr::OriginalName("Normal")] Normal = 1,
+    [pbr::OriginalName("Hard")] Hard = 2,
+    [pbr::OriginalName("VeryHard")] VeryHard = 3,
+    [pbr::OriginalName("SuperHard")] SuperHard = 4,
+    [pbr::OriginalName("UltraHard")] UltraHard = 5,
+  }
+
+  public enum QuestType {
+    [pbr::OriginalName("MainStory")] MainStory = 0,
+    [pbr::OriginalName("TrainingArea")] TrainingArea = 1,
+    [pbr::OriginalName("SyncPairStories")] SyncPairStories = 2,
+    [pbr::OriginalName("Events")] Events = 3,
+  }
+
+  #endregion
+
   #region Messages
   public sealed partial class StoryQuest : pb::IMessage<StoryQuest> {
     private static readonly pb::MessageParser<StoryQuest> _parser = new pb::MessageParser<StoryQuest>(() => new StoryQuest());
@@ -71,30 +100,33 @@ namespace ReMastersLib {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public StoryQuest(StoryQuest other) : this() {
-      questId_ = other.questId_;
-      questTitle_ = other.questTitle_;
-      questId2_ = other.questId2_;
-      u4_ = other.u4_;
-      u05_ = other.u05_;
-      u06_ = other.u06_;
-      questId3_ = other.questId3_;
-      u08_ = other.u08_;
-      u09_ = other.u09_;
-      u10_ = other.u10_;
-      u11_ = other.u11_;
-      u12_ = other.u12_;
-      u13_ = other.u13_;
-      u14_ = other.u14_;
-      u15_ = other.u15_;
-      u16_ = other.u16_;
-      u17_ = other.u17_;
-      u18_ = other.u18_;
-      u19_ = other.u19_;
-      u20_ = other.u20_;
-      u21_ = other.u21_;
-      u22_ = other.u22_;
-      questId4_ = other.questId4_;
+      storyQuestId_ = other.storyQuestId_;
+      questNameId_ = other.questNameId_;
+      fieldId_ = other.fieldId_;
+      requiredConditionId_ = other.requiredConditionId_;
+      sortBy_ = other.sortBy_;
+      areaSpotId_ = other.areaSpotId_;
+      itemSetId_ = other.itemSetId_;
+      questGroupId_ = other.questGroupId_;
+      fieldType_ = other.fieldType_;
+      scheduleId_ = other.scheduleId_;
+      playCountLimit_ = other.playCountLimit_;
+      chapterOpenAnimation_ = other.chapterOpenAnimation_;
+      difficulty_ = other.difficulty_;
+      weekScheduleKeyword_ = other.weekScheduleKeyword_;
+      debug_ = other.debug_;
+      debugCategory_ = other.debugCategory_;
+      rewardType_ = other.rewardType_;
+      showcasedItemId_ = other.showcasedItemId_;
+      charaQuestListItemId_ = other.charaQuestListItemId_;
+      isEvolutionQuest_ = other.isEvolutionQuest_;
+      questType_ = other.questType_;
+      isSearchQuest_ = other.isSearchQuest_;
+      nextQuestId_ = other.nextQuestId_;
       u24_ = other.u24_;
+      u25_ = other.u25_;
+      u26_ = other.u26_;
+      u27_ = other.u27_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -103,256 +135,268 @@ namespace ReMastersLib {
       return new StoryQuest(this);
     }
 
-    /// <summary>Field number for the "quest_id" field.</summary>
-    public const int QuestIdFieldNumber = 1;
-    private ulong questId_;
+    /// <summary>Field number for the "story_quest_id" field.</summary>
+    public const int StoryQuestIdFieldNumber = 1;
+    private ulong storyQuestId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong QuestId {
-      get { return questId_; }
+    public ulong StoryQuestId {
+      get { return storyQuestId_; }
       set {
-        questId_ = value;
+        storyQuestId_ = value;
       }
     }
 
-    /// <summary>Field number for the "quest_title" field.</summary>
-    public const int QuestTitleFieldNumber = 2;
-    private string questTitle_ = "";
+    /// <summary>Field number for the "quest_name_id" field.</summary>
+    public const int QuestNameIdFieldNumber = 2;
+    private string questNameId_ = "";
+    /// <summary>
+    /// story_quest_name_xx.lsd
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string QuestTitle {
-      get { return questTitle_; }
+    public string QuestNameId {
+      get { return questNameId_; }
       set {
-        questTitle_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        questNameId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "quest_id2" field.</summary>
-    public const int QuestId2FieldNumber = 3;
-    private ulong questId2_;
+    /// <summary>Field number for the "field_id" field.</summary>
+    public const int FieldIdFieldNumber = 3;
+    private ulong fieldId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong QuestId2 {
-      get { return questId2_; }
+    public ulong FieldId {
+      get { return fieldId_; }
       set {
-        questId2_ = value;
+        fieldId_ = value;
       }
     }
 
-    /// <summary>Field number for the "u4" field.</summary>
-    public const int U4FieldNumber = 4;
-    private long u4_;
+    /// <summary>Field number for the "required_condition_id" field.</summary>
+    public const int RequiredConditionIdFieldNumber = 4;
+    private long requiredConditionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long U4 {
-      get { return u4_; }
+    public long RequiredConditionId {
+      get { return requiredConditionId_; }
       set {
-        u4_ = value;
+        requiredConditionId_ = value;
       }
     }
 
-    /// <summary>Field number for the "u05" field.</summary>
-    public const int U05FieldNumber = 5;
-    private ulong u05_;
+    /// <summary>Field number for the "sort_by" field.</summary>
+    public const int SortByFieldNumber = 5;
+    private ulong sortBy_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U05 {
-      get { return u05_; }
+    public ulong SortBy {
+      get { return sortBy_; }
       set {
-        u05_ = value;
+        sortBy_ = value;
       }
     }
 
-    /// <summary>Field number for the "u06" field.</summary>
-    public const int U06FieldNumber = 6;
-    private ulong u06_;
+    /// <summary>Field number for the "area_spot_id" field.</summary>
+    public const int AreaSpotIdFieldNumber = 6;
+    private ulong areaSpotId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U06 {
-      get { return u06_; }
+    public ulong AreaSpotId {
+      get { return areaSpotId_; }
       set {
-        u06_ = value;
+        areaSpotId_ = value;
       }
     }
 
-    /// <summary>Field number for the "quest_id3" field.</summary>
-    public const int QuestId3FieldNumber = 7;
-    private ulong questId3_;
+    /// <summary>Field number for the "item_set_id" field.</summary>
+    public const int ItemSetIdFieldNumber = 7;
+    private ulong itemSetId_;
+    /// <summary>
+    /// ItemSet.pb (First-time rewards)
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong QuestId3 {
-      get { return questId3_; }
+    public ulong ItemSetId {
+      get { return itemSetId_; }
       set {
-        questId3_ = value;
+        itemSetId_ = value;
       }
     }
 
-    /// <summary>Field number for the "u08" field.</summary>
-    public const int U08FieldNumber = 8;
-    private ulong u08_;
+    /// <summary>Field number for the "quest_group_id" field.</summary>
+    public const int QuestGroupIdFieldNumber = 8;
+    private ulong questGroupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U08 {
-      get { return u08_; }
+    public ulong QuestGroupId {
+      get { return questGroupId_; }
       set {
-        u08_ = value;
+        questGroupId_ = value;
       }
     }
 
-    /// <summary>Field number for the "u09" field.</summary>
-    public const int U09FieldNumber = 9;
-    private ulong u09_;
+    /// <summary>Field number for the "field_type" field.</summary>
+    public const int FieldTypeFieldNumber = 9;
+    private int fieldType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U09 {
-      get { return u09_; }
+    public int FieldType {
+      get { return fieldType_; }
       set {
-        u09_ = value;
+        fieldType_ = value;
       }
     }
 
-    /// <summary>Field number for the "u10" field.</summary>
-    public const int U10FieldNumber = 10;
-    private string u10_ = "";
+    /// <summary>Field number for the "schedule_id" field.</summary>
+    public const int ScheduleIdFieldNumber = 10;
+    private string scheduleId_ = "";
+    /// <summary>
+    /// Schedule.pb
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string U10 {
-      get { return u10_; }
+    public string ScheduleId {
+      get { return scheduleId_; }
       set {
-        u10_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        scheduleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "u11" field.</summary>
-    public const int U11FieldNumber = 11;
-    private ulong u11_;
+    /// <summary>Field number for the "play_count_limit" field.</summary>
+    public const int PlayCountLimitFieldNumber = 11;
+    private long playCountLimit_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U11 {
-      get { return u11_; }
+    public long PlayCountLimit {
+      get { return playCountLimit_; }
       set {
-        u11_ = value;
+        playCountLimit_ = value;
       }
     }
 
-    /// <summary>Field number for the "u12" field.</summary>
-    public const int U12FieldNumber = 12;
-    private ulong u12_;
+    /// <summary>Field number for the "chapter_open_animation" field.</summary>
+    public const int ChapterOpenAnimationFieldNumber = 12;
+    private bool chapterOpenAnimation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U12 {
-      get { return u12_; }
+    public bool ChapterOpenAnimation {
+      get { return chapterOpenAnimation_; }
       set {
-        u12_ = value;
+        chapterOpenAnimation_ = value;
       }
     }
 
-    /// <summary>Field number for the "u13" field.</summary>
-    public const int U13FieldNumber = 13;
-    private ulong u13_;
+    /// <summary>Field number for the "difficulty" field.</summary>
+    public const int DifficultyFieldNumber = 13;
+    private global::ReMastersLib.Difficulty difficulty_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U13 {
-      get { return u13_; }
+    public global::ReMastersLib.Difficulty Difficulty {
+      get { return difficulty_; }
       set {
-        u13_ = value;
+        difficulty_ = value;
       }
     }
 
-    /// <summary>Field number for the "u14" field.</summary>
-    public const int U14FieldNumber = 14;
-    private string u14_ = "";
+    /// <summary>Field number for the "week_schedule_keyword" field.</summary>
+    public const int WeekScheduleKeywordFieldNumber = 14;
+    private string weekScheduleKeyword_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string U14 {
-      get { return u14_; }
+    public string WeekScheduleKeyword {
+      get { return weekScheduleKeyword_; }
       set {
-        u14_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        weekScheduleKeyword_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "u15" field.</summary>
-    public const int U15FieldNumber = 15;
-    private ulong u15_;
+    /// <summary>Field number for the "debug" field.</summary>
+    public const int DebugFieldNumber = 15;
+    private bool debug_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U15 {
-      get { return u15_; }
+    public bool Debug {
+      get { return debug_; }
       set {
-        u15_ = value;
+        debug_ = value;
       }
     }
 
-    /// <summary>Field number for the "u16" field.</summary>
-    public const int U16FieldNumber = 16;
-    private ulong u16_;
+    /// <summary>Field number for the "debug_category" field.</summary>
+    public const int DebugCategoryFieldNumber = 16;
+    private long debugCategory_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U16 {
-      get { return u16_; }
+    public long DebugCategory {
+      get { return debugCategory_; }
       set {
-        u16_ = value;
+        debugCategory_ = value;
       }
     }
 
-    /// <summary>Field number for the "u17" field.</summary>
-    public const int U17FieldNumber = 17;
-    private ulong u17_;
+    /// <summary>Field number for the "reward_type" field.</summary>
+    public const int RewardTypeFieldNumber = 17;
+    private int rewardType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U17 {
-      get { return u17_; }
+    public int RewardType {
+      get { return rewardType_; }
       set {
-        u17_ = value;
+        rewardType_ = value;
       }
     }
 
-    /// <summary>Field number for the "u18" field.</summary>
-    public const int U18FieldNumber = 18;
-    private ulong u18_;
+    /// <summary>Field number for the "showcased_item_id" field.</summary>
+    public const int ShowcasedItemIdFieldNumber = 18;
+    private long showcasedItemId_;
+    /// <summary>
+    /// Item.pb
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U18 {
-      get { return u18_; }
+    public long ShowcasedItemId {
+      get { return showcasedItemId_; }
       set {
-        u18_ = value;
+        showcasedItemId_ = value;
       }
     }
 
-    /// <summary>Field number for the "u19" field.</summary>
-    public const int U19FieldNumber = 19;
-    private ulong u19_;
+    /// <summary>Field number for the "chara_quest_list_item_id" field.</summary>
+    public const int CharaQuestListItemIdFieldNumber = 19;
+    private long charaQuestListItemId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U19 {
-      get { return u19_; }
+    public long CharaQuestListItemId {
+      get { return charaQuestListItemId_; }
       set {
-        u19_ = value;
+        charaQuestListItemId_ = value;
       }
     }
 
-    /// <summary>Field number for the "u20" field.</summary>
-    public const int U20FieldNumber = 20;
-    private ulong u20_;
+    /// <summary>Field number for the "is_evolution_quest" field.</summary>
+    public const int IsEvolutionQuestFieldNumber = 20;
+    private bool isEvolutionQuest_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U20 {
-      get { return u20_; }
+    public bool IsEvolutionQuest {
+      get { return isEvolutionQuest_; }
       set {
-        u20_ = value;
+        isEvolutionQuest_ = value;
       }
     }
 
-    /// <summary>Field number for the "u21" field.</summary>
-    public const int U21FieldNumber = 21;
-    private ulong u21_;
+    /// <summary>Field number for the "quest_type" field.</summary>
+    public const int QuestTypeFieldNumber = 21;
+    private global::ReMastersLib.QuestType questType_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U21 {
-      get { return u21_; }
+    public global::ReMastersLib.QuestType QuestType {
+      get { return questType_; }
       set {
-        u21_ = value;
+        questType_ = value;
       }
     }
 
-    /// <summary>Field number for the "u22" field.</summary>
-    public const int U22FieldNumber = 22;
-    private ulong u22_;
+    /// <summary>Field number for the "is_search_quest" field.</summary>
+    public const int IsSearchQuestFieldNumber = 22;
+    private bool isSearchQuest_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U22 {
-      get { return u22_; }
+    public bool IsSearchQuest {
+      get { return isSearchQuest_; }
       set {
-        u22_ = value;
+        isSearchQuest_ = value;
       }
     }
 
-    /// <summary>Field number for the "quest_id4" field.</summary>
-    public const int QuestId4FieldNumber = 23;
-    private ulong questId4_;
+    /// <summary>Field number for the "next_quest_id" field.</summary>
+    public const int NextQuestIdFieldNumber = 23;
+    private ulong nextQuestId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong QuestId4 {
-      get { return questId4_; }
+    public ulong NextQuestId {
+      get { return nextQuestId_; }
       set {
-        questId4_ = value;
+        nextQuestId_ = value;
       }
     }
 
@@ -364,6 +408,39 @@ namespace ReMastersLib {
       get { return u24_; }
       set {
         u24_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u25" field.</summary>
+    public const int U25FieldNumber = 25;
+    private ulong u25_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong U25 {
+      get { return u25_; }
+      set {
+        u25_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u26" field.</summary>
+    public const int U26FieldNumber = 26;
+    private ulong u26_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong U26 {
+      get { return u26_; }
+      set {
+        u26_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u27" field.</summary>
+    public const int U27FieldNumber = 27;
+    private ulong u27_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong U27 {
+      get { return u27_; }
+      set {
+        u27_ = value;
       }
     }
 
@@ -380,60 +457,66 @@ namespace ReMastersLib {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (QuestId != other.QuestId) return false;
-      if (QuestTitle != other.QuestTitle) return false;
-      if (QuestId2 != other.QuestId2) return false;
-      if (U4 != other.U4) return false;
-      if (U05 != other.U05) return false;
-      if (U06 != other.U06) return false;
-      if (QuestId3 != other.QuestId3) return false;
-      if (U08 != other.U08) return false;
-      if (U09 != other.U09) return false;
-      if (U10 != other.U10) return false;
-      if (U11 != other.U11) return false;
-      if (U12 != other.U12) return false;
-      if (U13 != other.U13) return false;
-      if (U14 != other.U14) return false;
-      if (U15 != other.U15) return false;
-      if (U16 != other.U16) return false;
-      if (U17 != other.U17) return false;
-      if (U18 != other.U18) return false;
-      if (U19 != other.U19) return false;
-      if (U20 != other.U20) return false;
-      if (U21 != other.U21) return false;
-      if (U22 != other.U22) return false;
-      if (QuestId4 != other.QuestId4) return false;
+      if (StoryQuestId != other.StoryQuestId) return false;
+      if (QuestNameId != other.QuestNameId) return false;
+      if (FieldId != other.FieldId) return false;
+      if (RequiredConditionId != other.RequiredConditionId) return false;
+      if (SortBy != other.SortBy) return false;
+      if (AreaSpotId != other.AreaSpotId) return false;
+      if (ItemSetId != other.ItemSetId) return false;
+      if (QuestGroupId != other.QuestGroupId) return false;
+      if (FieldType != other.FieldType) return false;
+      if (ScheduleId != other.ScheduleId) return false;
+      if (PlayCountLimit != other.PlayCountLimit) return false;
+      if (ChapterOpenAnimation != other.ChapterOpenAnimation) return false;
+      if (Difficulty != other.Difficulty) return false;
+      if (WeekScheduleKeyword != other.WeekScheduleKeyword) return false;
+      if (Debug != other.Debug) return false;
+      if (DebugCategory != other.DebugCategory) return false;
+      if (RewardType != other.RewardType) return false;
+      if (ShowcasedItemId != other.ShowcasedItemId) return false;
+      if (CharaQuestListItemId != other.CharaQuestListItemId) return false;
+      if (IsEvolutionQuest != other.IsEvolutionQuest) return false;
+      if (QuestType != other.QuestType) return false;
+      if (IsSearchQuest != other.IsSearchQuest) return false;
+      if (NextQuestId != other.NextQuestId) return false;
       if (U24 != other.U24) return false;
+      if (U25 != other.U25) return false;
+      if (U26 != other.U26) return false;
+      if (U27 != other.U27) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (QuestId != 0UL) hash ^= QuestId.GetHashCode();
-      if (QuestTitle.Length != 0) hash ^= QuestTitle.GetHashCode();
-      if (QuestId2 != 0UL) hash ^= QuestId2.GetHashCode();
-      if (U4 != 0L) hash ^= U4.GetHashCode();
-      if (U05 != 0UL) hash ^= U05.GetHashCode();
-      if (U06 != 0UL) hash ^= U06.GetHashCode();
-      if (QuestId3 != 0UL) hash ^= QuestId3.GetHashCode();
-      if (U08 != 0UL) hash ^= U08.GetHashCode();
-      if (U09 != 0UL) hash ^= U09.GetHashCode();
-      if (U10.Length != 0) hash ^= U10.GetHashCode();
-      if (U11 != 0UL) hash ^= U11.GetHashCode();
-      if (U12 != 0UL) hash ^= U12.GetHashCode();
-      if (U13 != 0UL) hash ^= U13.GetHashCode();
-      if (U14.Length != 0) hash ^= U14.GetHashCode();
-      if (U15 != 0UL) hash ^= U15.GetHashCode();
-      if (U16 != 0UL) hash ^= U16.GetHashCode();
-      if (U17 != 0UL) hash ^= U17.GetHashCode();
-      if (U18 != 0UL) hash ^= U18.GetHashCode();
-      if (U19 != 0UL) hash ^= U19.GetHashCode();
-      if (U20 != 0UL) hash ^= U20.GetHashCode();
-      if (U21 != 0UL) hash ^= U21.GetHashCode();
-      if (U22 != 0UL) hash ^= U22.GetHashCode();
-      if (QuestId4 != 0UL) hash ^= QuestId4.GetHashCode();
+      if (StoryQuestId != 0UL) hash ^= StoryQuestId.GetHashCode();
+      if (QuestNameId.Length != 0) hash ^= QuestNameId.GetHashCode();
+      if (FieldId != 0UL) hash ^= FieldId.GetHashCode();
+      if (RequiredConditionId != 0L) hash ^= RequiredConditionId.GetHashCode();
+      if (SortBy != 0UL) hash ^= SortBy.GetHashCode();
+      if (AreaSpotId != 0UL) hash ^= AreaSpotId.GetHashCode();
+      if (ItemSetId != 0UL) hash ^= ItemSetId.GetHashCode();
+      if (QuestGroupId != 0UL) hash ^= QuestGroupId.GetHashCode();
+      if (FieldType != 0) hash ^= FieldType.GetHashCode();
+      if (ScheduleId.Length != 0) hash ^= ScheduleId.GetHashCode();
+      if (PlayCountLimit != 0L) hash ^= PlayCountLimit.GetHashCode();
+      if (ChapterOpenAnimation != false) hash ^= ChapterOpenAnimation.GetHashCode();
+      if (Difficulty != 0) hash ^= Difficulty.GetHashCode();
+      if (WeekScheduleKeyword.Length != 0) hash ^= WeekScheduleKeyword.GetHashCode();
+      if (Debug != false) hash ^= Debug.GetHashCode();
+      if (DebugCategory != 0L) hash ^= DebugCategory.GetHashCode();
+      if (RewardType != 0) hash ^= RewardType.GetHashCode();
+      if (ShowcasedItemId != 0L) hash ^= ShowcasedItemId.GetHashCode();
+      if (CharaQuestListItemId != 0L) hash ^= CharaQuestListItemId.GetHashCode();
+      if (IsEvolutionQuest != false) hash ^= IsEvolutionQuest.GetHashCode();
+      if (QuestType != 0) hash ^= QuestType.GetHashCode();
+      if (IsSearchQuest != false) hash ^= IsSearchQuest.GetHashCode();
+      if (NextQuestId != 0UL) hash ^= NextQuestId.GetHashCode();
       if (U24 != 0UL) hash ^= U24.GetHashCode();
+      if (U25 != 0UL) hash ^= U25.GetHashCode();
+      if (U26 != 0UL) hash ^= U26.GetHashCode();
+      if (U27 != 0UL) hash ^= U27.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -447,101 +530,113 @@ namespace ReMastersLib {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (QuestId != 0UL) {
+      if (StoryQuestId != 0UL) {
         output.WriteRawTag(8);
-        output.WriteUInt64(QuestId);
+        output.WriteUInt64(StoryQuestId);
       }
-      if (QuestTitle.Length != 0) {
+      if (QuestNameId.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(QuestTitle);
+        output.WriteString(QuestNameId);
       }
-      if (QuestId2 != 0UL) {
+      if (FieldId != 0UL) {
         output.WriteRawTag(24);
-        output.WriteUInt64(QuestId2);
+        output.WriteUInt64(FieldId);
       }
-      if (U4 != 0L) {
+      if (RequiredConditionId != 0L) {
         output.WriteRawTag(32);
-        output.WriteInt64(U4);
+        output.WriteInt64(RequiredConditionId);
       }
-      if (U05 != 0UL) {
+      if (SortBy != 0UL) {
         output.WriteRawTag(40);
-        output.WriteUInt64(U05);
+        output.WriteUInt64(SortBy);
       }
-      if (U06 != 0UL) {
+      if (AreaSpotId != 0UL) {
         output.WriteRawTag(48);
-        output.WriteUInt64(U06);
+        output.WriteUInt64(AreaSpotId);
       }
-      if (QuestId3 != 0UL) {
+      if (ItemSetId != 0UL) {
         output.WriteRawTag(56);
-        output.WriteUInt64(QuestId3);
+        output.WriteUInt64(ItemSetId);
       }
-      if (U08 != 0UL) {
+      if (QuestGroupId != 0UL) {
         output.WriteRawTag(64);
-        output.WriteUInt64(U08);
+        output.WriteUInt64(QuestGroupId);
       }
-      if (U09 != 0UL) {
+      if (FieldType != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt64(U09);
+        output.WriteInt32(FieldType);
       }
-      if (U10.Length != 0) {
+      if (ScheduleId.Length != 0) {
         output.WriteRawTag(82);
-        output.WriteString(U10);
+        output.WriteString(ScheduleId);
       }
-      if (U11 != 0UL) {
+      if (PlayCountLimit != 0L) {
         output.WriteRawTag(88);
-        output.WriteUInt64(U11);
+        output.WriteInt64(PlayCountLimit);
       }
-      if (U12 != 0UL) {
+      if (ChapterOpenAnimation != false) {
         output.WriteRawTag(96);
-        output.WriteUInt64(U12);
+        output.WriteBool(ChapterOpenAnimation);
       }
-      if (U13 != 0UL) {
+      if (Difficulty != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt64(U13);
+        output.WriteEnum((int) Difficulty);
       }
-      if (U14.Length != 0) {
+      if (WeekScheduleKeyword.Length != 0) {
         output.WriteRawTag(114);
-        output.WriteString(U14);
+        output.WriteString(WeekScheduleKeyword);
       }
-      if (U15 != 0UL) {
+      if (Debug != false) {
         output.WriteRawTag(120);
-        output.WriteUInt64(U15);
+        output.WriteBool(Debug);
       }
-      if (U16 != 0UL) {
+      if (DebugCategory != 0L) {
         output.WriteRawTag(128, 1);
-        output.WriteUInt64(U16);
+        output.WriteInt64(DebugCategory);
       }
-      if (U17 != 0UL) {
+      if (RewardType != 0) {
         output.WriteRawTag(136, 1);
-        output.WriteUInt64(U17);
+        output.WriteInt32(RewardType);
       }
-      if (U18 != 0UL) {
+      if (ShowcasedItemId != 0L) {
         output.WriteRawTag(144, 1);
-        output.WriteUInt64(U18);
+        output.WriteInt64(ShowcasedItemId);
       }
-      if (U19 != 0UL) {
+      if (CharaQuestListItemId != 0L) {
         output.WriteRawTag(152, 1);
-        output.WriteUInt64(U19);
+        output.WriteInt64(CharaQuestListItemId);
       }
-      if (U20 != 0UL) {
+      if (IsEvolutionQuest != false) {
         output.WriteRawTag(160, 1);
-        output.WriteUInt64(U20);
+        output.WriteBool(IsEvolutionQuest);
       }
-      if (U21 != 0UL) {
+      if (QuestType != 0) {
         output.WriteRawTag(168, 1);
-        output.WriteUInt64(U21);
+        output.WriteEnum((int) QuestType);
       }
-      if (U22 != 0UL) {
+      if (IsSearchQuest != false) {
         output.WriteRawTag(176, 1);
-        output.WriteUInt64(U22);
+        output.WriteBool(IsSearchQuest);
       }
-      if (QuestId4 != 0UL) {
+      if (NextQuestId != 0UL) {
         output.WriteRawTag(184, 1);
-        output.WriteUInt64(QuestId4);
+        output.WriteUInt64(NextQuestId);
       }
       if (U24 != 0UL) {
         output.WriteRawTag(192, 1);
         output.WriteUInt64(U24);
+      }
+      if (U25 != 0UL) {
+        output.WriteRawTag(200, 1);
+        output.WriteUInt64(U25);
+      }
+      if (U26 != 0UL) {
+        output.WriteRawTag(208, 1);
+        output.WriteUInt64(U26);
+      }
+      if (U27 != 0UL) {
+        output.WriteRawTag(216, 1);
+        output.WriteUInt64(U27);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -551,77 +646,86 @@ namespace ReMastersLib {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (QuestId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(QuestId);
+      if (StoryQuestId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(StoryQuestId);
       }
-      if (QuestTitle.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(QuestTitle);
+      if (QuestNameId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(QuestNameId);
       }
-      if (QuestId2 != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(QuestId2);
+      if (FieldId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(FieldId);
       }
-      if (U4 != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(U4);
+      if (RequiredConditionId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RequiredConditionId);
       }
-      if (U05 != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(U05);
+      if (SortBy != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(SortBy);
       }
-      if (U06 != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(U06);
+      if (AreaSpotId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(AreaSpotId);
       }
-      if (QuestId3 != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(QuestId3);
+      if (ItemSetId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(ItemSetId);
       }
-      if (U08 != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(U08);
+      if (QuestGroupId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(QuestGroupId);
       }
-      if (U09 != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(U09);
+      if (FieldType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FieldType);
       }
-      if (U10.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(U10);
+      if (ScheduleId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ScheduleId);
       }
-      if (U11 != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(U11);
+      if (PlayCountLimit != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PlayCountLimit);
       }
-      if (U12 != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(U12);
+      if (ChapterOpenAnimation != false) {
+        size += 1 + 1;
       }
-      if (U13 != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(U13);
+      if (Difficulty != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Difficulty);
       }
-      if (U14.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(U14);
+      if (WeekScheduleKeyword.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WeekScheduleKeyword);
       }
-      if (U15 != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(U15);
+      if (Debug != false) {
+        size += 1 + 1;
       }
-      if (U16 != 0UL) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(U16);
+      if (DebugCategory != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(DebugCategory);
       }
-      if (U17 != 0UL) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(U17);
+      if (RewardType != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(RewardType);
       }
-      if (U18 != 0UL) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(U18);
+      if (ShowcasedItemId != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(ShowcasedItemId);
       }
-      if (U19 != 0UL) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(U19);
+      if (CharaQuestListItemId != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(CharaQuestListItemId);
       }
-      if (U20 != 0UL) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(U20);
+      if (IsEvolutionQuest != false) {
+        size += 2 + 1;
       }
-      if (U21 != 0UL) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(U21);
+      if (QuestType != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) QuestType);
       }
-      if (U22 != 0UL) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(U22);
+      if (IsSearchQuest != false) {
+        size += 2 + 1;
       }
-      if (QuestId4 != 0UL) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(QuestId4);
+      if (NextQuestId != 0UL) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(NextQuestId);
       }
       if (U24 != 0UL) {
         size += 2 + pb::CodedOutputStream.ComputeUInt64Size(U24);
+      }
+      if (U25 != 0UL) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(U25);
+      }
+      if (U26 != 0UL) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(U26);
+      }
+      if (U27 != 0UL) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(U27);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -634,77 +738,86 @@ namespace ReMastersLib {
       if (other == null) {
         return;
       }
-      if (other.QuestId != 0UL) {
-        QuestId = other.QuestId;
+      if (other.StoryQuestId != 0UL) {
+        StoryQuestId = other.StoryQuestId;
       }
-      if (other.QuestTitle.Length != 0) {
-        QuestTitle = other.QuestTitle;
+      if (other.QuestNameId.Length != 0) {
+        QuestNameId = other.QuestNameId;
       }
-      if (other.QuestId2 != 0UL) {
-        QuestId2 = other.QuestId2;
+      if (other.FieldId != 0UL) {
+        FieldId = other.FieldId;
       }
-      if (other.U4 != 0L) {
-        U4 = other.U4;
+      if (other.RequiredConditionId != 0L) {
+        RequiredConditionId = other.RequiredConditionId;
       }
-      if (other.U05 != 0UL) {
-        U05 = other.U05;
+      if (other.SortBy != 0UL) {
+        SortBy = other.SortBy;
       }
-      if (other.U06 != 0UL) {
-        U06 = other.U06;
+      if (other.AreaSpotId != 0UL) {
+        AreaSpotId = other.AreaSpotId;
       }
-      if (other.QuestId3 != 0UL) {
-        QuestId3 = other.QuestId3;
+      if (other.ItemSetId != 0UL) {
+        ItemSetId = other.ItemSetId;
       }
-      if (other.U08 != 0UL) {
-        U08 = other.U08;
+      if (other.QuestGroupId != 0UL) {
+        QuestGroupId = other.QuestGroupId;
       }
-      if (other.U09 != 0UL) {
-        U09 = other.U09;
+      if (other.FieldType != 0) {
+        FieldType = other.FieldType;
       }
-      if (other.U10.Length != 0) {
-        U10 = other.U10;
+      if (other.ScheduleId.Length != 0) {
+        ScheduleId = other.ScheduleId;
       }
-      if (other.U11 != 0UL) {
-        U11 = other.U11;
+      if (other.PlayCountLimit != 0L) {
+        PlayCountLimit = other.PlayCountLimit;
       }
-      if (other.U12 != 0UL) {
-        U12 = other.U12;
+      if (other.ChapterOpenAnimation != false) {
+        ChapterOpenAnimation = other.ChapterOpenAnimation;
       }
-      if (other.U13 != 0UL) {
-        U13 = other.U13;
+      if (other.Difficulty != 0) {
+        Difficulty = other.Difficulty;
       }
-      if (other.U14.Length != 0) {
-        U14 = other.U14;
+      if (other.WeekScheduleKeyword.Length != 0) {
+        WeekScheduleKeyword = other.WeekScheduleKeyword;
       }
-      if (other.U15 != 0UL) {
-        U15 = other.U15;
+      if (other.Debug != false) {
+        Debug = other.Debug;
       }
-      if (other.U16 != 0UL) {
-        U16 = other.U16;
+      if (other.DebugCategory != 0L) {
+        DebugCategory = other.DebugCategory;
       }
-      if (other.U17 != 0UL) {
-        U17 = other.U17;
+      if (other.RewardType != 0) {
+        RewardType = other.RewardType;
       }
-      if (other.U18 != 0UL) {
-        U18 = other.U18;
+      if (other.ShowcasedItemId != 0L) {
+        ShowcasedItemId = other.ShowcasedItemId;
       }
-      if (other.U19 != 0UL) {
-        U19 = other.U19;
+      if (other.CharaQuestListItemId != 0L) {
+        CharaQuestListItemId = other.CharaQuestListItemId;
       }
-      if (other.U20 != 0UL) {
-        U20 = other.U20;
+      if (other.IsEvolutionQuest != false) {
+        IsEvolutionQuest = other.IsEvolutionQuest;
       }
-      if (other.U21 != 0UL) {
-        U21 = other.U21;
+      if (other.QuestType != 0) {
+        QuestType = other.QuestType;
       }
-      if (other.U22 != 0UL) {
-        U22 = other.U22;
+      if (other.IsSearchQuest != false) {
+        IsSearchQuest = other.IsSearchQuest;
       }
-      if (other.QuestId4 != 0UL) {
-        QuestId4 = other.QuestId4;
+      if (other.NextQuestId != 0UL) {
+        NextQuestId = other.NextQuestId;
       }
       if (other.U24 != 0UL) {
         U24 = other.U24;
+      }
+      if (other.U25 != 0UL) {
+        U25 = other.U25;
+      }
+      if (other.U26 != 0UL) {
+        U26 = other.U26;
+      }
+      if (other.U27 != 0UL) {
+        U27 = other.U27;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -718,99 +831,111 @@ namespace ReMastersLib {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            QuestId = input.ReadUInt64();
+            StoryQuestId = input.ReadUInt64();
             break;
           }
           case 18: {
-            QuestTitle = input.ReadString();
+            QuestNameId = input.ReadString();
             break;
           }
           case 24: {
-            QuestId2 = input.ReadUInt64();
+            FieldId = input.ReadUInt64();
             break;
           }
           case 32: {
-            U4 = input.ReadInt64();
+            RequiredConditionId = input.ReadInt64();
             break;
           }
           case 40: {
-            U05 = input.ReadUInt64();
+            SortBy = input.ReadUInt64();
             break;
           }
           case 48: {
-            U06 = input.ReadUInt64();
+            AreaSpotId = input.ReadUInt64();
             break;
           }
           case 56: {
-            QuestId3 = input.ReadUInt64();
+            ItemSetId = input.ReadUInt64();
             break;
           }
           case 64: {
-            U08 = input.ReadUInt64();
+            QuestGroupId = input.ReadUInt64();
             break;
           }
           case 72: {
-            U09 = input.ReadUInt64();
+            FieldType = input.ReadInt32();
             break;
           }
           case 82: {
-            U10 = input.ReadString();
+            ScheduleId = input.ReadString();
             break;
           }
           case 88: {
-            U11 = input.ReadUInt64();
+            PlayCountLimit = input.ReadInt64();
             break;
           }
           case 96: {
-            U12 = input.ReadUInt64();
+            ChapterOpenAnimation = input.ReadBool();
             break;
           }
           case 104: {
-            U13 = input.ReadUInt64();
+            difficulty_ = (global::ReMastersLib.Difficulty) input.ReadEnum();
             break;
           }
           case 114: {
-            U14 = input.ReadString();
+            WeekScheduleKeyword = input.ReadString();
             break;
           }
           case 120: {
-            U15 = input.ReadUInt64();
+            Debug = input.ReadBool();
             break;
           }
           case 128: {
-            U16 = input.ReadUInt64();
+            DebugCategory = input.ReadInt64();
             break;
           }
           case 136: {
-            U17 = input.ReadUInt64();
+            RewardType = input.ReadInt32();
             break;
           }
           case 144: {
-            U18 = input.ReadUInt64();
+            ShowcasedItemId = input.ReadInt64();
             break;
           }
           case 152: {
-            U19 = input.ReadUInt64();
+            CharaQuestListItemId = input.ReadInt64();
             break;
           }
           case 160: {
-            U20 = input.ReadUInt64();
+            IsEvolutionQuest = input.ReadBool();
             break;
           }
           case 168: {
-            U21 = input.ReadUInt64();
+            questType_ = (global::ReMastersLib.QuestType) input.ReadEnum();
             break;
           }
           case 176: {
-            U22 = input.ReadUInt64();
+            IsSearchQuest = input.ReadBool();
             break;
           }
           case 184: {
-            QuestId4 = input.ReadUInt64();
+            NextQuestId = input.ReadUInt64();
             break;
           }
           case 192: {
             U24 = input.ReadUInt64();
+            break;
+          }
+          case 200: {
+            U25 = input.ReadUInt64();
+            break;
+          }
+          case 208: {
+            U26 = input.ReadUInt64();
+            break;
+          }
+          case 216: {
+            U27 = input.ReadUInt64();
             break;
           }
         }

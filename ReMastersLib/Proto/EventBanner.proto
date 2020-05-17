@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message EventBanner {
+	string event_banner_id = 1;
+	int32 u2 = 2;
+	int32 u3 = 3;
+	string schedule_id = 4;		// Schedule.pb
+	string u5 = 5;
+	int32 banner_id = 6;		// Banner.pb
+}
+
+message EventBannerTable {
+	repeated EventBanner entries = 1;
+}

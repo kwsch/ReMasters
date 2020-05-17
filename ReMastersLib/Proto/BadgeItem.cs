@@ -24,15 +24,15 @@ namespace ReMastersLib {
     static BadgeItemReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVQcm90by9CYWRnZUl0ZW0ucHJvdG8SDFJlTWFzdGVyc0xpYiJVCglCYWRn",
-            "ZUl0ZW0SEAoIdW5rbm93bjEYASABKAQSEAoIYmFkZ2VfaWQYAiABKA0SEgoK",
-            "YmFkZ2VfbmFtZRgDIAEoCRIQCgh1bmtub3duMhgEIAEoDSI6Cg5CYWRnZUl0",
-            "ZW1UYWJsZRIoCgdlbnRyaWVzGAEgAygLMhcuUmVNYXN0ZXJzTGliLkJhZGdl",
-            "SXRlbWIGcHJvdG8z"));
+            "ChVQcm90by9CYWRnZUl0ZW0ucHJvdG8SDFJlTWFzdGVyc0xpYiJlCglCYWRn",
+            "ZUl0ZW0SFQoNYmFkZ2VfaXRlbV9pZBgBIAEoBBIUCgxiYWRnZV9udW1iZXIY",
+            "AiABKA0SEgoKYmFkZ2VfbmFtZRgDIAEoCRIXCg90cmFpbmVyX2Jhc2VfaWQY",
+            "BCABKA0iOgoOQmFkZ2VJdGVtVGFibGUSKAoHZW50cmllcxgBIAMoCzIXLlJl",
+            "TWFzdGVyc0xpYi5CYWRnZUl0ZW1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.BadgeItem), global::ReMastersLib.BadgeItem.Parser, new[]{ "Unknown1", "BadgeId", "BadgeName", "Unknown2" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.BadgeItem), global::ReMastersLib.BadgeItem.Parser, new[]{ "BadgeItemId", "BadgeNumber", "BadgeName", "TrainerBaseId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.BadgeItemTable), global::ReMastersLib.BadgeItemTable.Parser, new[]{ "Entries" }, null, null, null)
           }));
     }
@@ -65,10 +65,10 @@ namespace ReMastersLib {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BadgeItem(BadgeItem other) : this() {
-      unknown1_ = other.unknown1_;
-      badgeId_ = other.badgeId_;
+      badgeItemId_ = other.badgeItemId_;
+      badgeNumber_ = other.badgeNumber_;
       badgeName_ = other.badgeName_;
-      unknown2_ = other.unknown2_;
+      trainerBaseId_ = other.trainerBaseId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -77,25 +77,28 @@ namespace ReMastersLib {
       return new BadgeItem(this);
     }
 
-    /// <summary>Field number for the "unknown1" field.</summary>
-    public const int Unknown1FieldNumber = 1;
-    private ulong unknown1_;
+    /// <summary>Field number for the "badge_item_id" field.</summary>
+    public const int BadgeItemIdFieldNumber = 1;
+    private ulong badgeItemId_;
+    /// <summary>
+    /// bardge_item_name_xx.lsd
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong Unknown1 {
-      get { return unknown1_; }
+    public ulong BadgeItemId {
+      get { return badgeItemId_; }
       set {
-        unknown1_ = value;
+        badgeItemId_ = value;
       }
     }
 
-    /// <summary>Field number for the "badge_id" field.</summary>
-    public const int BadgeIdFieldNumber = 2;
-    private uint badgeId_;
+    /// <summary>Field number for the "badge_number" field.</summary>
+    public const int BadgeNumberFieldNumber = 2;
+    private uint badgeNumber_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint BadgeId {
-      get { return badgeId_; }
+    public uint BadgeNumber {
+      get { return badgeNumber_; }
       set {
-        badgeId_ = value;
+        badgeNumber_ = value;
       }
     }
 
@@ -110,14 +113,17 @@ namespace ReMastersLib {
       }
     }
 
-    /// <summary>Field number for the "unknown2" field.</summary>
-    public const int Unknown2FieldNumber = 4;
-    private uint unknown2_;
+    /// <summary>Field number for the "trainer_base_id" field.</summary>
+    public const int TrainerBaseIdFieldNumber = 4;
+    private uint trainerBaseId_;
+    /// <summary>
+    /// TrainerBase.pb
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Unknown2 {
-      get { return unknown2_; }
+    public uint TrainerBaseId {
+      get { return trainerBaseId_; }
       set {
-        unknown2_ = value;
+        trainerBaseId_ = value;
       }
     }
 
@@ -134,20 +140,20 @@ namespace ReMastersLib {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Unknown1 != other.Unknown1) return false;
-      if (BadgeId != other.BadgeId) return false;
+      if (BadgeItemId != other.BadgeItemId) return false;
+      if (BadgeNumber != other.BadgeNumber) return false;
       if (BadgeName != other.BadgeName) return false;
-      if (Unknown2 != other.Unknown2) return false;
+      if (TrainerBaseId != other.TrainerBaseId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Unknown1 != 0UL) hash ^= Unknown1.GetHashCode();
-      if (BadgeId != 0) hash ^= BadgeId.GetHashCode();
+      if (BadgeItemId != 0UL) hash ^= BadgeItemId.GetHashCode();
+      if (BadgeNumber != 0) hash ^= BadgeNumber.GetHashCode();
       if (BadgeName.Length != 0) hash ^= BadgeName.GetHashCode();
-      if (Unknown2 != 0) hash ^= Unknown2.GetHashCode();
+      if (TrainerBaseId != 0) hash ^= TrainerBaseId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -161,21 +167,21 @@ namespace ReMastersLib {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Unknown1 != 0UL) {
+      if (BadgeItemId != 0UL) {
         output.WriteRawTag(8);
-        output.WriteUInt64(Unknown1);
+        output.WriteUInt64(BadgeItemId);
       }
-      if (BadgeId != 0) {
+      if (BadgeNumber != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(BadgeId);
+        output.WriteUInt32(BadgeNumber);
       }
       if (BadgeName.Length != 0) {
         output.WriteRawTag(26);
         output.WriteString(BadgeName);
       }
-      if (Unknown2 != 0) {
+      if (TrainerBaseId != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(Unknown2);
+        output.WriteUInt32(TrainerBaseId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -185,17 +191,17 @@ namespace ReMastersLib {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Unknown1 != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Unknown1);
+      if (BadgeItemId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(BadgeItemId);
       }
-      if (BadgeId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BadgeId);
+      if (BadgeNumber != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BadgeNumber);
       }
       if (BadgeName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BadgeName);
       }
-      if (Unknown2 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Unknown2);
+      if (TrainerBaseId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TrainerBaseId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -208,17 +214,17 @@ namespace ReMastersLib {
       if (other == null) {
         return;
       }
-      if (other.Unknown1 != 0UL) {
-        Unknown1 = other.Unknown1;
+      if (other.BadgeItemId != 0UL) {
+        BadgeItemId = other.BadgeItemId;
       }
-      if (other.BadgeId != 0) {
-        BadgeId = other.BadgeId;
+      if (other.BadgeNumber != 0) {
+        BadgeNumber = other.BadgeNumber;
       }
       if (other.BadgeName.Length != 0) {
         BadgeName = other.BadgeName;
       }
-      if (other.Unknown2 != 0) {
-        Unknown2 = other.Unknown2;
+      if (other.TrainerBaseId != 0) {
+        TrainerBaseId = other.TrainerBaseId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -232,11 +238,11 @@ namespace ReMastersLib {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Unknown1 = input.ReadUInt64();
+            BadgeItemId = input.ReadUInt64();
             break;
           }
           case 16: {
-            BadgeId = input.ReadUInt32();
+            BadgeNumber = input.ReadUInt32();
             break;
           }
           case 26: {
@@ -244,7 +250,7 @@ namespace ReMastersLib {
             break;
           }
           case 32: {
-            Unknown2 = input.ReadUInt32();
+            TrainerBaseId = input.ReadUInt32();
             break;
           }
         }

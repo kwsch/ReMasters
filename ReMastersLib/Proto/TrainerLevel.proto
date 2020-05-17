@@ -4,7 +4,12 @@ package ReMastersLib;
 
 message TrainerLevel {
     uint32 level = 1;
-    uint32 required_exp = 2;
+    uint32 u2 = 2;
+    uint32 u3 = 3;
+    uint32 u4 = 4;
+    uint32 u5 = 5;
+    uint32 u6 = 6;
+    uint32 u7 = 7;
 }
 
 message TrainerLevelTable {
