@@ -24,14 +24,15 @@ namespace ReMastersLib {
     static FieldTalkVoiceReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpQcm90by9GaWVsZFRhbGtWb2ljZS5wcm90bxIMUmVNYXN0ZXJzTGliIjQK",
-            "DkZpZWxkVGFsa1ZvaWNlEgoKAnUxGAEgASgJEgoKAnUyGAIgASgJEgoKAnUz",
-            "GAMgASgIIkQKE0ZpZWxkVGFsa1ZvaWNlVGFibGUSLQoHZW50cmllcxgBIAMo",
-            "CzIcLlJlTWFzdGVyc0xpYi5GaWVsZFRhbGtWb2ljZWIGcHJvdG8z"));
+            "ChpQcm90by9GaWVsZFRhbGtWb2ljZS5wcm90bxIMUmVNYXN0ZXJzTGliIlEK",
+            "DkZpZWxkVGFsa1ZvaWNlEhsKE2ZpZWxkX3RhbGtfdm9pY2VfaWQYASABKAkS",
+            "CgoCdTIYAiABKAkSCgoCdTMYAyABKAkSCgoCdTQYBCABKAgiRAoTRmllbGRU",
+            "YWxrVm9pY2VUYWJsZRItCgdlbnRyaWVzGAEgAygLMhwuUmVNYXN0ZXJzTGli",
+            "LkZpZWxkVGFsa1ZvaWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.FieldTalkVoice), global::ReMastersLib.FieldTalkVoice.Parser, new[]{ "U1", "U2", "U3" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.FieldTalkVoice), global::ReMastersLib.FieldTalkVoice.Parser, new[]{ "FieldTalkVoiceId", "U2", "U3", "U4" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.FieldTalkVoiceTable), global::ReMastersLib.FieldTalkVoiceTable.Parser, new[]{ "Entries" }, null, null, null)
           }));
     }
@@ -64,9 +65,10 @@ namespace ReMastersLib {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FieldTalkVoice(FieldTalkVoice other) : this() {
-      u1_ = other.u1_;
+      fieldTalkVoiceId_ = other.fieldTalkVoiceId_;
       u2_ = other.u2_;
       u3_ = other.u3_;
+      u4_ = other.u4_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -75,14 +77,14 @@ namespace ReMastersLib {
       return new FieldTalkVoice(this);
     }
 
-    /// <summary>Field number for the "u1" field.</summary>
-    public const int U1FieldNumber = 1;
-    private string u1_ = "";
+    /// <summary>Field number for the "field_talk_voice_id" field.</summary>
+    public const int FieldTalkVoiceIdFieldNumber = 1;
+    private string fieldTalkVoiceId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string U1 {
-      get { return u1_; }
+    public string FieldTalkVoiceId {
+      get { return fieldTalkVoiceId_; }
       set {
-        u1_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        fieldTalkVoiceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -99,12 +101,23 @@ namespace ReMastersLib {
 
     /// <summary>Field number for the "u3" field.</summary>
     public const int U3FieldNumber = 3;
-    private bool u3_;
+    private string u3_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool U3 {
+    public string U3 {
       get { return u3_; }
       set {
-        u3_ = value;
+        u3_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "u4" field.</summary>
+    public const int U4FieldNumber = 4;
+    private bool u4_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool U4 {
+      get { return u4_; }
+      set {
+        u4_ = value;
       }
     }
 
@@ -121,18 +134,20 @@ namespace ReMastersLib {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (U1 != other.U1) return false;
+      if (FieldTalkVoiceId != other.FieldTalkVoiceId) return false;
       if (U2 != other.U2) return false;
       if (U3 != other.U3) return false;
+      if (U4 != other.U4) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (U1.Length != 0) hash ^= U1.GetHashCode();
+      if (FieldTalkVoiceId.Length != 0) hash ^= FieldTalkVoiceId.GetHashCode();
       if (U2.Length != 0) hash ^= U2.GetHashCode();
-      if (U3 != false) hash ^= U3.GetHashCode();
+      if (U3.Length != 0) hash ^= U3.GetHashCode();
+      if (U4 != false) hash ^= U4.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -146,17 +161,21 @@ namespace ReMastersLib {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (U1.Length != 0) {
+      if (FieldTalkVoiceId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(U1);
+        output.WriteString(FieldTalkVoiceId);
       }
       if (U2.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(U2);
       }
-      if (U3 != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(U3);
+      if (U3.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(U3);
+      }
+      if (U4 != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(U4);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -166,13 +185,16 @@ namespace ReMastersLib {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (U1.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(U1);
+      if (FieldTalkVoiceId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FieldTalkVoiceId);
       }
       if (U2.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(U2);
       }
-      if (U3 != false) {
+      if (U3.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(U3);
+      }
+      if (U4 != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -186,14 +208,17 @@ namespace ReMastersLib {
       if (other == null) {
         return;
       }
-      if (other.U1.Length != 0) {
-        U1 = other.U1;
+      if (other.FieldTalkVoiceId.Length != 0) {
+        FieldTalkVoiceId = other.FieldTalkVoiceId;
       }
       if (other.U2.Length != 0) {
         U2 = other.U2;
       }
-      if (other.U3 != false) {
+      if (other.U3.Length != 0) {
         U3 = other.U3;
+      }
+      if (other.U4 != false) {
+        U4 = other.U4;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -207,15 +232,19 @@ namespace ReMastersLib {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            U1 = input.ReadString();
+            FieldTalkVoiceId = input.ReadString();
             break;
           }
           case 18: {
             U2 = input.ReadString();
             break;
           }
-          case 24: {
-            U3 = input.ReadBool();
+          case 26: {
+            U3 = input.ReadString();
+            break;
+          }
+          case 32: {
+            U4 = input.ReadBool();
             break;
           }
         }
