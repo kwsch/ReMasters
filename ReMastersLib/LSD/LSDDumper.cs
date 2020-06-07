@@ -1,39 +1,60 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace ReMastersLib
 {
     public static class LSDDumper
     {
-        public static void Dump(string path, string outPath)
+        public static void Dump(string lsdPath, string jsonPath, string txtPath)
         {
-            var result = Dump(path);
-            File.WriteAllLines(outPath, result);
+            Directory.CreateDirectory(jsonPath);
+            var files = Directory.EnumerateFiles(lsdPath, "*.lsd", SearchOption.AllDirectories);
+
+            using (StreamWriter sw = File.CreateText(txtPath))
+            {
+                foreach (var f in files)
+                {
+                    var data = File.ReadAllBytes(f);
+                    var lsd = new LSD(data);
+                    var entries = lsd.GetEntries();
+                    AddStrings(f, entries, sw);
+                    DumpJSON(f, entries, lsdPath, jsonPath);
+                }
+            }
         }
 
-        private static IEnumerable<string> Dump(string path)
-        {
-            var files = Directory.EnumerateFiles(path, "*.lsd", SearchOption.AllDirectories);
-
-            var result = new List<string>();
-            foreach (var f in files)
-                AddStrings(f, result);
-
-            return result;
-        }
-
-        private static void AddStrings(string file, List<string> result)
+        private static void AddStrings(string file, KeyValuePair<string,string>[] entries, StreamWriter sw)
         {
             var fn = Path.GetFileName(file);
-            result.Add("===========");
-            result.Add(fn);
-            result.Add("===========");
+            sw.WriteLine("===========");
+            sw.WriteLine(fn);
+            sw.WriteLine("===========");
 
-            var data = File.ReadAllBytes(file);
-            var f = new LSD(data);
-            var lines = f.GetLines();
-            result.AddRange(lines);
-            result.Add("");
+            foreach (var entry in entries)
+                sw.WriteLine($"[{entry.Key}] {entry.Value}");
+
+            sw.WriteLine("");
+        }
+
+        private static void DumpJSON(string file, KeyValuePair<string,string>[] entries, string lsdPath, string jsonPath)
+        {
+            var relPath = file.Replace(lsdPath + Path.DirectorySeparatorChar, "");
+            var path = Path.Combine(jsonPath, relPath);
+            path = Path.ChangeExtension(path, "json");
+
+            Directory.CreateDirectory(Path.GetDirectoryName(path));
+            using (StreamWriter sw = File.CreateText(path))
+            {
+                sw.WriteLine("{");
+                foreach (var entry in entries)
+                {
+                    var key = JsonConvert.ToString(entry.Key);
+                    var val = JsonConvert.ToString(entry.Value);
+                    sw.WriteLine($"    {key}: {val},");
+                }
+                sw.WriteLine("}");
+            }
         }
     }
 }

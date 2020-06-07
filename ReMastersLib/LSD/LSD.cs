@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Text;
+using System.Collections.Generic;
 
 namespace ReMastersLib
 {
@@ -22,16 +23,16 @@ namespace ReMastersLib
         private uint Magic => BitConverter.ToUInt32(Data, 0x00);
         public int Count => BitConverter.ToInt32(Data, 0x0C);
 
-        public string[] GetLines()
+        public KeyValuePair<string,string>[] GetEntries()
         {
             int count = Count;
-            string[] result = new string[Count];
+            var entries = new KeyValuePair<string,string>[Count];
             for (int i = 0; i < count; i++)
-                result[i] = GetLine(i);
-            return result;
+                entries[i] = GetEntry(i);
+            return entries;
         }
 
-        private string GetLine(int i)
+        private KeyValuePair<string,string> GetEntry(int i)
         {
             var eOfs = GetEntryInfoOffset(i);
             int ofs = BitConverter.ToInt32(Data, eOfs + 0);
@@ -42,7 +43,7 @@ namespace ReMastersLib
             var code = enc.GetString(Data, ofs, codeLen);
             var str = enc.GetString(Data, ofs + codeLen, len);
 
-            return $"[{code}] {str}";
+            return new KeyValuePair<string,string>(code, str);
         }
 
         private static int GetEntryInfoOffset(int i)

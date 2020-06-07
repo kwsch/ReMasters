@@ -60,15 +60,17 @@ namespace ReMastersLib
         public void DumpMessagesAPK(string outRoot)
         {
             var messages = Path.Combine(BasePath, @"assets\resources\assets\Messages");
-            var outPath = Path.Combine(outRoot, "lsd_apk.txt");
-            LSDDumper.Dump(messages, outPath);
+            var jsonPath = Path.Combine(outRoot, "lsddump", "apk");
+            var txtPath = Path.Combine(outRoot, "lsddump", "lsd_apk.txt");
+            LSDDumper.Dump(messages, jsonPath, txtPath);
         }
 
         public void DumpMessagesDownload(string outRoot)
         {
-            var messages = outRoot;
-            var outPath = Path.Combine(outRoot, "lsd_dl.txt");
-            LSDDumper.Dump(messages, outPath);
+            var messages = Path.Combine(outRoot, "Messages");
+            var jsonPath = Path.Combine(outRoot, "lsddump", "dl");
+            var txtPath = Path.Combine(outRoot, "lsddump", "lsd_dl.txt");
+            LSDDumper.Dump(messages, jsonPath, txtPath);
         }
 
         public void DumpResources(string outRoot)
