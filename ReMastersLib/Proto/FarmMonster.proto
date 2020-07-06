@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message FarmMonster {
+	int64 farm_monster_id = 1;
+	int64 trainer_id = 2;			// Trainer.pb
+	int32 nb_passives = 3;
+	bool is_shiny = 4;
+	int64 u5 = 5;					// same as trainer_id ?
+	int32 u6 = 6;
+}
+
+message FarmMonsterTable {
+	repeated FarmMonster entries = 1;
+}

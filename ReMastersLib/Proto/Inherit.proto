@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message Inherit {
+	int32 quest_group_id = 1;
+	int32 days = 2;				// days before the quest are automatically reset
+	int32 u3 = 3;
+}
+
+message InheritTable {
+	repeated Inherit entries = 1;
+}

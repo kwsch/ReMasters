@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message LegendQuestGroupSchedule {
+	int32 quest_group_id = 1;	// LegendQuestGroup.pb
+	string schedule_id = 2;		// Schedule.pb
+}
+
+message LegendQuestGroupScheduleTable {
+	repeated LegendQuestGroupSchedule entries = 1;
+}

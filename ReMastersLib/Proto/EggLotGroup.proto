@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message EggLotGroup {
+	int32 egg_lot_group_id = 1;
+	int64 farm_monster_id = 2;		// FarmMonster.pb
+	int32 weight = 3;
+}
+
+message EggLotGroupTable {
+	repeated EggLotGroup entries = 1;
+}

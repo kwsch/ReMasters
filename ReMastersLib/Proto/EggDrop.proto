@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message EggDrop {
+	int32 egg_drop_id = 1;
+	int32 rate = 2;				// per 1000
+	int64 u3 = 3;				// same as egg_drop_id
+	int32 u4 = 4;
+	bool is_regular = 5;
+}
+
+message EggDropTable {
+	repeated EggDrop entries = 1;
+}

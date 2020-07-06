@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message LegendQuestDamageReward {
+	int64 story_quest_id = 1;
+	int32 gauge = 2;
+	int32 percentage = 3;
+	int64 item_set_id_first = 4;
+	int64 item_set_id_general = 5;
+}
+
+message LegendQuestDamageRewardTable {
+	repeated LegendQuestDamageReward entries = 1;
+}

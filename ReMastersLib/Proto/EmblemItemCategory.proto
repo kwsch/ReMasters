@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message EmblemItemCategory {
+	int32 category = 1;
+	repeated int64 sub_categories = 2;	// bardge_item_minor_category_xx.lsd
+}
+
+message EmblemItemCategoryTable {
+	repeated EmblemItemCategory entries = 1;
+}
