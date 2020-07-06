@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message EggDropWeight {
+	int32 egg_drop_id = 1;		// EggDrop.pb
+	int64 item_id = 2;
+	int32 rate = 3;				// in %
+}
+
+message EggDropWeightTable {
+	repeated EggDropWeight entries = 1;
+}

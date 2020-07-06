@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message HomeFrequentlyGiveItemTrainerLotItem {
+	int32 item_lot_item_id = 1;
+	int64 item_set_id = 2;			// ItemSet.pb
+	int32 rate = 3;					// in %
+}
+
+message HomeFrequentlyGiveItemTrainerLotItemTable {
+	repeated HomeFrequentlyGiveItemTrainerLotItem entries = 1;
+}

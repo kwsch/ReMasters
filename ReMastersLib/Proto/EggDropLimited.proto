@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message EggDropLimited {
+	int32 egg_drop_id = 1;		// EggDrop.pb
+	string schedule_id = 2;		// Schedule.pb
+	int32 u3 = 3;
+	int32 u4 = 4;
+	int32 u5 = 5;
+	int32 u6 = 6;
+}
+
+message EggDropLimitedTable {
+	repeated EggDropLimited entries = 1;
+}

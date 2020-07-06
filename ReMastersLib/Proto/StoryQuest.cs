@@ -24,7 +24,7 @@ namespace ReMastersLib {
     static StoryQuestReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQcm90by9TdG9yeVF1ZXN0LnByb3RvEgxSZU1hc3RlcnNMaWIilgUKClN0",
+            "ChZQcm90by9TdG9yeVF1ZXN0LnByb3RvEgxSZU1hc3RlcnNMaWIi0gUKClN0",
             "b3J5UXVlc3QSFgoOc3RvcnlfcXVlc3RfaWQYASABKAQSFQoNcXVlc3RfbmFt",
             "ZV9pZBgCIAEoCRIQCghmaWVsZF9pZBgDIAEoBBIdChVyZXF1aXJlZF9jb25k",
             "aXRpb25faWQYBCABKAMSDwoHc29ydF9ieRgFIAEoBBIUCgxhcmVhX3Nwb3Rf",
@@ -39,16 +39,18 @@ namespace ReMastersLib {
             "bHV0aW9uX3F1ZXN0GBQgASgIEisKCnF1ZXN0X3R5cGUYFSABKA4yFy5SZU1h",
             "c3RlcnNMaWIuUXVlc3RUeXBlEhcKD2lzX3NlYXJjaF9xdWVzdBgWIAEoCBIV",
             "Cg1uZXh0X3F1ZXN0X2lkGBcgASgEEgsKA3UyNBgYIAEoBBILCgN1MjUYGSAB",
-            "KAQSCwoDdTI2GBogASgEEgsKA3UyNxgbIAEoBCI8Cg9TdG9yeVF1ZXN0VGFi",
-            "bGUSKQoHZW50cmllcxgBIAMoCzIYLlJlTWFzdGVyc0xpYi5TdG9yeVF1ZXN0",
-            "KlgKCkRpZmZpY3VsdHkSCAoETm9uZRAAEgoKBk5vcm1hbBABEggKBEhhcmQQ",
-            "AhIMCghWZXJ5SGFyZBADEg0KCVN1cGVySGFyZBAEEg0KCVVsdHJhSGFyZBAF",
-            "Kk0KCVF1ZXN0VHlwZRINCglNYWluU3RvcnkQABIQCgxUcmFpbmluZ0FyZWEQ",
-            "ARITCg9TeW5jUGFpclN0b3JpZXMQAhIKCgZFdmVudHMQA2IGcHJvdG8z"));
+            "KAQSCwoDdTI2GBogASgDEgsKA3UyNxgbIAEoAxILCgN1MjgYHCABKAMSCwoD",
+            "dTI5GB0gASgDEgsKA3UzMBgeIAEoAxITCgtlZ2dfZHJvcF9pZBgfIAEoAyI8",
+            "Cg9TdG9yeVF1ZXN0VGFibGUSKQoHZW50cmllcxgBIAMoCzIYLlJlTWFzdGVy",
+            "c0xpYi5TdG9yeVF1ZXN0KlgKCkRpZmZpY3VsdHkSCAoETm9uZRAAEgoKBk5v",
+            "cm1hbBABEggKBEhhcmQQAhIMCghWZXJ5SGFyZBADEg0KCVN1cGVySGFyZBAE",
+            "Eg0KCVVsdHJhSGFyZBAFKk0KCVF1ZXN0VHlwZRINCglNYWluU3RvcnkQABIQ",
+            "CgxUcmFpbmluZ0FyZWEQARITCg9TeW5jUGFpclN0b3JpZXMQAhIKCgZFdmVu",
+            "dHMQA2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::ReMastersLib.Difficulty), typeof(global::ReMastersLib.QuestType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.StoryQuest), global::ReMastersLib.StoryQuest.Parser, new[]{ "StoryQuestId", "QuestNameId", "FieldId", "RequiredConditionId", "SortBy", "AreaSpotId", "ItemSetId", "QuestGroupId", "FieldType", "ScheduleId", "PlayCountLimit", "ChapterOpenAnimation", "Difficulty", "WeekScheduleKeyword", "Debug", "DebugCategory", "RewardType", "ShowcasedItemId", "CharaQuestListItemId", "IsEvolutionQuest", "QuestType", "IsSearchQuest", "NextQuestId", "U24", "U25", "U26", "U27" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.StoryQuest), global::ReMastersLib.StoryQuest.Parser, new[]{ "StoryQuestId", "QuestNameId", "FieldId", "RequiredConditionId", "SortBy", "AreaSpotId", "ItemSetId", "QuestGroupId", "FieldType", "ScheduleId", "PlayCountLimit", "ChapterOpenAnimation", "Difficulty", "WeekScheduleKeyword", "Debug", "DebugCategory", "RewardType", "ShowcasedItemId", "CharaQuestListItemId", "IsEvolutionQuest", "QuestType", "IsSearchQuest", "NextQuestId", "U24", "U25", "U26", "U27", "U28", "U29", "U30", "EggDropId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.StoryQuestTable), global::ReMastersLib.StoryQuestTable.Parser, new[]{ "Entries" }, null, null, null)
           }));
     }
@@ -127,6 +129,10 @@ namespace ReMastersLib {
       u25_ = other.u25_;
       u26_ = other.u26_;
       u27_ = other.u27_;
+      u28_ = other.u28_;
+      u29_ = other.u29_;
+      u30_ = other.u30_;
+      eggDropId_ = other.eggDropId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -232,6 +238,9 @@ namespace ReMastersLib {
     /// <summary>Field number for the "field_type" field.</summary>
     public const int FieldTypeFieldNumber = 9;
     private int fieldType_;
+    /// <summary>
+    /// 0: No battle, 1: Normal, 2: Co-op
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int FieldType {
       get { return fieldType_; }
@@ -424,9 +433,9 @@ namespace ReMastersLib {
 
     /// <summary>Field number for the "u26" field.</summary>
     public const int U26FieldNumber = 26;
-    private ulong u26_;
+    private long u26_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U26 {
+    public long U26 {
       get { return u26_; }
       set {
         u26_ = value;
@@ -435,12 +444,59 @@ namespace ReMastersLib {
 
     /// <summary>Field number for the "u27" field.</summary>
     public const int U27FieldNumber = 27;
-    private ulong u27_;
+    private long u27_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong U27 {
+    public long U27 {
       get { return u27_; }
       set {
         u27_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u28" field.</summary>
+    public const int U28FieldNumber = 28;
+    private long u28_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long U28 {
+      get { return u28_; }
+      set {
+        u28_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u29" field.</summary>
+    public const int U29FieldNumber = 29;
+    private long u29_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long U29 {
+      get { return u29_; }
+      set {
+        u29_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u30" field.</summary>
+    public const int U30FieldNumber = 30;
+    private long u30_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long U30 {
+      get { return u30_; }
+      set {
+        u30_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "egg_drop_id" field.</summary>
+    public const int EggDropIdFieldNumber = 31;
+    private long eggDropId_;
+    /// <summary>
+    /// EggDrop.pb
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long EggDropId {
+      get { return eggDropId_; }
+      set {
+        eggDropId_ = value;
       }
     }
 
@@ -484,6 +540,10 @@ namespace ReMastersLib {
       if (U25 != other.U25) return false;
       if (U26 != other.U26) return false;
       if (U27 != other.U27) return false;
+      if (U28 != other.U28) return false;
+      if (U29 != other.U29) return false;
+      if (U30 != other.U30) return false;
+      if (EggDropId != other.EggDropId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -515,8 +575,12 @@ namespace ReMastersLib {
       if (NextQuestId != 0UL) hash ^= NextQuestId.GetHashCode();
       if (U24 != 0UL) hash ^= U24.GetHashCode();
       if (U25 != 0UL) hash ^= U25.GetHashCode();
-      if (U26 != 0UL) hash ^= U26.GetHashCode();
-      if (U27 != 0UL) hash ^= U27.GetHashCode();
+      if (U26 != 0L) hash ^= U26.GetHashCode();
+      if (U27 != 0L) hash ^= U27.GetHashCode();
+      if (U28 != 0L) hash ^= U28.GetHashCode();
+      if (U29 != 0L) hash ^= U29.GetHashCode();
+      if (U30 != 0L) hash ^= U30.GetHashCode();
+      if (EggDropId != 0L) hash ^= EggDropId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -630,13 +694,29 @@ namespace ReMastersLib {
         output.WriteRawTag(200, 1);
         output.WriteUInt64(U25);
       }
-      if (U26 != 0UL) {
+      if (U26 != 0L) {
         output.WriteRawTag(208, 1);
-        output.WriteUInt64(U26);
+        output.WriteInt64(U26);
       }
-      if (U27 != 0UL) {
+      if (U27 != 0L) {
         output.WriteRawTag(216, 1);
-        output.WriteUInt64(U27);
+        output.WriteInt64(U27);
+      }
+      if (U28 != 0L) {
+        output.WriteRawTag(224, 1);
+        output.WriteInt64(U28);
+      }
+      if (U29 != 0L) {
+        output.WriteRawTag(232, 1);
+        output.WriteInt64(U29);
+      }
+      if (U30 != 0L) {
+        output.WriteRawTag(240, 1);
+        output.WriteInt64(U30);
+      }
+      if (EggDropId != 0L) {
+        output.WriteRawTag(248, 1);
+        output.WriteInt64(EggDropId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -721,11 +801,23 @@ namespace ReMastersLib {
       if (U25 != 0UL) {
         size += 2 + pb::CodedOutputStream.ComputeUInt64Size(U25);
       }
-      if (U26 != 0UL) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(U26);
+      if (U26 != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(U26);
       }
-      if (U27 != 0UL) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(U27);
+      if (U27 != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(U27);
+      }
+      if (U28 != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(U28);
+      }
+      if (U29 != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(U29);
+      }
+      if (U30 != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(U30);
+      }
+      if (EggDropId != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(EggDropId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -813,11 +905,23 @@ namespace ReMastersLib {
       if (other.U25 != 0UL) {
         U25 = other.U25;
       }
-      if (other.U26 != 0UL) {
+      if (other.U26 != 0L) {
         U26 = other.U26;
       }
-      if (other.U27 != 0UL) {
+      if (other.U27 != 0L) {
         U27 = other.U27;
+      }
+      if (other.U28 != 0L) {
+        U28 = other.U28;
+      }
+      if (other.U29 != 0L) {
+        U29 = other.U29;
+      }
+      if (other.U30 != 0L) {
+        U30 = other.U30;
+      }
+      if (other.EggDropId != 0L) {
+        EggDropId = other.EggDropId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -931,11 +1035,27 @@ namespace ReMastersLib {
             break;
           }
           case 208: {
-            U26 = input.ReadUInt64();
+            U26 = input.ReadInt64();
             break;
           }
           case 216: {
-            U27 = input.ReadUInt64();
+            U27 = input.ReadInt64();
+            break;
+          }
+          case 224: {
+            U28 = input.ReadInt64();
+            break;
+          }
+          case 232: {
+            U29 = input.ReadInt64();
+            break;
+          }
+          case 240: {
+            U30 = input.ReadInt64();
+            break;
+          }
+          case 248: {
+            EggDropId = input.ReadInt64();
             break;
           }
         }

@@ -11,7 +11,7 @@ message StoryQuest {
 	uint64 area_spot_id = 6;
 	uint64 item_set_id = 7;					// ItemSet.pb (First-time rewards)
 	uint64 quest_group_id = 8;
-	int32 field_type = 9;
+	int32 field_type = 9;					// 0: No battle, 1: Normal, 2: Co-op
 	string schedule_id = 10;				// Schedule.pb
 	int64 play_count_limit = 11;
 	bool chapter_open_animation = 12;
@@ -28,8 +28,12 @@ message StoryQuest {
 	uint64 next_quest_id = 23;
 	uint64 u24 = 24;
 	uint64 u25 = 25;
-	uint64 u26 = 26;
-	uint64 u27 = 27;
+	int64 u26 = 26;
+	int64 u27 = 27;
+	int64 u28 = 28;
+	int64 u29 = 29;
+	int64 u30 = 30;
+	int64 egg_drop_id = 31;				// EggDrop.pb
 }
 
 enum Difficulty {
