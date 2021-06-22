@@ -136,8 +136,14 @@ namespace ReMastersLib
 
                         var resourcePath = Path.Combine(DownloadPath, $"{folder}", $"{fileID}");
 
-                        if (!File.Exists(resourcePath) && name.StartsWith("sound/Bundle"))
+                        if (!File.Exists(resourcePath))
+                        {
+                            if (!name.StartsWith("sound/Bundle"))
+                            {
+                                Console.WriteLine($"Failed to find {name} ({resourcePath})");
+                            }
                             continue;
+                        }
 
                         var sf = new SoundFile(File.ReadAllBytes(resourcePath));
 
