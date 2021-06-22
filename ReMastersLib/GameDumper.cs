@@ -1,6 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Text;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using K4os.Hash.xxHash;
+using ReMastersLib.Sound;
 
 namespace ReMastersLib
 {
@@ -103,6 +109,39 @@ namespace ReMastersLib
                 DumpABND(abnd, outPath);
 
                 processed.Add(fn);
+            }
+        }
+
+        public void DumpSound(string outRoot)
+        {
+            foreach (var audioType in new[] {"BGM", "SE", "Voice_en"})
+            {
+                var audioJson = JObject.Parse(File.ReadAllText(Path.Combine(outRoot, "sound", $"{audioType}.json")));
+                foreach (var audioBank in audioJson["audioBanks"])
+                {
+                    foreach (var audioResource in audioBank["audioResources"])
+                    {
+                        var name = audioResource["name"].ToString();
+                        var format = audioResource["format"].ToString();
+                        if (format != "ogg") throw new ArgumentException($"Unknown format for {name}: {format}");
+
+                        var fileID = XXH64.DigestOf(Encoding.ASCII.GetBytes($"{name}.{format}"));
+                        var folder = fileID;
+                        while (folder >= 10)
+                            folder /= 10;
+
+                        var resourcePath = Path.Combine(DownloadPath, $"{folder}", $"{fileID}");
+
+                        if (!File.Exists(resourcePath) && name.StartsWith("sound/Bundle"))
+                            continue;
+
+                        var sf = new SoundFile(File.ReadAllBytes(resourcePath));
+
+                        var outPath = $"{Path.Combine(outRoot, name.Replace("/", $"{Path.DirectorySeparatorChar}"))}.{format}";
+                        Directory.CreateDirectory(Path.GetDirectoryName(outPath));
+                        File.WriteAllBytes(outPath, sf.Data);
+                    }
+                }
             }
         }
 

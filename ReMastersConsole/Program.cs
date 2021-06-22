@@ -15,10 +15,11 @@ namespace ReMastersConsole
 
             var paths = new GameDataPaths
             {
-                UnpackedAPKPath = @"D:\Kurt\Desktop\masters",
-                DownloadPath = @"D:\Kurt\Desktop\masters\dl\data\com.dena.a12026418\files\downloaded-resource-dir",
-                ShardPath = @"D:\Kurt\Desktop\masters\dl\downloaded-resource-dir\downloaded-resource-dir\assetdb_shard",
-                OutputPath = @"D:\masterdump",
+                UnpackedAPKPath = @"E:\masters-inv\2.9.0\apk",
+                DownloadPath = @"E:\masters-inv\2.9.0\downloaded-resource-dir",
+                ShardPath = @"E:\masters-inv\2.9.0\downloaded-resource-dir\assetdb_shard",
+
+                OutputPath = @"E:\masters-inv\2.9.0\dump",
             };
 
             var settings = new DumpSettings(paths)
@@ -27,7 +28,8 @@ namespace ReMastersConsole
                 DumpStringsAPK = true,
 
                 DumpResources = true,
-                DumpProto = true,
+                DumpSound = true,
+                DumpProto = false,
             };
 
             settings.DumpGameData();

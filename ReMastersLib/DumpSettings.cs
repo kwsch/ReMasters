@@ -5,6 +5,7 @@
         public bool DumpStringsAPK { get; set; } = true;
         public bool DumpStringsDL { get; set; } = true;
         public bool DumpResources { get; set; } = true;
+        public bool DumpSound { get; set; } = true;
         public bool DumpProto { get; set; } = true;
 
         public readonly GameDataPaths Paths;
@@ -23,6 +24,8 @@
                 dumper.DumpResources(Paths.OutputPath);
             if (DumpStringsDL)
                 dumper.DumpMessagesDownload(Paths.OutputPath);
+            if (DumpSound)
+                dumper.DumpSound(Paths.OutputPath);
             if (DumpProto)
                 dumper.DumpProto(Paths.OutputPath);
         }
