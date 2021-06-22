@@ -114,9 +114,13 @@ namespace ReMastersLib
 
         public void DumpSound(string outRoot)
         {
-            foreach (var audioType in new[] {"BGM", "SE", "Voice_en"})
+            foreach (var audioType in new[] {"BGM", "SE", "Voice_en", "Voice_ja"})
             {
-                var audioJson = JObject.Parse(File.ReadAllText(Path.Combine(outRoot, "sound", $"{audioType}.json")));
+                var jsonPath = Path.Combine(outRoot, "sound", $"{audioType}.json");
+                if (!File.Exists(jsonPath))
+                    continue;
+
+                var audioJson = JObject.Parse(File.ReadAllText(jsonPath));
                 foreach (var audioBank in audioJson["audioBanks"])
                 {
                     foreach (var audioResource in audioBank["audioResources"])
