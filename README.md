@@ -11,11 +11,6 @@ In `Program.cs`:
 
 When the Console project is run the program will decrypt, decompress, and export as much content as possible.
 
-### Future:
-
-- Sound dumping
-- Protobuf structure documentation &amp; file dumping
-
 ### Credits:
 
 By [SciresM](https://github.com/SciresM/) &amp; [Kaphotics](https://github.com/kwsch/)
