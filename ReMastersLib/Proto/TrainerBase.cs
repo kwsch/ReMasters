@@ -25,17 +25,17 @@ namespace ReMastersLib {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdQcm90by9UcmFpbmVyQmFzZS5wcm90bxIMUmVNYXN0ZXJzTGliIugBCgtU",
-            "cmFpbmVyQmFzZRIXCg90cmFpbmVyX2Jhc2VfaWQYASABKAQSEAoIYWN0b3Jf",
-            "aWQYAiABKAkSFwoPdHJhaW5lcl9uYW1lX2lkGAMgASgJEgoKAnU0GAQgASgF",
-            "EgoKAnU1GAUgASgJEgoKAnU2GAYgASgFEgoKAnU3GAcgASgFEg4KBmdlbmRl",
-            "chgIIAEoBRITCgtwb2tlYmFsbF9pZBgJIAEoCRISCgppc19nZW5lcmljGAog",
-            "ASgFEhUKDWJhdHRsZV9iZ21faWQYCyABKAkSFQoNcmVzdWx0X2JnbV9pZBgM",
+            "cmFpbmVyQmFzZRIKCgJpZBgBIAEoBBIQCghhY3Rvcl9pZBgCIAEoCRIXCg90",
+            "cmFpbmVyX25hbWVfaWQYAyABKAkSCgoCdTQYBCABKAUSCgoCdTUYBSABKAkS",
+            "CgoCdTYYBiABKAUSCgoCdTcYByABKAUSDgoGZ2VuZGVyGAggASgFEhMKC3Bv",
+            "a2ViYWxsX2lkGAkgASgJEhIKCmlzX2dlbmVyaWMYCiABKAUSFQoNYmF0dGxl",
+            "X2JnbV9pZBgLIAEoCRIVCg1yZXN1bHRfYmdtX2lkGAwgASgJEgsKA3UxMxgN",
             "IAEoCSI+ChBUcmFpbmVyQmFzZVRhYmxlEioKB2VudHJpZXMYASADKAsyGS5S",
             "ZU1hc3RlcnNMaWIuVHJhaW5lckJhc2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.TrainerBase), global::ReMastersLib.TrainerBase.Parser, new[]{ "TrainerBaseId", "ActorId", "TrainerNameId", "U4", "U5", "U6", "U7", "Gender", "PokeballId", "IsGeneric", "BattleBgmId", "ResultBgmId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.TrainerBase), global::ReMastersLib.TrainerBase.Parser, new[]{ "Id", "ActorId", "TrainerNameId", "U4", "U5", "U6", "U7", "Gender", "PokeballId", "IsGeneric", "BattleBgmId", "ResultBgmId", "U13" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.TrainerBaseTable), global::ReMastersLib.TrainerBaseTable.Parser, new[]{ "Entries" }, null, null, null)
           }));
     }
@@ -68,7 +68,7 @@ namespace ReMastersLib {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TrainerBase(TrainerBase other) : this() {
-      trainerBaseId_ = other.trainerBaseId_;
+      id_ = other.id_;
       actorId_ = other.actorId_;
       trainerNameId_ = other.trainerNameId_;
       u4_ = other.u4_;
@@ -80,6 +80,7 @@ namespace ReMastersLib {
       isGeneric_ = other.isGeneric_;
       battleBgmId_ = other.battleBgmId_;
       resultBgmId_ = other.resultBgmId_;
+      u13_ = other.u13_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,14 +89,14 @@ namespace ReMastersLib {
       return new TrainerBase(this);
     }
 
-    /// <summary>Field number for the "trainer_base_id" field.</summary>
-    public const int TrainerBaseIdFieldNumber = 1;
-    private ulong trainerBaseId_;
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private ulong id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong TrainerBaseId {
-      get { return trainerBaseId_; }
+    public ulong Id {
+      get { return id_; }
       set {
-        trainerBaseId_ = value;
+        id_ = value;
       }
     }
 
@@ -172,7 +173,7 @@ namespace ReMastersLib {
     public const int GenderFieldNumber = 8;
     private int gender_;
     /// <summary>
-    /// 1 for male, 2 for female
+    /// 1: Male, 2: Female
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Gender {
@@ -197,7 +198,7 @@ namespace ReMastersLib {
     public const int IsGenericFieldNumber = 10;
     private int isGeneric_;
     /// <summary>
-    /// 1 for generic trainers, else 0
+    /// 0: Non-generic character, 1: Generic character
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int IsGeneric {
@@ -210,6 +211,9 @@ namespace ReMastersLib {
     /// <summary>Field number for the "battle_bgm_id" field.</summary>
     public const int BattleBgmIdFieldNumber = 11;
     private string battleBgmId_ = "";
+    /// <summary>
+    /// BGM name in sound/BGM.json
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string BattleBgmId {
       get { return battleBgmId_; }
@@ -221,14 +225,22 @@ namespace ReMastersLib {
     /// <summary>Field number for the "result_bgm_id" field.</summary>
     public const int ResultBgmIdFieldNumber = 12;
     private string resultBgmId_ = "";
-    /// <summary>
-    /// battle result theme
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ResultBgmId {
       get { return resultBgmId_; }
       set {
         resultBgmId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "u13" field.</summary>
+    public const int U13FieldNumber = 13;
+    private string u13_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string U13 {
+      get { return u13_; }
+      set {
+        u13_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -245,7 +257,7 @@ namespace ReMastersLib {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TrainerBaseId != other.TrainerBaseId) return false;
+      if (Id != other.Id) return false;
       if (ActorId != other.ActorId) return false;
       if (TrainerNameId != other.TrainerNameId) return false;
       if (U4 != other.U4) return false;
@@ -257,13 +269,14 @@ namespace ReMastersLib {
       if (IsGeneric != other.IsGeneric) return false;
       if (BattleBgmId != other.BattleBgmId) return false;
       if (ResultBgmId != other.ResultBgmId) return false;
+      if (U13 != other.U13) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (TrainerBaseId != 0UL) hash ^= TrainerBaseId.GetHashCode();
+      if (Id != 0UL) hash ^= Id.GetHashCode();
       if (ActorId.Length != 0) hash ^= ActorId.GetHashCode();
       if (TrainerNameId.Length != 0) hash ^= TrainerNameId.GetHashCode();
       if (U4 != 0) hash ^= U4.GetHashCode();
@@ -275,6 +288,7 @@ namespace ReMastersLib {
       if (IsGeneric != 0) hash ^= IsGeneric.GetHashCode();
       if (BattleBgmId.Length != 0) hash ^= BattleBgmId.GetHashCode();
       if (ResultBgmId.Length != 0) hash ^= ResultBgmId.GetHashCode();
+      if (U13.Length != 0) hash ^= U13.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -288,9 +302,9 @@ namespace ReMastersLib {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (TrainerBaseId != 0UL) {
+      if (Id != 0UL) {
         output.WriteRawTag(8);
-        output.WriteUInt64(TrainerBaseId);
+        output.WriteUInt64(Id);
       }
       if (ActorId.Length != 0) {
         output.WriteRawTag(18);
@@ -336,6 +350,10 @@ namespace ReMastersLib {
         output.WriteRawTag(98);
         output.WriteString(ResultBgmId);
       }
+      if (U13.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(U13);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -344,8 +362,8 @@ namespace ReMastersLib {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (TrainerBaseId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TrainerBaseId);
+      if (Id != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Id);
       }
       if (ActorId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ActorId);
@@ -380,6 +398,9 @@ namespace ReMastersLib {
       if (ResultBgmId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ResultBgmId);
       }
+      if (U13.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(U13);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -391,8 +412,8 @@ namespace ReMastersLib {
       if (other == null) {
         return;
       }
-      if (other.TrainerBaseId != 0UL) {
-        TrainerBaseId = other.TrainerBaseId;
+      if (other.Id != 0UL) {
+        Id = other.Id;
       }
       if (other.ActorId.Length != 0) {
         ActorId = other.ActorId;
@@ -427,6 +448,9 @@ namespace ReMastersLib {
       if (other.ResultBgmId.Length != 0) {
         ResultBgmId = other.ResultBgmId;
       }
+      if (other.U13.Length != 0) {
+        U13 = other.U13;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -439,7 +463,7 @@ namespace ReMastersLib {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            TrainerBaseId = input.ReadUInt64();
+            Id = input.ReadUInt64();
             break;
           }
           case 18: {
@@ -484,6 +508,10 @@ namespace ReMastersLib {
           }
           case 98: {
             ResultBgmId = input.ReadString();
+            break;
+          }
+          case 106: {
+            U13 = input.ReadString();
             break;
           }
         }

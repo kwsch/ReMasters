@@ -24,22 +24,26 @@ namespace ReMastersLib {
     static TrainerReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNQcm90by9UcmFpbmVyLnByb3RvEgxSZU1hc3RlcnNMaWIioQMKB1RyYWlu",
-            "ZXISEgoKdHJhaW5lcl9pZBgBIAEoBBIKCgJ1MhgCIAEoBRIUCgxzY291dF9t",
-            "ZXRob2QYAyABKAUSFwoPdHJhaW5lcl9iYXNlX2lkGAQgASgFEgwKBHR5cGUY",
-            "BSABKAUSDgoGcmFyaXR5GAYgASgFEgwKBHJvbGUYByABKAUSEgoKbW9uc3Rl",
-            "cl9pZBgIIAEoBBIRCgltb3ZlXzFfaWQYCSABKAUSEQoJbW92ZV8yX2lkGAog",
-            "ASgFEhEKCW1vdmVfM19pZBgLIAEoBRIRCgltb3ZlXzRfaWQYDCABKAUSEQoJ",
-            "d2Vha190eXBlGA0gASgFEgsKA3UxNBgOIAEoBRILCgN1MTUYDyABKAUSFAoM",
-            "cGFzc2l2ZV8xX2lkGBAgASgFEhQKDHBhc3NpdmVfMl9pZBgRIAEoBRIUCgxw",
-            "YXNzaXZlXzNfaWQYEiABKAUSFAoMcGFzc2l2ZV80X2lkGBMgASgFEhQKDHBh",
-            "c3NpdmVfNV9pZBgUIAEoBRILCgN1MjEYFSABKAkSEwoLc2NoZWR1bGVfaWQY",
-            "FiABKAkiNgoMVHJhaW5lclRhYmxlEiYKB2VudHJpZXMYASADKAsyFS5SZU1h",
-            "c3RlcnNMaWIuVHJhaW5lcmIGcHJvdG8z"));
+            "ChNQcm90by9UcmFpbmVyLnByb3RvEgxSZU1hc3RlcnNMaWIi4wQKB1RyYWlu",
+            "ZXISEgoKdHJhaW5lcl9pZBgBIAEoAxIUCgx0cmFpbmVyX2tpbmQYAiABKAUS",
+            "FAoMc2NvdXRfbWV0aG9kGAMgASgFEhMKC2V4Y2x1c2l2aXR5GAQgASgDEhcK",
+            "D3RyYWluZXJfYmFzZV9pZBgFIAEoBRIMCgR0eXBlGAYgASgFEg4KBnJhcml0",
+            "eRgHIAEoBRIMCgRyb2xlGAggASgFEhIKCm1vbnN0ZXJfaWQYCSABKAQSEQoJ",
+            "bW92ZV8xX2lkGAogASgFEhEKCW1vdmVfMl9pZBgLIAEoBRIRCgltb3ZlXzNf",
+            "aWQYDCABKAUSEQoJbW92ZV80X2lkGA0gASgFEhAKCHdlYWtuZXNzGA4gASgF",
+            "EhMKC3N0b3J5X3F1ZXN0GA8gASgEEgsKA3UxNhgQIAEoBRIUCgxwYXNzaXZl",
+            "XzFfaWQYESABKAUSFAoMcGFzc2l2ZV8yX2lkGBIgASgFEhQKDHBhc3NpdmVf",
+            "M19pZBgTIAEoBRIUCgxwYXNzaXZlXzRfaWQYFCABKAUSFwoPdGVhbV9za2ls",
+            "bF8xX2lkGBUgASgFEhcKD3RlYW1fc2tpbGxfMl9pZBgWIAEoBRIXCg90ZWFt",
+            "X3NraWxsXzNfaWQYFyABKAUSFwoPdGVhbV9za2lsbF80X2lkGBggASgFEhcK",
+            "D3RlYW1fc2tpbGxfNV9pZBgZIAEoBRILCgN1MjYYGiABKAUSCwoDdTI3GBsg",
+            "ASgFEg4KBm51bWJlchgcIAEoBRITCgtzY2hlZHVsZV9pZBgdIAEoCRIWCg5l",
+            "eF9zY2hlZHVsZV9pZBgeIAEoCSI2CgxUcmFpbmVyVGFibGUSJgoHZW50cmll",
+            "cxgBIAMoCzIVLlJlTWFzdGVyc0xpYi5UcmFpbmVyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.Trainer), global::ReMastersLib.Trainer.Parser, new[]{ "TrainerId", "U2", "ScoutMethod", "TrainerBaseId", "Type", "Rarity", "Role", "MonsterId", "Move1Id", "Move2Id", "Move3Id", "Move4Id", "WeakType", "U14", "U15", "Passive1Id", "Passive2Id", "Passive3Id", "Passive4Id", "Passive5Id", "U21", "ScheduleId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.Trainer), global::ReMastersLib.Trainer.Parser, new[]{ "TrainerId", "TrainerKind", "ScoutMethod", "Exclusivity", "TrainerBaseId", "Type", "Rarity", "Role", "MonsterId", "Move1Id", "Move2Id", "Move3Id", "Move4Id", "Weakness", "StoryQuest", "U16", "Passive1Id", "Passive2Id", "Passive3Id", "Passive4Id", "TeamSkill1Id", "TeamSkill2Id", "TeamSkill3Id", "TeamSkill4Id", "TeamSkill5Id", "U26", "U27", "Number", "ScheduleId", "ExScheduleId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.TrainerTable), global::ReMastersLib.TrainerTable.Parser, new[]{ "Entries" }, null, null, null)
           }));
     }
@@ -73,8 +77,9 @@ namespace ReMastersLib {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Trainer(Trainer other) : this() {
       trainerId_ = other.trainerId_;
-      u2_ = other.u2_;
+      trainerKind_ = other.trainerKind_;
       scoutMethod_ = other.scoutMethod_;
+      exclusivity_ = other.exclusivity_;
       trainerBaseId_ = other.trainerBaseId_;
       type_ = other.type_;
       rarity_ = other.rarity_;
@@ -84,16 +89,23 @@ namespace ReMastersLib {
       move2Id_ = other.move2Id_;
       move3Id_ = other.move3Id_;
       move4Id_ = other.move4Id_;
-      weakType_ = other.weakType_;
-      u14_ = other.u14_;
-      u15_ = other.u15_;
+      weakness_ = other.weakness_;
+      storyQuest_ = other.storyQuest_;
+      u16_ = other.u16_;
       passive1Id_ = other.passive1Id_;
       passive2Id_ = other.passive2Id_;
       passive3Id_ = other.passive3Id_;
       passive4Id_ = other.passive4Id_;
-      passive5Id_ = other.passive5Id_;
-      u21_ = other.u21_;
+      teamSkill1Id_ = other.teamSkill1Id_;
+      teamSkill2Id_ = other.teamSkill2Id_;
+      teamSkill3Id_ = other.teamSkill3Id_;
+      teamSkill4Id_ = other.teamSkill4Id_;
+      teamSkill5Id_ = other.teamSkill5Id_;
+      u26_ = other.u26_;
+      u27_ = other.u27_;
+      number_ = other.number_;
       scheduleId_ = other.scheduleId_;
+      exScheduleId_ = other.exScheduleId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -104,26 +116,26 @@ namespace ReMastersLib {
 
     /// <summary>Field number for the "trainer_id" field.</summary>
     public const int TrainerIdFieldNumber = 1;
-    private ulong trainerId_;
+    private long trainerId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong TrainerId {
+    public long TrainerId {
       get { return trainerId_; }
       set {
         trainerId_ = value;
       }
     }
 
-    /// <summary>Field number for the "u2" field.</summary>
-    public const int U2FieldNumber = 2;
-    private int u2_;
+    /// <summary>Field number for the "trainer_kind" field.</summary>
+    public const int TrainerKindFieldNumber = 2;
+    private int trainerKind_;
     /// <summary>
-    /// 1 for the mc, 2 otherwise
+    /// 1: Main Character, 2: Other
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int U2 {
-      get { return u2_; }
+    public int TrainerKind {
+      get { return trainerKind_; }
       set {
-        u2_ = value;
+        trainerKind_ = value;
       }
     }
 
@@ -131,7 +143,7 @@ namespace ReMastersLib {
     public const int ScoutMethodFieldNumber = 3;
     private int scoutMethod_;
     /// <summary>
-    /// 1 for gacha, 2 for story
+    /// 1: Gacha / BP, 2: Story, 3: Egg
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int ScoutMethod {
@@ -141,9 +153,26 @@ namespace ReMastersLib {
       }
     }
 
+    /// <summary>Field number for the "exclusivity" field.</summary>
+    public const int ExclusivityFieldNumber = 4;
+    private long exclusivity_;
+    /// <summary>
+    /// 1: Regular, 2: Pokéfair / Master Fair, 3: Seasonal
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Exclusivity {
+      get { return exclusivity_; }
+      set {
+        exclusivity_ = value;
+      }
+    }
+
     /// <summary>Field number for the "trainer_base_id" field.</summary>
-    public const int TrainerBaseIdFieldNumber = 4;
+    public const int TrainerBaseIdFieldNumber = 5;
     private int trainerBaseId_;
+    /// <summary>
+    /// TrainerBase.pb
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int TrainerBaseId {
       get { return trainerBaseId_; }
@@ -153,10 +182,10 @@ namespace ReMastersLib {
     }
 
     /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 5;
+    public const int TypeFieldNumber = 6;
     private int type_;
     /// <summary>
-    /// motif_type_name_en.lsd
+    /// motif_type_name_xx.lsd
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Type {
@@ -167,7 +196,7 @@ namespace ReMastersLib {
     }
 
     /// <summary>Field number for the "rarity" field.</summary>
-    public const int RarityFieldNumber = 6;
+    public const int RarityFieldNumber = 7;
     private int rarity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Rarity {
@@ -178,10 +207,10 @@ namespace ReMastersLib {
     }
 
     /// <summary>Field number for the "role" field.</summary>
-    public const int RoleFieldNumber = 7;
+    public const int RoleFieldNumber = 8;
     private int role_;
     /// <summary>
-    /// role_type_name_en.lsd (0 = Phy Strike)
+    /// role_type_name_xx.lsd (0: Physical Strike)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Role {
@@ -192,8 +221,11 @@ namespace ReMastersLib {
     }
 
     /// <summary>Field number for the "monster_id" field.</summary>
-    public const int MonsterIdFieldNumber = 8;
+    public const int MonsterIdFieldNumber = 9;
     private ulong monsterId_;
+    /// <summary>
+    /// Monster.pb
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong MonsterId {
       get { return monsterId_; }
@@ -203,8 +235,11 @@ namespace ReMastersLib {
     }
 
     /// <summary>Field number for the "move_1_id" field.</summary>
-    public const int Move1IdFieldNumber = 9;
+    public const int Move1IdFieldNumber = 10;
     private int move1Id_;
+    /// <summary>
+    /// Move.pb
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Move1Id {
       get { return move1Id_; }
@@ -214,7 +249,7 @@ namespace ReMastersLib {
     }
 
     /// <summary>Field number for the "move_2_id" field.</summary>
-    public const int Move2IdFieldNumber = 10;
+    public const int Move2IdFieldNumber = 11;
     private int move2Id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Move2Id {
@@ -225,7 +260,7 @@ namespace ReMastersLib {
     }
 
     /// <summary>Field number for the "move_3_id" field.</summary>
-    public const int Move3IdFieldNumber = 11;
+    public const int Move3IdFieldNumber = 12;
     private int move3Id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Move3Id {
@@ -236,7 +271,7 @@ namespace ReMastersLib {
     }
 
     /// <summary>Field number for the "move_4_id" field.</summary>
-    public const int Move4IdFieldNumber = 12;
+    public const int Move4IdFieldNumber = 13;
     private int move4Id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Move4Id {
@@ -246,45 +281,51 @@ namespace ReMastersLib {
       }
     }
 
-    /// <summary>Field number for the "weak_type" field.</summary>
-    public const int WeakTypeFieldNumber = 13;
-    private int weakType_;
+    /// <summary>Field number for the "weakness" field.</summary>
+    public const int WeaknessFieldNumber = 14;
+    private int weakness_;
     /// <summary>
-    /// motif_type_name_en.lsd
+    /// motif_type_name_xx.lsd
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int WeakType {
-      get { return weakType_; }
+    public int Weakness {
+      get { return weakness_; }
       set {
-        weakType_ = value;
+        weakness_ = value;
       }
     }
 
-    /// <summary>Field number for the "u14" field.</summary>
-    public const int U14FieldNumber = 14;
-    private int u14_;
+    /// <summary>Field number for the "story_quest" field.</summary>
+    public const int StoryQuestFieldNumber = 15;
+    private ulong storyQuest_;
+    /// <summary>
+    /// Sync Pair Story quest ID (-1 if none)
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int U14 {
-      get { return u14_; }
+    public ulong StoryQuest {
+      get { return storyQuest_; }
       set {
-        u14_ = value;
+        storyQuest_ = value;
       }
     }
 
-    /// <summary>Field number for the "u15" field.</summary>
-    public const int U15FieldNumber = 15;
-    private int u15_;
+    /// <summary>Field number for the "u16" field.</summary>
+    public const int U16FieldNumber = 16;
+    private int u16_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int U15 {
-      get { return u15_; }
+    public int U16 {
+      get { return u16_; }
       set {
-        u15_ = value;
+        u16_ = value;
       }
     }
 
     /// <summary>Field number for the "passive_1_id" field.</summary>
-    public const int Passive1IdFieldNumber = 16;
+    public const int Passive1IdFieldNumber = 17;
     private int passive1Id_;
+    /// <summary>
+    /// passive_skill_name_xx.lsd / passive_skill_description_xx.lsd
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Passive1Id {
       get { return passive1Id_; }
@@ -294,7 +335,7 @@ namespace ReMastersLib {
     }
 
     /// <summary>Field number for the "passive_2_id" field.</summary>
-    public const int Passive2IdFieldNumber = 17;
+    public const int Passive2IdFieldNumber = 18;
     private int passive2Id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Passive2Id {
@@ -305,7 +346,7 @@ namespace ReMastersLib {
     }
 
     /// <summary>Field number for the "passive_3_id" field.</summary>
-    public const int Passive3IdFieldNumber = 18;
+    public const int Passive3IdFieldNumber = 19;
     private int passive3Id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Passive3Id {
@@ -316,7 +357,7 @@ namespace ReMastersLib {
     }
 
     /// <summary>Field number for the "passive_4_id" field.</summary>
-    public const int Passive4IdFieldNumber = 19;
+    public const int Passive4IdFieldNumber = 20;
     private int passive4Id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Passive4Id {
@@ -326,36 +367,125 @@ namespace ReMastersLib {
       }
     }
 
-    /// <summary>Field number for the "passive_5_id" field.</summary>
-    public const int Passive5IdFieldNumber = 20;
-    private int passive5Id_;
+    /// <summary>Field number for the "team_skill_1_id" field.</summary>
+    public const int TeamSkill1IdFieldNumber = 21;
+    private int teamSkill1Id_;
+    /// <summary>
+    /// TeamSkill.pb
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Passive5Id {
-      get { return passive5Id_; }
+    public int TeamSkill1Id {
+      get { return teamSkill1Id_; }
       set {
-        passive5Id_ = value;
+        teamSkill1Id_ = value;
       }
     }
 
-    /// <summary>Field number for the "u21" field.</summary>
-    public const int U21FieldNumber = 21;
-    private string u21_ = "";
+    /// <summary>Field number for the "team_skill_2_id" field.</summary>
+    public const int TeamSkill2IdFieldNumber = 22;
+    private int teamSkill2Id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string U21 {
-      get { return u21_; }
+    public int TeamSkill2Id {
+      get { return teamSkill2Id_; }
       set {
-        u21_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        teamSkill2Id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "team_skill_3_id" field.</summary>
+    public const int TeamSkill3IdFieldNumber = 23;
+    private int teamSkill3Id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TeamSkill3Id {
+      get { return teamSkill3Id_; }
+      set {
+        teamSkill3Id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "team_skill_4_id" field.</summary>
+    public const int TeamSkill4IdFieldNumber = 24;
+    private int teamSkill4Id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TeamSkill4Id {
+      get { return teamSkill4Id_; }
+      set {
+        teamSkill4Id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "team_skill_5_id" field.</summary>
+    public const int TeamSkill5IdFieldNumber = 25;
+    private int teamSkill5Id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TeamSkill5Id {
+      get { return teamSkill5Id_; }
+      set {
+        teamSkill5Id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u26" field.</summary>
+    public const int U26FieldNumber = 26;
+    private int u26_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int U26 {
+      get { return u26_; }
+      set {
+        u26_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u27" field.</summary>
+    public const int U27FieldNumber = 27;
+    private int u27_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int U27 {
+      get { return u27_; }
+      set {
+        u27_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "number" field.</summary>
+    public const int NumberFieldNumber = 28;
+    private int number_;
+    /// <summary>
+    /// least significant 2 digits = alt number, rest = in-game pair number
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Number {
+      get { return number_; }
+      set {
+        number_ = value;
       }
     }
 
     /// <summary>Field number for the "schedule_id" field.</summary>
-    public const int ScheduleIdFieldNumber = 22;
+    public const int ScheduleIdFieldNumber = 29;
     private string scheduleId_ = "";
+    /// <summary>
+    /// Schedule.pb
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ScheduleId {
       get { return scheduleId_; }
       set {
         scheduleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ex_schedule_id" field.</summary>
+    public const int ExScheduleIdFieldNumber = 30;
+    private string exScheduleId_ = "";
+    /// <summary>
+    /// for the 6* EX timeframe
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ExScheduleId {
+      get { return exScheduleId_; }
+      set {
+        exScheduleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -373,8 +503,9 @@ namespace ReMastersLib {
         return true;
       }
       if (TrainerId != other.TrainerId) return false;
-      if (U2 != other.U2) return false;
+      if (TrainerKind != other.TrainerKind) return false;
       if (ScoutMethod != other.ScoutMethod) return false;
+      if (Exclusivity != other.Exclusivity) return false;
       if (TrainerBaseId != other.TrainerBaseId) return false;
       if (Type != other.Type) return false;
       if (Rarity != other.Rarity) return false;
@@ -384,25 +515,33 @@ namespace ReMastersLib {
       if (Move2Id != other.Move2Id) return false;
       if (Move3Id != other.Move3Id) return false;
       if (Move4Id != other.Move4Id) return false;
-      if (WeakType != other.WeakType) return false;
-      if (U14 != other.U14) return false;
-      if (U15 != other.U15) return false;
+      if (Weakness != other.Weakness) return false;
+      if (StoryQuest != other.StoryQuest) return false;
+      if (U16 != other.U16) return false;
       if (Passive1Id != other.Passive1Id) return false;
       if (Passive2Id != other.Passive2Id) return false;
       if (Passive3Id != other.Passive3Id) return false;
       if (Passive4Id != other.Passive4Id) return false;
-      if (Passive5Id != other.Passive5Id) return false;
-      if (U21 != other.U21) return false;
+      if (TeamSkill1Id != other.TeamSkill1Id) return false;
+      if (TeamSkill2Id != other.TeamSkill2Id) return false;
+      if (TeamSkill3Id != other.TeamSkill3Id) return false;
+      if (TeamSkill4Id != other.TeamSkill4Id) return false;
+      if (TeamSkill5Id != other.TeamSkill5Id) return false;
+      if (U26 != other.U26) return false;
+      if (U27 != other.U27) return false;
+      if (Number != other.Number) return false;
       if (ScheduleId != other.ScheduleId) return false;
+      if (ExScheduleId != other.ExScheduleId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (TrainerId != 0UL) hash ^= TrainerId.GetHashCode();
-      if (U2 != 0) hash ^= U2.GetHashCode();
+      if (TrainerId != 0L) hash ^= TrainerId.GetHashCode();
+      if (TrainerKind != 0) hash ^= TrainerKind.GetHashCode();
       if (ScoutMethod != 0) hash ^= ScoutMethod.GetHashCode();
+      if (Exclusivity != 0L) hash ^= Exclusivity.GetHashCode();
       if (TrainerBaseId != 0) hash ^= TrainerBaseId.GetHashCode();
       if (Type != 0) hash ^= Type.GetHashCode();
       if (Rarity != 0) hash ^= Rarity.GetHashCode();
@@ -412,16 +551,23 @@ namespace ReMastersLib {
       if (Move2Id != 0) hash ^= Move2Id.GetHashCode();
       if (Move3Id != 0) hash ^= Move3Id.GetHashCode();
       if (Move4Id != 0) hash ^= Move4Id.GetHashCode();
-      if (WeakType != 0) hash ^= WeakType.GetHashCode();
-      if (U14 != 0) hash ^= U14.GetHashCode();
-      if (U15 != 0) hash ^= U15.GetHashCode();
+      if (Weakness != 0) hash ^= Weakness.GetHashCode();
+      if (StoryQuest != 0UL) hash ^= StoryQuest.GetHashCode();
+      if (U16 != 0) hash ^= U16.GetHashCode();
       if (Passive1Id != 0) hash ^= Passive1Id.GetHashCode();
       if (Passive2Id != 0) hash ^= Passive2Id.GetHashCode();
       if (Passive3Id != 0) hash ^= Passive3Id.GetHashCode();
       if (Passive4Id != 0) hash ^= Passive4Id.GetHashCode();
-      if (Passive5Id != 0) hash ^= Passive5Id.GetHashCode();
-      if (U21.Length != 0) hash ^= U21.GetHashCode();
+      if (TeamSkill1Id != 0) hash ^= TeamSkill1Id.GetHashCode();
+      if (TeamSkill2Id != 0) hash ^= TeamSkill2Id.GetHashCode();
+      if (TeamSkill3Id != 0) hash ^= TeamSkill3Id.GetHashCode();
+      if (TeamSkill4Id != 0) hash ^= TeamSkill4Id.GetHashCode();
+      if (TeamSkill5Id != 0) hash ^= TeamSkill5Id.GetHashCode();
+      if (U26 != 0) hash ^= U26.GetHashCode();
+      if (U27 != 0) hash ^= U27.GetHashCode();
+      if (Number != 0) hash ^= Number.GetHashCode();
       if (ScheduleId.Length != 0) hash ^= ScheduleId.GetHashCode();
+      if (ExScheduleId.Length != 0) hash ^= ExScheduleId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -435,93 +581,125 @@ namespace ReMastersLib {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (TrainerId != 0UL) {
+      if (TrainerId != 0L) {
         output.WriteRawTag(8);
-        output.WriteUInt64(TrainerId);
+        output.WriteInt64(TrainerId);
       }
-      if (U2 != 0) {
+      if (TrainerKind != 0) {
         output.WriteRawTag(16);
-        output.WriteInt32(U2);
+        output.WriteInt32(TrainerKind);
       }
       if (ScoutMethod != 0) {
         output.WriteRawTag(24);
         output.WriteInt32(ScoutMethod);
       }
-      if (TrainerBaseId != 0) {
+      if (Exclusivity != 0L) {
         output.WriteRawTag(32);
+        output.WriteInt64(Exclusivity);
+      }
+      if (TrainerBaseId != 0) {
+        output.WriteRawTag(40);
         output.WriteInt32(TrainerBaseId);
       }
       if (Type != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(48);
         output.WriteInt32(Type);
       }
       if (Rarity != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(56);
         output.WriteInt32(Rarity);
       }
       if (Role != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteInt32(Role);
       }
       if (MonsterId != 0UL) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt64(MonsterId);
       }
       if (Move1Id != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(80);
         output.WriteInt32(Move1Id);
       }
       if (Move2Id != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(88);
         output.WriteInt32(Move2Id);
       }
       if (Move3Id != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(96);
         output.WriteInt32(Move3Id);
       }
       if (Move4Id != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteInt32(Move4Id);
       }
-      if (WeakType != 0) {
-        output.WriteRawTag(104);
-        output.WriteInt32(WeakType);
-      }
-      if (U14 != 0) {
+      if (Weakness != 0) {
         output.WriteRawTag(112);
-        output.WriteInt32(U14);
+        output.WriteInt32(Weakness);
       }
-      if (U15 != 0) {
+      if (StoryQuest != 0UL) {
         output.WriteRawTag(120);
-        output.WriteInt32(U15);
+        output.WriteUInt64(StoryQuest);
+      }
+      if (U16 != 0) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt32(U16);
       }
       if (Passive1Id != 0) {
-        output.WriteRawTag(128, 1);
+        output.WriteRawTag(136, 1);
         output.WriteInt32(Passive1Id);
       }
       if (Passive2Id != 0) {
-        output.WriteRawTag(136, 1);
+        output.WriteRawTag(144, 1);
         output.WriteInt32(Passive2Id);
       }
       if (Passive3Id != 0) {
-        output.WriteRawTag(144, 1);
+        output.WriteRawTag(152, 1);
         output.WriteInt32(Passive3Id);
       }
       if (Passive4Id != 0) {
-        output.WriteRawTag(152, 1);
+        output.WriteRawTag(160, 1);
         output.WriteInt32(Passive4Id);
       }
-      if (Passive5Id != 0) {
-        output.WriteRawTag(160, 1);
-        output.WriteInt32(Passive5Id);
+      if (TeamSkill1Id != 0) {
+        output.WriteRawTag(168, 1);
+        output.WriteInt32(TeamSkill1Id);
       }
-      if (U21.Length != 0) {
-        output.WriteRawTag(170, 1);
-        output.WriteString(U21);
+      if (TeamSkill2Id != 0) {
+        output.WriteRawTag(176, 1);
+        output.WriteInt32(TeamSkill2Id);
+      }
+      if (TeamSkill3Id != 0) {
+        output.WriteRawTag(184, 1);
+        output.WriteInt32(TeamSkill3Id);
+      }
+      if (TeamSkill4Id != 0) {
+        output.WriteRawTag(192, 1);
+        output.WriteInt32(TeamSkill4Id);
+      }
+      if (TeamSkill5Id != 0) {
+        output.WriteRawTag(200, 1);
+        output.WriteInt32(TeamSkill5Id);
+      }
+      if (U26 != 0) {
+        output.WriteRawTag(208, 1);
+        output.WriteInt32(U26);
+      }
+      if (U27 != 0) {
+        output.WriteRawTag(216, 1);
+        output.WriteInt32(U27);
+      }
+      if (Number != 0) {
+        output.WriteRawTag(224, 1);
+        output.WriteInt32(Number);
       }
       if (ScheduleId.Length != 0) {
-        output.WriteRawTag(178, 1);
+        output.WriteRawTag(234, 1);
         output.WriteString(ScheduleId);
+      }
+      if (ExScheduleId.Length != 0) {
+        output.WriteRawTag(242, 1);
+        output.WriteString(ExScheduleId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -531,14 +709,17 @@ namespace ReMastersLib {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (TrainerId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TrainerId);
+      if (TrainerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TrainerId);
       }
-      if (U2 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(U2);
+      if (TrainerKind != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TrainerKind);
       }
       if (ScoutMethod != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ScoutMethod);
+      }
+      if (Exclusivity != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Exclusivity);
       }
       if (TrainerBaseId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TrainerBaseId);
@@ -567,14 +748,14 @@ namespace ReMastersLib {
       if (Move4Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Move4Id);
       }
-      if (WeakType != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(WeakType);
+      if (Weakness != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Weakness);
       }
-      if (U14 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(U14);
+      if (StoryQuest != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(StoryQuest);
       }
-      if (U15 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(U15);
+      if (U16 != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(U16);
       }
       if (Passive1Id != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(Passive1Id);
@@ -588,14 +769,35 @@ namespace ReMastersLib {
       if (Passive4Id != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(Passive4Id);
       }
-      if (Passive5Id != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeInt32Size(Passive5Id);
+      if (TeamSkill1Id != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(TeamSkill1Id);
       }
-      if (U21.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(U21);
+      if (TeamSkill2Id != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(TeamSkill2Id);
+      }
+      if (TeamSkill3Id != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(TeamSkill3Id);
+      }
+      if (TeamSkill4Id != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(TeamSkill4Id);
+      }
+      if (TeamSkill5Id != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(TeamSkill5Id);
+      }
+      if (U26 != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(U26);
+      }
+      if (U27 != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(U27);
+      }
+      if (Number != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(Number);
       }
       if (ScheduleId.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ScheduleId);
+      }
+      if (ExScheduleId.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ExScheduleId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -608,14 +810,17 @@ namespace ReMastersLib {
       if (other == null) {
         return;
       }
-      if (other.TrainerId != 0UL) {
+      if (other.TrainerId != 0L) {
         TrainerId = other.TrainerId;
       }
-      if (other.U2 != 0) {
-        U2 = other.U2;
+      if (other.TrainerKind != 0) {
+        TrainerKind = other.TrainerKind;
       }
       if (other.ScoutMethod != 0) {
         ScoutMethod = other.ScoutMethod;
+      }
+      if (other.Exclusivity != 0L) {
+        Exclusivity = other.Exclusivity;
       }
       if (other.TrainerBaseId != 0) {
         TrainerBaseId = other.TrainerBaseId;
@@ -644,14 +849,14 @@ namespace ReMastersLib {
       if (other.Move4Id != 0) {
         Move4Id = other.Move4Id;
       }
-      if (other.WeakType != 0) {
-        WeakType = other.WeakType;
+      if (other.Weakness != 0) {
+        Weakness = other.Weakness;
       }
-      if (other.U14 != 0) {
-        U14 = other.U14;
+      if (other.StoryQuest != 0UL) {
+        StoryQuest = other.StoryQuest;
       }
-      if (other.U15 != 0) {
-        U15 = other.U15;
+      if (other.U16 != 0) {
+        U16 = other.U16;
       }
       if (other.Passive1Id != 0) {
         Passive1Id = other.Passive1Id;
@@ -665,14 +870,35 @@ namespace ReMastersLib {
       if (other.Passive4Id != 0) {
         Passive4Id = other.Passive4Id;
       }
-      if (other.Passive5Id != 0) {
-        Passive5Id = other.Passive5Id;
+      if (other.TeamSkill1Id != 0) {
+        TeamSkill1Id = other.TeamSkill1Id;
       }
-      if (other.U21.Length != 0) {
-        U21 = other.U21;
+      if (other.TeamSkill2Id != 0) {
+        TeamSkill2Id = other.TeamSkill2Id;
+      }
+      if (other.TeamSkill3Id != 0) {
+        TeamSkill3Id = other.TeamSkill3Id;
+      }
+      if (other.TeamSkill4Id != 0) {
+        TeamSkill4Id = other.TeamSkill4Id;
+      }
+      if (other.TeamSkill5Id != 0) {
+        TeamSkill5Id = other.TeamSkill5Id;
+      }
+      if (other.U26 != 0) {
+        U26 = other.U26;
+      }
+      if (other.U27 != 0) {
+        U27 = other.U27;
+      }
+      if (other.Number != 0) {
+        Number = other.Number;
       }
       if (other.ScheduleId.Length != 0) {
         ScheduleId = other.ScheduleId;
+      }
+      if (other.ExScheduleId.Length != 0) {
+        ExScheduleId = other.ExScheduleId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -686,11 +912,11 @@ namespace ReMastersLib {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            TrainerId = input.ReadUInt64();
+            TrainerId = input.ReadInt64();
             break;
           }
           case 16: {
-            U2 = input.ReadInt32();
+            TrainerKind = input.ReadInt32();
             break;
           }
           case 24: {
@@ -698,79 +924,111 @@ namespace ReMastersLib {
             break;
           }
           case 32: {
-            TrainerBaseId = input.ReadInt32();
+            Exclusivity = input.ReadInt64();
             break;
           }
           case 40: {
-            Type = input.ReadInt32();
+            TrainerBaseId = input.ReadInt32();
             break;
           }
           case 48: {
-            Rarity = input.ReadInt32();
+            Type = input.ReadInt32();
             break;
           }
           case 56: {
-            Role = input.ReadInt32();
+            Rarity = input.ReadInt32();
             break;
           }
           case 64: {
-            MonsterId = input.ReadUInt64();
+            Role = input.ReadInt32();
             break;
           }
           case 72: {
-            Move1Id = input.ReadInt32();
+            MonsterId = input.ReadUInt64();
             break;
           }
           case 80: {
-            Move2Id = input.ReadInt32();
+            Move1Id = input.ReadInt32();
             break;
           }
           case 88: {
-            Move3Id = input.ReadInt32();
+            Move2Id = input.ReadInt32();
             break;
           }
           case 96: {
-            Move4Id = input.ReadInt32();
+            Move3Id = input.ReadInt32();
             break;
           }
           case 104: {
-            WeakType = input.ReadInt32();
+            Move4Id = input.ReadInt32();
             break;
           }
           case 112: {
-            U14 = input.ReadInt32();
+            Weakness = input.ReadInt32();
             break;
           }
           case 120: {
-            U15 = input.ReadInt32();
+            StoryQuest = input.ReadUInt64();
             break;
           }
           case 128: {
-            Passive1Id = input.ReadInt32();
+            U16 = input.ReadInt32();
             break;
           }
           case 136: {
-            Passive2Id = input.ReadInt32();
+            Passive1Id = input.ReadInt32();
             break;
           }
           case 144: {
-            Passive3Id = input.ReadInt32();
+            Passive2Id = input.ReadInt32();
             break;
           }
           case 152: {
-            Passive4Id = input.ReadInt32();
+            Passive3Id = input.ReadInt32();
             break;
           }
           case 160: {
-            Passive5Id = input.ReadInt32();
+            Passive4Id = input.ReadInt32();
             break;
           }
-          case 170: {
-            U21 = input.ReadString();
+          case 168: {
+            TeamSkill1Id = input.ReadInt32();
             break;
           }
-          case 178: {
+          case 176: {
+            TeamSkill2Id = input.ReadInt32();
+            break;
+          }
+          case 184: {
+            TeamSkill3Id = input.ReadInt32();
+            break;
+          }
+          case 192: {
+            TeamSkill4Id = input.ReadInt32();
+            break;
+          }
+          case 200: {
+            TeamSkill5Id = input.ReadInt32();
+            break;
+          }
+          case 208: {
+            U26 = input.ReadInt32();
+            break;
+          }
+          case 216: {
+            U27 = input.ReadInt32();
+            break;
+          }
+          case 224: {
+            Number = input.ReadInt32();
+            break;
+          }
+          case 234: {
             ScheduleId = input.ReadString();
+            break;
+          }
+          case 242: {
+            ExScheduleId = input.ReadString();
             break;
           }
         }

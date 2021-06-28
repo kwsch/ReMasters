@@ -3,30 +3,48 @@ syntax = "proto3";
 package ReMastersLib;
 
 message Trainer {
-	uint64 trainer_id = 1;
-	int32 u2 = 2;					// 1 for the mc, 2 otherwise
-	int32 scout_method = 3;			// 1 for gacha, 2 for story
-	int32 trainer_base_id = 4;
-	int32 type = 5;					// motif_type_name_en.lsd
-	int32 rarity = 6;
-	int32 role = 7;					// role_type_name_en.lsd (0 = Phy Strike)
-	uint64 monster_id = 8;
-	int32 move_1_id = 9;
-	int32 move_2_id = 10;
-	int32 move_3_id = 11;
-	int32 move_4_id = 12;
-	int32 weak_type = 13;			// motif_type_name_en.lsd
-	int32 u14 = 14;
-	int32 u15 = 15;
-	int32 passive_1_id = 16;
-	int32 passive_2_id = 17;
-	int32 passive_3_id = 18;
-	int32 passive_4_id = 19;
-	int32 passive_5_id = 20;
-	string u21 = 21;
-	string schedule_id = 22;
+    int64 trainer_id = 1;
+    int32 trainer_kind = 2;     // 1: Main Character, 2: Other
+    int32 scout_method = 3;     // 1: Gacha / BP, 2: Story, 3: Egg
+    int64 exclusivity = 4;      // 1: Regular, 2: Pokéfair / Master Fair, 3: Seasonal
+    int32 trainer_base_id = 5;  // TrainerBase.pb
+    int32 type = 6;             // motif_type_name_xx.lsd
+    int32 rarity = 7;
+    int32 role = 8;             // role_type_name_xx.lsd (0: Physical Strike)
+    uint64 monster_id = 9;         // Monster.pb
+
+    // Move.pb
+    int32 move_1_id = 10;
+    int32 move_2_id = 11;
+    int32 move_3_id = 12;
+    int32 move_4_id = 13;
+
+    int32 weakness = 14;     // motif_type_name_xx.lsd
+    uint64 story_quest = 15; // Sync Pair Story quest ID (-1 if none)
+    int32 u16 = 16;
+
+    // passive_skill_name_xx.lsd / passive_skill_description_xx.lsd
+    int32 passive_1_id = 17;
+    int32 passive_2_id = 18;
+    int32 passive_3_id = 19;
+    int32 passive_4_id = 20;
+
+    // TeamSkill.pb
+    int32 team_skill_1_id = 21;
+    int32 team_skill_2_id = 22;
+    int32 team_skill_3_id = 23;
+    int32 team_skill_4_id = 24;
+    int32 team_skill_5_id = 25;
+
+    int32 u26 = 26;
+    int32 u27 = 27;
+    int32 number = 28; // least significant 2 digits = alt number, rest = in-game pair number
+
+    // Schedule.pb
+    string schedule_id = 29;
+    string ex_schedule_id = 30; // for the 6* EX timeframe
 }
 
 message TrainerTable {
-	repeated Trainer entries = 1;
+    repeated Trainer entries = 1;
 }

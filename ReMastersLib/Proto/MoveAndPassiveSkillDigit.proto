@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message MoveAndPassiveSkillDigit {
+    int64 id = 1;           // Move id or Passive id
+    int64 param1 = 2;
+    int64 param2 = 3;
+    int64 param3 = 4;
+    int64 param4 = 5;
+    int64 param5 = 6;
+    int64 param6 = 7;
+    int64 param7 = 8;
+    int64 param8 = 9;
+    int64 param9 = 10;
+    int64 param10 = 11;
+}
+
+message MoveAndPassiveSkillDigitTable {
+    repeated MoveAndPassiveSkillDigit entries = 1;
+}
