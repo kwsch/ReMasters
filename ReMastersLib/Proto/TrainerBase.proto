@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package ReMastersLib;
+
 message TrainerBase {
     uint64 id = 1;
     string actor_id = 2;
