@@ -1,22 +1,24 @@
 syntax = "proto3";
 
-package ReMastersLib;
-
 message TrainerBase {
-	uint64 trainer_base_id = 1;
-	string actor_id = 2;
-	string trainer_name_id = 3;		// trainer_name_xx.lsd
-	int32 u4 = 4;
-	string u5 = 5;
-	int32 u6 = 6;
-	int32 u7 = 7;
-	int32 gender = 8;				// 1 for male, 2 for female
-	string pokeball_id = 9;
-	int32 is_generic = 10;			// 1 for generic trainers, else 0
-	string battle_bgm_id = 11;
-	string result_bgm_id = 12;		// battle result theme
+    uint64 id = 1;
+    string actor_id = 2;
+    string trainer_name_id = 3;    // trainer_name_xx.lsd
+    int32 u4 = 4;
+    string u5 = 5;
+    int32 u6 = 6;
+    int32 u7 = 7;
+    int32 gender = 8;               // 1: Male, 2: Female
+    string pokeball_id = 9;
+    int32 is_generic = 10;          // 0: Non-generic character, 1: Generic character
+
+    // BGM name in sound/BGM.json
+    string battle_bgm_id = 11;
+    string result_bgm_id = 12;
+
+    string u13 = 13;
 }
 
 message TrainerBaseTable {
-	repeated TrainerBase entries = 1;
+    repeated TrainerBase entries = 1;
 }

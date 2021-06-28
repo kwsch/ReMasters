@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message DeckItemLevelLimitExchangeRate {
+    int64 u1 = 1;
+    int64 u2 = 2;
+    int64 u3 = 3;
+    int64 u4 = 4;
+    int64 u5 = 5;
+    int64 item_set_id = 6;
+}
+
+message DeckItemLevelLimitExchangeRateTable {
+    repeated DeckItemLevelLimitExchangeRate entries = 1;
+}
