@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message DeckItemLvUp {
+    int64 item_id = 1;
+    int32 item_level = 2;
+    int32 coin_cost = 3;
+    int64 item_set_id = 4;
+}
+
+message DeckItemLvUpTable {
+    repeated DeckItemLvUp entries = 1;
+}
