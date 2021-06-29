@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message DeckItemLvUpItem {
+    int64 item_id = 1;
+    int32 item_subCategory = 2;
+    string item_image_name = 3;
+    int32 item_frame = 4;
+    int32 item_type = 5;  // motif_type_name_en.lsd
+}
+
+message DeckItemLvUpItemTable {
+    repeated DeckItemLvUpItem entries = 1;
+}
