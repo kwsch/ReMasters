@@ -155,6 +155,41 @@ namespace ReMastersLib
             }
         }
 
+        public void DumpVideo(string outRoot)
+        {
+            var jsonPath = Path.Combine(outRoot, @"db\asset\bundles_archives.json");
+            if (!File.Exists(jsonPath))
+                return;
+
+            var json = JObject.Parse(File.ReadAllText(jsonPath));
+            foreach (var archive in json["archives"])
+            {
+                var archiveName = archive["name"].ToString();
+                if (!archiveName.StartsWith("archive_Movie_"))
+                    continue;
+
+                foreach (var p in archive["include"])
+                {
+                    var path = p.ToString();
+                    if (path.EndsWith(".mp4"))
+                    {
+                        var fileIDString = $"{XXH64.DigestOf(Encoding.ASCII.GetBytes(path))}";
+                        var resourcePath = Path.Combine(DownloadPath, $"{fileIDString[0]}", fileIDString);
+
+                        if (!File.Exists(resourcePath))
+                        {
+                            Console.WriteLine($"Failed to find {path} ({resourcePath})");
+                            continue;
+                        }
+
+                        var outPath = $"{Path.Combine(outRoot, path.Replace("/", $"{Path.DirectorySeparatorChar}"))}";
+                        Directory.CreateDirectory(Path.GetDirectoryName(outPath));
+                        System.IO.File.Copy(resourcePath, outPath, true);
+                    }
+                }
+            }
+        }
+
         public void DumpProto(string outRoot, bool tableLayout = true)
         {
             var pdf = Path.Combine(outRoot, "protodump");

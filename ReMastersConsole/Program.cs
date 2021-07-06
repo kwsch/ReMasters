@@ -29,6 +29,7 @@ namespace ReMastersConsole
 
                 DumpResources = true,
                 DumpSound = true,
+                DumpVideo = true,
                 DumpProto = false,
             };
 
