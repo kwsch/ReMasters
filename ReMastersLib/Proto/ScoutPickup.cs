@@ -24,15 +24,15 @@ namespace ReMastersLib {
     static ScoutPickupReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdQcm90by9TY291dFBpY2t1cC5wcm90bxIMUmVNYXN0ZXJzTGliIlYKC1Nj",
+            "ChdQcm90by9TY291dFBpY2t1cC5wcm90bxIMUmVNYXN0ZXJzTGliIl4KC1Nj",
             "b3V0UGlja3VwEhAKCHNjb3V0X2lkGAEgASgJEhIKCnRyYWluZXJfaWQYAiAB",
-            "KAMSDwoHdGV4dF9pZBgDIAEoCRIQCghwcmlvcml0eRgEIAEoBSI+ChBTY291",
-            "dFBpY2t1cFRhYmxlEioKB2VudHJpZXMYASADKAsyGS5SZU1hc3RlcnNMaWIu",
-            "U2NvdXRQaWNrdXBiBnByb3RvMw=="));
+            "KAMSFwoPc2NvdXRfcGlja3VwX2lkGAMgASgJEhAKCHByaW9yaXR5GAQgASgF",
+            "Ij4KEFNjb3V0UGlja3VwVGFibGUSKgoHZW50cmllcxgBIAMoCzIZLlJlTWFz",
+            "dGVyc0xpYi5TY291dFBpY2t1cGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.ScoutPickup), global::ReMastersLib.ScoutPickup.Parser, new[]{ "ScoutId", "TrainerId", "TextId", "Priority" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.ScoutPickup), global::ReMastersLib.ScoutPickup.Parser, new[]{ "ScoutId", "TrainerId", "ScoutPickupId", "Priority" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.ScoutPickupTable), global::ReMastersLib.ScoutPickupTable.Parser, new[]{ "Entries" }, null, null, null)
           }));
     }
@@ -67,7 +67,7 @@ namespace ReMastersLib {
     public ScoutPickup(ScoutPickup other) : this() {
       scoutId_ = other.scoutId_;
       trainerId_ = other.trainerId_;
-      textId_ = other.textId_;
+      scoutPickupId_ = other.scoutPickupId_;
       priority_ = other.priority_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -105,17 +105,20 @@ namespace ReMastersLib {
       }
     }
 
-    /// <summary>Field number for the "text_id" field.</summary>
-    public const int TextIdFieldNumber = 3;
-    private string textId_ = "";
+    /// <summary>Field number for the "scout_pickup_id" field.</summary>
+    public const int ScoutPickupIdFieldNumber = 3;
+    private string scoutPickupId_ = "";
     /// <summary>
-    /// lottery_pickup_description_xx.lsd / scout_pickup_description_xx.lsd
+    ///
+    ///Used in:
+    ///- lottery_pickup_description_xx.lsd (1.0.0) / scout_pickup_description_xx.lsd (Later versions)
+    ///- path to the video: Movie/Scout/Pickup/&lt;scout_id>/&lt;scout_pickup_id>.mp4
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string TextId {
-      get { return textId_; }
+    public string ScoutPickupId {
+      get { return scoutPickupId_; }
       set {
-        textId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        scoutPickupId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -148,7 +151,7 @@ namespace ReMastersLib {
       }
       if (ScoutId != other.ScoutId) return false;
       if (TrainerId != other.TrainerId) return false;
-      if (TextId != other.TextId) return false;
+      if (ScoutPickupId != other.ScoutPickupId) return false;
       if (Priority != other.Priority) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -158,7 +161,7 @@ namespace ReMastersLib {
       int hash = 1;
       if (ScoutId.Length != 0) hash ^= ScoutId.GetHashCode();
       if (TrainerId != 0L) hash ^= TrainerId.GetHashCode();
-      if (TextId.Length != 0) hash ^= TextId.GetHashCode();
+      if (ScoutPickupId.Length != 0) hash ^= ScoutPickupId.GetHashCode();
       if (Priority != 0) hash ^= Priority.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -181,9 +184,9 @@ namespace ReMastersLib {
         output.WriteRawTag(16);
         output.WriteInt64(TrainerId);
       }
-      if (TextId.Length != 0) {
+      if (ScoutPickupId.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteString(TextId);
+        output.WriteString(ScoutPickupId);
       }
       if (Priority != 0) {
         output.WriteRawTag(32);
@@ -203,8 +206,8 @@ namespace ReMastersLib {
       if (TrainerId != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(TrainerId);
       }
-      if (TextId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(TextId);
+      if (ScoutPickupId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ScoutPickupId);
       }
       if (Priority != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Priority);
@@ -226,8 +229,8 @@ namespace ReMastersLib {
       if (other.TrainerId != 0L) {
         TrainerId = other.TrainerId;
       }
-      if (other.TextId.Length != 0) {
-        TextId = other.TextId;
+      if (other.ScoutPickupId.Length != 0) {
+        ScoutPickupId = other.ScoutPickupId;
       }
       if (other.Priority != 0) {
         Priority = other.Priority;
@@ -252,7 +255,7 @@ namespace ReMastersLib {
             break;
           }
           case 26: {
-            TextId = input.ReadString();
+            ScoutPickupId = input.ReadString();
             break;
           }
           case 32: {
