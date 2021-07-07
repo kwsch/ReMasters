@@ -6,6 +6,7 @@
         public bool DumpStringsDL { get; set; } = true;
         public bool DumpResources { get; set; } = true;
         public bool DumpSound { get; set; } = true;
+        public bool DumpVideo { get; set; } = true;
         public bool DumpProto { get; set; } = true;
 
         public readonly GameDataPaths Paths;
@@ -26,6 +27,8 @@
                 dumper.DumpMessagesDownload(Paths.OutputPath);
             if (DumpSound)
                 dumper.DumpSound(Paths.OutputPath);
+            if (DumpVideo)
+                dumper.DumpVideo(Paths.OutputPath);
             if (DumpProto)
                 dumper.DumpProto(Paths.OutputPath);
         }

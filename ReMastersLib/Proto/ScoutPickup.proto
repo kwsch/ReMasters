@@ -3,12 +3,18 @@ syntax = "proto3";
 package ReMastersLib;
 
 message ScoutPickup {
-	string scout_id = 1;	// Scout.pb
-	int64 trainer_id = 2;	// Trainer.pb
-	string text_id = 3;		// lottery_pickup_description_xx.lsd / scout_pickup_description_xx.lsd
-	int32 priority = 4;		// from 10 to lower values
+    string scout_id = 1;    // Scout.pb
+    int64 trainer_id = 2;   // Trainer.pb
+
+    /*
+        Used in:
+        - lottery_pickup_description_xx.lsd (1.0.0) / scout_pickup_description_xx.lsd (Later versions)
+        - path to the video: Movie/Scout/Pickup/<scout_id>/<scout_pickup_id>.mp4
+    */
+    string scout_pickup_id = 3;
+    int32 priority = 4;     // from 10 to lower values
 }
 
 message ScoutPickupTable {
-	repeated ScoutPickup entries = 1;
+    repeated ScoutPickup entries = 1;
 }

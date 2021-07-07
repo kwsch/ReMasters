@@ -155,6 +155,110 @@ namespace ReMastersLib
             }
         }
 
+        private void DumpSyncPairPreviewVideo(string outRoot)
+        {
+            var pbPath = Path.Combine(outRoot, @"db\master\pb\ScoutPickup.pb");
+
+            if (!File.Exists(pbPath))
+                pbPath = Path.Combine(outRoot, @"db\master\pb\LotteryPickup.pb"); // different name in v1.0.0
+
+            if (!File.Exists(pbPath))
+            {
+                Console.WriteLine($"Failed to find ScoutPickup.pb or LotteryPickup.pb: skip Sync Pair Preview videos");
+                return;
+            }
+
+            var table = ScoutPickupTable.Parser.ParseFrom(File.ReadAllBytes(pbPath));
+            foreach (var message in table.Entries)
+            {
+                var path = $"Movie/Scout/Pickup/{message.ScoutId}/{message.ScoutPickupId}.mp4";
+                var fileIDString = $"{XXH64.DigestOf(Encoding.ASCII.GetBytes(path))}";
+                var resourcePath = Path.Combine(DownloadPath, $"{fileIDString[0]}", fileIDString);
+                if (!File.Exists(resourcePath))
+                {
+                    Console.WriteLine($"Failed to find {path} ({resourcePath})");
+                    continue;
+                }
+
+                var outPath = $"{Path.Combine(outRoot, path.Replace("/", $"{Path.DirectorySeparatorChar}"))}";
+                Directory.CreateDirectory(Path.GetDirectoryName(outPath));
+                System.IO.File.Copy(resourcePath, outPath, true);
+            }
+        }
+
+        private void DumpVideoWithUnknownName(string outRoot, Dictionary<string, string> unkNameVideos)
+        {
+            foreach (var entry in FileDB.Values)
+            {
+                var fileIDString = $"{entry.FileID}";
+                if (!unkNameVideos.ContainsKey(fileIDString))
+                    continue;
+
+                var resourcePath = Path.Combine(DownloadPath, $"{entry.FileName[0]}", entry.FileName);
+                if (!File.Exists(resourcePath))
+                {
+                    Console.WriteLine($"Failed to find video {resourcePath}");
+                    continue;
+                }
+
+                // we don't know the actual video names, but can still place them in the correct(ish?) folder
+                var relPath = Path.GetDirectoryName(unkNameVideos[fileIDString]).Replace("/", $"{Path.DirectorySeparatorChar}");
+                var outPath = $"{Path.Combine(outRoot, relPath, $"{entry.FileName}.mp4")}";
+                Directory.CreateDirectory(Path.GetDirectoryName(outPath));
+                System.IO.File.Copy(resourcePath, outPath, true);
+            }
+        }
+
+        public void DumpMiscVideo(string outRoot)
+        {
+            var jsonPath = Path.Combine(outRoot, @"db\asset\bundles_archives.json");
+            if (!File.Exists(jsonPath))
+                return;
+
+            var unkNameVideos = new Dictionary<string, string>();
+            var json = JObject.Parse(File.ReadAllText(jsonPath));
+            foreach (var archive in json["archives"])
+            {
+                var archiveName = archive["name"].ToString();
+                if (!archiveName.StartsWith("archive_Movie_"))
+                    continue;
+
+                foreach (var p in archive["include"])
+                {
+                    var path = p.ToString();
+                    if (path.EndsWith(".mp4"))
+                    {
+                        var fileIDString = $"{XXH64.DigestOf(Encoding.ASCII.GetBytes(path))}";
+                        var resourcePath = Path.Combine(DownloadPath, $"{fileIDString[0]}", fileIDString);
+
+                        if (!File.Exists(resourcePath))
+                        {
+                            Console.WriteLine($"Failed to find {path} ({resourcePath})");
+                            continue;
+                        }
+
+                        var outPath = $"{Path.Combine(outRoot, path.Replace("/", $"{Path.DirectorySeparatorChar}"))}";
+                        Directory.CreateDirectory(Path.GetDirectoryName(outPath));
+                        System.IO.File.Copy(resourcePath, outPath, true);
+                    }
+                    else if (!path.StartsWith("Movie/Scout/Pickup/"))
+                    {
+                        var archiveNameHashString = $"{XXH64.DigestOf(Encoding.ASCII.GetBytes(archiveName))}";
+                        if (unkNameVideos.ContainsKey(archiveNameHashString))
+                            Console.WriteLine($"Multiple paths given for {archiveName}: fallback to {path}");
+                        unkNameVideos[archiveNameHashString] = path;
+                    }
+                }
+            }
+            DumpVideoWithUnknownName(outRoot, unkNameVideos);
+        }
+
+        public void DumpVideo(string outRoot)
+        {
+            DumpSyncPairPreviewVideo(outRoot);
+            DumpMiscVideo(outRoot);
+        }
+
         public void DumpProto(string outRoot, bool tableLayout = true)
         {
             var pdf = Path.Combine(outRoot, "protodump");
