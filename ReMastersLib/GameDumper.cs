@@ -155,12 +155,36 @@ namespace ReMastersLib
             }
         }
 
+        private void DumpVideoWithUnknownName(string outRoot, Dictionary<string, string> unkNameVideos)
+        {
+            foreach (var entry in FileDB.Values)
+            {
+                var fileIDString = $"{entry.FileID}";
+                if (!unkNameVideos.ContainsKey(fileIDString))
+                    continue;
+
+                var resourcePath = Path.Combine(DownloadPath, $"{entry.FileName[0]}", entry.FileName);
+                if (!File.Exists(resourcePath))
+                {
+                    Console.WriteLine($"Failed to find video {resourcePath}");
+                    continue;
+                }
+
+                // we don't know the actual video names, but can still place them in the correct(ish?) folder
+                var relPath = Path.GetDirectoryName(unkNameVideos[fileIDString]).Replace("/", $"{Path.DirectorySeparatorChar}");
+                var outPath = $"{Path.Combine(outRoot, relPath, $"{entry.FileName}.mp4")}";
+                Directory.CreateDirectory(Path.GetDirectoryName(outPath));
+                System.IO.File.Copy(resourcePath, outPath, true);
+            }
+        }
+
         public void DumpVideo(string outRoot)
         {
             var jsonPath = Path.Combine(outRoot, @"db\asset\bundles_archives.json");
             if (!File.Exists(jsonPath))
                 return;
 
+            var unkNameVideos = new Dictionary<string, string>();
             var json = JObject.Parse(File.ReadAllText(jsonPath));
             foreach (var archive in json["archives"])
             {
@@ -186,8 +210,16 @@ namespace ReMastersLib
                         Directory.CreateDirectory(Path.GetDirectoryName(outPath));
                         System.IO.File.Copy(resourcePath, outPath, true);
                     }
+                    else if (!path.StartsWith("Movie/Scout/Pickup/"))
+                    {
+                        var archiveNameHashString = $"{XXH64.DigestOf(Encoding.ASCII.GetBytes(archiveName))}";
+                        if (unkNameVideos.ContainsKey(archiveNameHashString))
+                            Console.WriteLine($"Multiple paths given for {archiveName}: fallback to {path}");
+                        unkNameVideos[archiveNameHashString] = path;
+                    }
                 }
             }
+            DumpVideoWithUnknownName(outRoot, unkNameVideos);
         }
 
         public void DumpProto(string outRoot, bool tableLayout = true)
