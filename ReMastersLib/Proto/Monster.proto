@@ -12,6 +12,10 @@ message Monster {
     repeated uint32 spa_values = 7;
     repeated uint32 spd_values = 8;
     repeated uint32 spe_values = 9;
+    int32 move1_change_id = 10;
+    int32 move2_change_id = 11;
+    int32 move3_change_id = 12;
+    int32 move4_change_id = 13;
 }
 
 message MonsterTable {

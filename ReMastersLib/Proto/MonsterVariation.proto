@@ -4,29 +4,37 @@ package ReMastersLib;
 
 message MonsterVariation {
     uint64 monster_id = 1;
-    uint32 form = 2;				// 1 = Mega, 2 = Other
+    uint32 form = 2;                // 1 = Mega, 2 = Other
     string actor_id = 3;
     uint32 atk_scale = 4;
     uint32 def_scale = 5;
     uint32 spa_scale = 6;
     uint32 spd_scale = 7;
     uint32 spe_scale = 8;
-	int64 move_1_id = 9;
-	int64 move_2_id = 10;
-	int64 move_3_id = 11;
-	int64 move_4_id = 12;
-	int64 move_5_id = 13;
-	int64 move_6_id = 14;
-	int32 passive_1_id = 15;
-	int32 passive_2_id = 16;
-	int32 passive_3_id = 17;
-	int32 u18 = 18;
-	int32 u19 = 19;
-	int32 u20 = 20;
-	int32 u21 = 21;
-	int32 u22 = 22;
-	int32 u23 = 23;
-	int32 u24 = 24;
+    int64 move_1_id = 9;
+    int64 move_2_id = 10;
+    int64 move_3_id = 11;
+    int64 move_4_id = 12;
+    int64 move_5_id = 13;
+    int64 move_6_id = 14;
+    int32 passive_1_id = 15;
+    int32 passive_2_id = 16;
+    int32 passive_3_id = 17;
+    int32 u18 = 18;
+    int32 u19 = 19;
+    int32 u20 = 20;
+    int32 u21 = 21;
+    int32 u22 = 22;
+    int32 u23 = 23;
+    int32 u24 = 24;
+    int32 u25 = 25;
+    int32 u26 = 26;
+    int32 u27 = 27;
+    int32 u28 = 28;
+    int32 move_dynamax_id = 29;
+    int32 u30 = 30;
+    int32 u31 = 31;
+    int32 u32 = 32;
 }
 
 message MonsterVariationTable {

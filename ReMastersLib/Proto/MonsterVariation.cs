@@ -25,7 +25,7 @@ namespace ReMastersLib {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxQcm90by9Nb25zdGVyVmFyaWF0aW9uLnByb3RvEgxSZU1hc3RlcnNMaWIi",
-            "tAMKEE1vbnN0ZXJWYXJpYXRpb24SEgoKbW9uc3Rlcl9pZBgBIAEoBBIMCgRm",
+            "qAQKEE1vbnN0ZXJWYXJpYXRpb24SEgoKbW9uc3Rlcl9pZBgBIAEoBBIMCgRm",
             "b3JtGAIgASgNEhAKCGFjdG9yX2lkGAMgASgJEhEKCWF0a19zY2FsZRgEIAEo",
             "DRIRCglkZWZfc2NhbGUYBSABKA0SEQoJc3BhX3NjYWxlGAYgASgNEhEKCXNw",
             "ZF9zY2FsZRgHIAEoDRIRCglzcGVfc2NhbGUYCCABKA0SEQoJbW92ZV8xX2lk",
@@ -34,13 +34,16 @@ namespace ReMastersLib {
             "XzZfaWQYDiABKAMSFAoMcGFzc2l2ZV8xX2lkGA8gASgFEhQKDHBhc3NpdmVf",
             "Ml9pZBgQIAEoBRIUCgxwYXNzaXZlXzNfaWQYESABKAUSCwoDdTE4GBIgASgF",
             "EgsKA3UxORgTIAEoBRILCgN1MjAYFCABKAUSCwoDdTIxGBUgASgFEgsKA3Uy",
-            "MhgWIAEoBRILCgN1MjMYFyABKAUSCwoDdTI0GBggASgFIkgKFU1vbnN0ZXJW",
-            "YXJpYXRpb25UYWJsZRIvCgdlbnRyaWVzGAEgAygLMh4uUmVNYXN0ZXJzTGli",
-            "Lk1vbnN0ZXJWYXJpYXRpb25iBnByb3RvMw=="));
+            "MhgWIAEoBRILCgN1MjMYFyABKAUSCwoDdTI0GBggASgFEgsKA3UyNRgZIAEo",
+            "BRILCgN1MjYYGiABKAUSCwoDdTI3GBsgASgFEgsKA3UyOBgcIAEoBRIXCg9t",
+            "b3ZlX2R5bmFtYXhfaWQYHSABKAUSCwoDdTMwGB4gASgFEgsKA3UzMRgfIAEo",
+            "BRILCgN1MzIYICABKAUiSAoVTW9uc3RlclZhcmlhdGlvblRhYmxlEi8KB2Vu",
+            "dHJpZXMYASADKAsyHi5SZU1hc3RlcnNMaWIuTW9uc3RlclZhcmlhdGlvbmIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.MonsterVariation), global::ReMastersLib.MonsterVariation.Parser, new[]{ "MonsterId", "Form", "ActorId", "AtkScale", "DefScale", "SpaScale", "SpdScale", "SpeScale", "Move1Id", "Move2Id", "Move3Id", "Move4Id", "Move5Id", "Move6Id", "Passive1Id", "Passive2Id", "Passive3Id", "U18", "U19", "U20", "U21", "U22", "U23", "U24" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.MonsterVariation), global::ReMastersLib.MonsterVariation.Parser, new[]{ "MonsterId", "Form", "ActorId", "AtkScale", "DefScale", "SpaScale", "SpdScale", "SpeScale", "Move1Id", "Move2Id", "Move3Id", "Move4Id", "Move5Id", "Move6Id", "Passive1Id", "Passive2Id", "Passive3Id", "U18", "U19", "U20", "U21", "U22", "U23", "U24", "U25", "U26", "U27", "U28", "MoveDynamaxId", "U30", "U31", "U32" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.MonsterVariationTable), global::ReMastersLib.MonsterVariationTable.Parser, new[]{ "Entries" }, null, null, null)
           }));
     }
@@ -97,6 +100,14 @@ namespace ReMastersLib {
       u22_ = other.u22_;
       u23_ = other.u23_;
       u24_ = other.u24_;
+      u25_ = other.u25_;
+      u26_ = other.u26_;
+      u27_ = other.u27_;
+      u28_ = other.u28_;
+      moveDynamaxId_ = other.moveDynamaxId_;
+      u30_ = other.u30_;
+      u31_ = other.u31_;
+      u32_ = other.u32_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -372,6 +383,94 @@ namespace ReMastersLib {
       }
     }
 
+    /// <summary>Field number for the "u25" field.</summary>
+    public const int U25FieldNumber = 25;
+    private int u25_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int U25 {
+      get { return u25_; }
+      set {
+        u25_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u26" field.</summary>
+    public const int U26FieldNumber = 26;
+    private int u26_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int U26 {
+      get { return u26_; }
+      set {
+        u26_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u27" field.</summary>
+    public const int U27FieldNumber = 27;
+    private int u27_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int U27 {
+      get { return u27_; }
+      set {
+        u27_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u28" field.</summary>
+    public const int U28FieldNumber = 28;
+    private int u28_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int U28 {
+      get { return u28_; }
+      set {
+        u28_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "move_dynamax_id" field.</summary>
+    public const int MoveDynamaxIdFieldNumber = 29;
+    private int moveDynamaxId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MoveDynamaxId {
+      get { return moveDynamaxId_; }
+      set {
+        moveDynamaxId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u30" field.</summary>
+    public const int U30FieldNumber = 30;
+    private int u30_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int U30 {
+      get { return u30_; }
+      set {
+        u30_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u31" field.</summary>
+    public const int U31FieldNumber = 31;
+    private int u31_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int U31 {
+      get { return u31_; }
+      set {
+        u31_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "u32" field.</summary>
+    public const int U32FieldNumber = 32;
+    private int u32_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int U32 {
+      get { return u32_; }
+      set {
+        u32_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as MonsterVariation);
@@ -409,6 +508,14 @@ namespace ReMastersLib {
       if (U22 != other.U22) return false;
       if (U23 != other.U23) return false;
       if (U24 != other.U24) return false;
+      if (U25 != other.U25) return false;
+      if (U26 != other.U26) return false;
+      if (U27 != other.U27) return false;
+      if (U28 != other.U28) return false;
+      if (MoveDynamaxId != other.MoveDynamaxId) return false;
+      if (U30 != other.U30) return false;
+      if (U31 != other.U31) return false;
+      if (U32 != other.U32) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -439,6 +546,14 @@ namespace ReMastersLib {
       if (U22 != 0) hash ^= U22.GetHashCode();
       if (U23 != 0) hash ^= U23.GetHashCode();
       if (U24 != 0) hash ^= U24.GetHashCode();
+      if (U25 != 0) hash ^= U25.GetHashCode();
+      if (U26 != 0) hash ^= U26.GetHashCode();
+      if (U27 != 0) hash ^= U27.GetHashCode();
+      if (U28 != 0) hash ^= U28.GetHashCode();
+      if (MoveDynamaxId != 0) hash ^= MoveDynamaxId.GetHashCode();
+      if (U30 != 0) hash ^= U30.GetHashCode();
+      if (U31 != 0) hash ^= U31.GetHashCode();
+      if (U32 != 0) hash ^= U32.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -548,6 +663,38 @@ namespace ReMastersLib {
         output.WriteRawTag(192, 1);
         output.WriteInt32(U24);
       }
+      if (U25 != 0) {
+        output.WriteRawTag(200, 1);
+        output.WriteInt32(U25);
+      }
+      if (U26 != 0) {
+        output.WriteRawTag(208, 1);
+        output.WriteInt32(U26);
+      }
+      if (U27 != 0) {
+        output.WriteRawTag(216, 1);
+        output.WriteInt32(U27);
+      }
+      if (U28 != 0) {
+        output.WriteRawTag(224, 1);
+        output.WriteInt32(U28);
+      }
+      if (MoveDynamaxId != 0) {
+        output.WriteRawTag(232, 1);
+        output.WriteInt32(MoveDynamaxId);
+      }
+      if (U30 != 0) {
+        output.WriteRawTag(240, 1);
+        output.WriteInt32(U30);
+      }
+      if (U31 != 0) {
+        output.WriteRawTag(248, 1);
+        output.WriteInt32(U31);
+      }
+      if (U32 != 0) {
+        output.WriteRawTag(128, 2);
+        output.WriteInt32(U32);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -627,6 +774,30 @@ namespace ReMastersLib {
       }
       if (U24 != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(U24);
+      }
+      if (U25 != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(U25);
+      }
+      if (U26 != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(U26);
+      }
+      if (U27 != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(U27);
+      }
+      if (U28 != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(U28);
+      }
+      if (MoveDynamaxId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(MoveDynamaxId);
+      }
+      if (U30 != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(U30);
+      }
+      if (U31 != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(U31);
+      }
+      if (U32 != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(U32);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -710,6 +881,30 @@ namespace ReMastersLib {
       }
       if (other.U24 != 0) {
         U24 = other.U24;
+      }
+      if (other.U25 != 0) {
+        U25 = other.U25;
+      }
+      if (other.U26 != 0) {
+        U26 = other.U26;
+      }
+      if (other.U27 != 0) {
+        U27 = other.U27;
+      }
+      if (other.U28 != 0) {
+        U28 = other.U28;
+      }
+      if (other.MoveDynamaxId != 0) {
+        MoveDynamaxId = other.MoveDynamaxId;
+      }
+      if (other.U30 != 0) {
+        U30 = other.U30;
+      }
+      if (other.U31 != 0) {
+        U31 = other.U31;
+      }
+      if (other.U32 != 0) {
+        U32 = other.U32;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -816,6 +1011,38 @@ namespace ReMastersLib {
           }
           case 192: {
             U24 = input.ReadInt32();
+            break;
+          }
+          case 200: {
+            U25 = input.ReadInt32();
+            break;
+          }
+          case 208: {
+            U26 = input.ReadInt32();
+            break;
+          }
+          case 216: {
+            U27 = input.ReadInt32();
+            break;
+          }
+          case 224: {
+            U28 = input.ReadInt32();
+            break;
+          }
+          case 232: {
+            MoveDynamaxId = input.ReadInt32();
+            break;
+          }
+          case 240: {
+            U30 = input.ReadInt32();
+            break;
+          }
+          case 248: {
+            U31 = input.ReadInt32();
+            break;
+          }
+          case 256: {
+            U32 = input.ReadInt32();
             break;
           }
         }
