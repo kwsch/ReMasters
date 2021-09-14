@@ -31,10 +31,10 @@ message MonsterVariation {
     int32 u26 = 26;
     int32 u27 = 27;
     int32 u28 = 28;
-    int32 move_dynamax_id = 29;
-    int32 u30 = 30;
-    int32 u31 = 31;
-    int32 u32 = 32;
+    int32 move_dynamax_1_id = 29;
+    int32 move_dynamax_2_id = 30;
+    int32 move_dynamax_3_id = 31;
+    int32 move_dynamax_4_id = 32;
 }
 
 message MonsterVariationTable {
