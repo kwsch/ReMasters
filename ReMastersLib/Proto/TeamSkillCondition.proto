@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message TeamSkillCondition {
+	uint64 team_skill_condition_id = 1;			// team_skill_condition
+	int32 team_skill_id = 2;				// team_skill_name
+	int32 team_skill_min_pairs_req = 3;     // currently 2 needed 
+	int32 u4 = 4;
+	int32 u5 = 5;
+	int32 u6 = 6;
+	int32 u7 = 7;
+	int32 u8 = 8;
+	int32 u9 = 9;
+	int32 u10 = 10;
+	int32 u11 = 11;
+}
+
+message TeamSkillConditionTable {
+	repeated TeamSkillCondition entries = 1;
+}
