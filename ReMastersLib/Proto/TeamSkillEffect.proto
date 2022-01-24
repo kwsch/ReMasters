@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message TeamSkillEffect {
+	uint64 team_skill_effect_id = 1;			// team_skill_effect
+	int32 team_skill_id = 2;				// team_skill_name
+	int32 u3 = 3;
+	int32 team_skill_growth_id = 4;
+	int32 u5 = 5;
+	int32 u6 = 6;
+	int32 u7 = 7;
+	int32 u8 = 8;
+}
+
+message TeamSkillEffectTable {
+	repeated TeamSkillEffect entries = 1;
+}

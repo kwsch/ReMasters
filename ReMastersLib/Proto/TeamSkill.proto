@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message TeamSkill {
+	uint64 team_skill_id = 1;			// team_skill_name
+	int32 team_skill_prop_num = 2;					// 1 - team_skill_tag, 2 - team_skill_condition, 3 - team_skill_effect
+	int32 team_skill_prop_value = 3;				// based on above
+}
+
+message TeamSkillTable {
+	repeated TeamSkill entries = 1;
+}

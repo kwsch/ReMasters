@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message TeamSkillTag {
+	uint64 team_skill_tag_id = 1;			// team_skill_tag
+	int32 team_skill_tag_type = 2;			// motif_type_name_xx.lsd
+	int32 u3 = 3;					
+	int32 u4 = 4;
+	string schedule_id = 5;
+}
+
+message TeamSkillTagTable {
+	repeated TeamSkillTag entries = 1;
+}

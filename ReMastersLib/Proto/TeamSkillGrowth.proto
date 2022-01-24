@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message TeamSkillGrowth {
+	uint64 team_Skill_Growth_Id = 1;
+	int32 team_Skill_Level = 2;
+	int32 team_Skill_Stat_Growth = 3;
+}
+
+message TeamSkillGrowthTable {
+	repeated TeamSkillGrowth entries = 1;
+}
