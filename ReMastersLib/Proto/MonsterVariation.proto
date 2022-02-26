@@ -28,7 +28,7 @@ message MonsterVariation {
     int32 u23 = 23;
     int32 u24 = 24;
     int32 u25 = 25;
-    int32 u26 = 26;
+    int32 form_id = 26;             // monster_form_xx.lsd
     int32 u27 = 27;
     int32 u28 = 28;
     int32 move_dynamax_1_id = 29;

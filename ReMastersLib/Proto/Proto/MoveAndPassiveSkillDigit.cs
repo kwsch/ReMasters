@@ -25,17 +25,21 @@ namespace ReMastersLib {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRQcm90by9Nb3ZlQW5kUGFzc2l2ZVNraWxsRGlnaXQucHJvdG8SDFJlTWFz",
-            "dGVyc0xpYiLHAQoYTW92ZUFuZFBhc3NpdmVTa2lsbERpZ2l0EgoKAmlkGAEg",
+            "dGVyc0xpYiLxAgoYTW92ZUFuZFBhc3NpdmVTa2lsbERpZ2l0EgoKAmlkGAEg",
             "ASgDEg4KBnBhcmFtMRgCIAEoAxIOCgZwYXJhbTIYAyABKAMSDgoGcGFyYW0z",
             "GAQgASgDEg4KBnBhcmFtNBgFIAEoAxIOCgZwYXJhbTUYBiABKAMSDgoGcGFy",
             "YW02GAcgASgDEg4KBnBhcmFtNxgIIAEoAxIOCgZwYXJhbTgYCSABKAMSDgoG",
-            "cGFyYW05GAogASgDEg8KB3BhcmFtMTAYCyABKAMiWAodTW92ZUFuZFBhc3Np",
-            "dmVTa2lsbERpZ2l0VGFibGUSNwoHZW50cmllcxgBIAMoCzImLlJlTWFzdGVy",
-            "c0xpYi5Nb3ZlQW5kUGFzc2l2ZVNraWxsRGlnaXRiBnByb3RvMw=="));
+            "cGFyYW05GAogASgDEg8KB3BhcmFtMTAYCyABKAMSDwoHcGFyYW0xMRgMIAEo",
+            "AxIPCgdwYXJhbTEyGA0gASgDEg8KB3BhcmFtMTMYDiABKAMSDwoHcGFyYW0x",
+            "NBgPIAEoAxIPCgdwYXJhbTE1GBAgASgDEg8KB3BhcmFtMTYYESABKAMSDwoH",
+            "cGFyYW0xNxgSIAEoAxIPCgdwYXJhbTE4GBMgASgDEg8KB3BhcmFtMTkYFCAB",
+            "KAMSDwoHcGFyYW0yMBgVIAEoAyJYCh1Nb3ZlQW5kUGFzc2l2ZVNraWxsRGln",
+            "aXRUYWJsZRI3CgdlbnRyaWVzGAEgAygLMiYuUmVNYXN0ZXJzTGliLk1vdmVB",
+            "bmRQYXNzaXZlU2tpbGxEaWdpdGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.MoveAndPassiveSkillDigit), global::ReMastersLib.MoveAndPassiveSkillDigit.Parser, new[]{ "Id", "Param1", "Param2", "Param3", "Param4", "Param5", "Param6", "Param7", "Param8", "Param9", "Param10" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.MoveAndPassiveSkillDigit), global::ReMastersLib.MoveAndPassiveSkillDigit.Parser, new[]{ "Id", "Param1", "Param2", "Param3", "Param4", "Param5", "Param6", "Param7", "Param8", "Param9", "Param10", "Param11", "Param12", "Param13", "Param14", "Param15", "Param16", "Param17", "Param18", "Param19", "Param20" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.MoveAndPassiveSkillDigitTable), global::ReMastersLib.MoveAndPassiveSkillDigitTable.Parser, new[]{ "Entries" }, null, null, null, null)
           }));
     }
@@ -88,6 +92,16 @@ namespace ReMastersLib {
       param8_ = other.param8_;
       param9_ = other.param9_;
       param10_ = other.param10_;
+      param11_ = other.param11_;
+      param12_ = other.param12_;
+      param13_ = other.param13_;
+      param14_ = other.param14_;
+      param15_ = other.param15_;
+      param16_ = other.param16_;
+      param17_ = other.param17_;
+      param18_ = other.param18_;
+      param19_ = other.param19_;
+      param20_ = other.param20_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -232,6 +246,126 @@ namespace ReMastersLib {
       }
     }
 
+    /// <summary>Field number for the "param11" field.</summary>
+    public const int Param11FieldNumber = 12;
+    private long param11_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Param11 {
+      get { return param11_; }
+      set {
+        param11_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "param12" field.</summary>
+    public const int Param12FieldNumber = 13;
+    private long param12_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Param12 {
+      get { return param12_; }
+      set {
+        param12_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "param13" field.</summary>
+    public const int Param13FieldNumber = 14;
+    private long param13_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Param13 {
+      get { return param13_; }
+      set {
+        param13_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "param14" field.</summary>
+    public const int Param14FieldNumber = 15;
+    private long param14_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Param14 {
+      get { return param14_; }
+      set {
+        param14_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "param15" field.</summary>
+    public const int Param15FieldNumber = 16;
+    private long param15_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Param15 {
+      get { return param15_; }
+      set {
+        param15_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "param16" field.</summary>
+    public const int Param16FieldNumber = 17;
+    private long param16_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Param16 {
+      get { return param16_; }
+      set {
+        param16_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "param17" field.</summary>
+    public const int Param17FieldNumber = 18;
+    private long param17_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Param17 {
+      get { return param17_; }
+      set {
+        param17_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "param18" field.</summary>
+    public const int Param18FieldNumber = 19;
+    private long param18_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Param18 {
+      get { return param18_; }
+      set {
+        param18_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "param19" field.</summary>
+    public const int Param19FieldNumber = 20;
+    private long param19_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Param19 {
+      get { return param19_; }
+      set {
+        param19_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "param20" field.</summary>
+    public const int Param20FieldNumber = 21;
+    private long param20_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Param20 {
+      get { return param20_; }
+      set {
+        param20_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -258,6 +392,16 @@ namespace ReMastersLib {
       if (Param8 != other.Param8) return false;
       if (Param9 != other.Param9) return false;
       if (Param10 != other.Param10) return false;
+      if (Param11 != other.Param11) return false;
+      if (Param12 != other.Param12) return false;
+      if (Param13 != other.Param13) return false;
+      if (Param14 != other.Param14) return false;
+      if (Param15 != other.Param15) return false;
+      if (Param16 != other.Param16) return false;
+      if (Param17 != other.Param17) return false;
+      if (Param18 != other.Param18) return false;
+      if (Param19 != other.Param19) return false;
+      if (Param20 != other.Param20) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -276,6 +420,16 @@ namespace ReMastersLib {
       if (Param8 != 0L) hash ^= Param8.GetHashCode();
       if (Param9 != 0L) hash ^= Param9.GetHashCode();
       if (Param10 != 0L) hash ^= Param10.GetHashCode();
+      if (Param11 != 0L) hash ^= Param11.GetHashCode();
+      if (Param12 != 0L) hash ^= Param12.GetHashCode();
+      if (Param13 != 0L) hash ^= Param13.GetHashCode();
+      if (Param14 != 0L) hash ^= Param14.GetHashCode();
+      if (Param15 != 0L) hash ^= Param15.GetHashCode();
+      if (Param16 != 0L) hash ^= Param16.GetHashCode();
+      if (Param17 != 0L) hash ^= Param17.GetHashCode();
+      if (Param18 != 0L) hash ^= Param18.GetHashCode();
+      if (Param19 != 0L) hash ^= Param19.GetHashCode();
+      if (Param20 != 0L) hash ^= Param20.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -338,6 +492,46 @@ namespace ReMastersLib {
         output.WriteRawTag(88);
         output.WriteInt64(Param10);
       }
+      if (Param11 != 0L) {
+        output.WriteRawTag(96);
+        output.WriteInt64(Param11);
+      }
+      if (Param12 != 0L) {
+        output.WriteRawTag(104);
+        output.WriteInt64(Param12);
+      }
+      if (Param13 != 0L) {
+        output.WriteRawTag(112);
+        output.WriteInt64(Param13);
+      }
+      if (Param14 != 0L) {
+        output.WriteRawTag(120);
+        output.WriteInt64(Param14);
+      }
+      if (Param15 != 0L) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt64(Param15);
+      }
+      if (Param16 != 0L) {
+        output.WriteRawTag(136, 1);
+        output.WriteInt64(Param16);
+      }
+      if (Param17 != 0L) {
+        output.WriteRawTag(144, 1);
+        output.WriteInt64(Param17);
+      }
+      if (Param18 != 0L) {
+        output.WriteRawTag(152, 1);
+        output.WriteInt64(Param18);
+      }
+      if (Param19 != 0L) {
+        output.WriteRawTag(160, 1);
+        output.WriteInt64(Param19);
+      }
+      if (Param20 != 0L) {
+        output.WriteRawTag(168, 1);
+        output.WriteInt64(Param20);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -392,6 +586,46 @@ namespace ReMastersLib {
         output.WriteRawTag(88);
         output.WriteInt64(Param10);
       }
+      if (Param11 != 0L) {
+        output.WriteRawTag(96);
+        output.WriteInt64(Param11);
+      }
+      if (Param12 != 0L) {
+        output.WriteRawTag(104);
+        output.WriteInt64(Param12);
+      }
+      if (Param13 != 0L) {
+        output.WriteRawTag(112);
+        output.WriteInt64(Param13);
+      }
+      if (Param14 != 0L) {
+        output.WriteRawTag(120);
+        output.WriteInt64(Param14);
+      }
+      if (Param15 != 0L) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt64(Param15);
+      }
+      if (Param16 != 0L) {
+        output.WriteRawTag(136, 1);
+        output.WriteInt64(Param16);
+      }
+      if (Param17 != 0L) {
+        output.WriteRawTag(144, 1);
+        output.WriteInt64(Param17);
+      }
+      if (Param18 != 0L) {
+        output.WriteRawTag(152, 1);
+        output.WriteInt64(Param18);
+      }
+      if (Param19 != 0L) {
+        output.WriteRawTag(160, 1);
+        output.WriteInt64(Param19);
+      }
+      if (Param20 != 0L) {
+        output.WriteRawTag(168, 1);
+        output.WriteInt64(Param20);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -434,6 +668,36 @@ namespace ReMastersLib {
       }
       if (Param10 != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Param10);
+      }
+      if (Param11 != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Param11);
+      }
+      if (Param12 != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Param12);
+      }
+      if (Param13 != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Param13);
+      }
+      if (Param14 != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Param14);
+      }
+      if (Param15 != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(Param15);
+      }
+      if (Param16 != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(Param16);
+      }
+      if (Param17 != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(Param17);
+      }
+      if (Param18 != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(Param18);
+      }
+      if (Param19 != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(Param19);
+      }
+      if (Param20 != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(Param20);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -479,6 +743,36 @@ namespace ReMastersLib {
       }
       if (other.Param10 != 0L) {
         Param10 = other.Param10;
+      }
+      if (other.Param11 != 0L) {
+        Param11 = other.Param11;
+      }
+      if (other.Param12 != 0L) {
+        Param12 = other.Param12;
+      }
+      if (other.Param13 != 0L) {
+        Param13 = other.Param13;
+      }
+      if (other.Param14 != 0L) {
+        Param14 = other.Param14;
+      }
+      if (other.Param15 != 0L) {
+        Param15 = other.Param15;
+      }
+      if (other.Param16 != 0L) {
+        Param16 = other.Param16;
+      }
+      if (other.Param17 != 0L) {
+        Param17 = other.Param17;
+      }
+      if (other.Param18 != 0L) {
+        Param18 = other.Param18;
+      }
+      if (other.Param19 != 0L) {
+        Param19 = other.Param19;
+      }
+      if (other.Param20 != 0L) {
+        Param20 = other.Param20;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -539,6 +833,46 @@ namespace ReMastersLib {
             Param10 = input.ReadInt64();
             break;
           }
+          case 96: {
+            Param11 = input.ReadInt64();
+            break;
+          }
+          case 104: {
+            Param12 = input.ReadInt64();
+            break;
+          }
+          case 112: {
+            Param13 = input.ReadInt64();
+            break;
+          }
+          case 120: {
+            Param14 = input.ReadInt64();
+            break;
+          }
+          case 128: {
+            Param15 = input.ReadInt64();
+            break;
+          }
+          case 136: {
+            Param16 = input.ReadInt64();
+            break;
+          }
+          case 144: {
+            Param17 = input.ReadInt64();
+            break;
+          }
+          case 152: {
+            Param18 = input.ReadInt64();
+            break;
+          }
+          case 160: {
+            Param19 = input.ReadInt64();
+            break;
+          }
+          case 168: {
+            Param20 = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -596,6 +930,46 @@ namespace ReMastersLib {
           }
           case 88: {
             Param10 = input.ReadInt64();
+            break;
+          }
+          case 96: {
+            Param11 = input.ReadInt64();
+            break;
+          }
+          case 104: {
+            Param12 = input.ReadInt64();
+            break;
+          }
+          case 112: {
+            Param13 = input.ReadInt64();
+            break;
+          }
+          case 120: {
+            Param14 = input.ReadInt64();
+            break;
+          }
+          case 128: {
+            Param15 = input.ReadInt64();
+            break;
+          }
+          case 136: {
+            Param16 = input.ReadInt64();
+            break;
+          }
+          case 144: {
+            Param17 = input.ReadInt64();
+            break;
+          }
+          case 152: {
+            Param18 = input.ReadInt64();
+            break;
+          }
+          case 160: {
+            Param19 = input.ReadInt64();
+            break;
+          }
+          case 168: {
+            Param20 = input.ReadInt64();
             break;
           }
         }
