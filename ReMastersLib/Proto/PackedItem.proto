@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message PackedItem {
+	int32 packed_item_name_id = 1;      // packed_item_name_xx.lsd
+	int32 u2 = 2;
+	string image_id = 3;                // ui/image/Item
+	int32 item_set_id = 4;              // ItemSet.pb
+}
+
+message PackedItemTable {
+	repeated PackedItem entries = 1;
+}

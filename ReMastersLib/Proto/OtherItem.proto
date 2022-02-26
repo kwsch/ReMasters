@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message OtherItem {
+	int64 other_item_name_id = 1;               // other_item_name_xx.lsd
+	int32 other_item_description_id = 2;    // other_item_description_xx.lsd
+    string image_id = 3;                        // ui/image/Item
+	int32 u4 = 4;
+	int32 u5 = 5;
+}
+
+message OtherItemTable {
+	repeated OtherItem entries = 1;
+}
