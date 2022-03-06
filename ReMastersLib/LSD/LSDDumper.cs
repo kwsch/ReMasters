@@ -46,12 +46,15 @@ namespace ReMastersLib
             Directory.CreateDirectory(Path.GetDirectoryName(path));
             using (StreamWriter sw = File.CreateText(path))
             {
+                var size = entries.Length;
+
                 sw.WriteLine("{");
-                foreach (var entry in entries)
+                for (int i = 0; i < size; i++)
                 {
+                    var entry = entries[i];
                     var key = JsonConvert.ToString(entry.Key);
                     var val = JsonConvert.ToString(entry.Value);
-                    sw.WriteLine($"    {key}: {val},");
+                    sw.WriteLine($"    {key}: {val}" + (i == size - 1 ? "" : ","));
                 }
                 sw.WriteLine("}");
             }
