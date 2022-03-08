@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message MonsterEnhancement {
+	uint64 monster_enhancement_id = 1;
+	uint64 trainer_id = 2;
+	uint64 monster_id_current = 3;
+	uint64 monster_id_next = 4;
+	string schedule_id = 5;				// Schedule.pb
+	string type = 6;    // monster_enhancement_description_xx.lsd
+}
+
+message MonsterEnhancementTable {
+	repeated MonsterEnhancement entries = 1;
+}
