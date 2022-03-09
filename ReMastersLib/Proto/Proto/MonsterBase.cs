@@ -24,19 +24,20 @@ namespace ReMastersLib {
     static MonsterBaseReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdQcm90by9Nb25zdGVyQmFzZS5wcm90bxIMUmVNYXN0ZXJzTGliIo0CCgtN",
+            "ChdQcm90by9Nb25zdGVyQmFzZS5wcm90bxIMUmVNYXN0ZXJzTGliIrgCCgtN",
             "b25zdGVyQmFzZRIXCg9tb25zdGVyX2Jhc2VfaWQYASABKAUSEAoIYWN0b3Jf",
             "aWQYAiABKAkSFAoMYWN0b3JfbnVtYmVyGAMgASgFEhUKDWFjdG9yX3Zhcmlh",
             "bnQYBCABKAUSCgoCdTUYBSABKAUSDwoHanBfbmFtZRgGIAEoCRIKCgJ1NxgH",
             "IAEoBRIOCgZnZW5kZXIYCCABKAUSCgoCdTkYCSABKAUSEAoIc3RyZW5ndGgY",
             "CiABKAUSCwoDdTExGAsgASgFEhcKD2Zvcm1fcGFzc2l2ZV9pZBgMIAEoBRIL",
-            "CgN1MTMYDSABKAUSCwoDdTE0GA4gASgFEg8KB2Zvcm1faWQYDyABKAUiPgoQ",
-            "TW9uc3RlckJhc2VUYWJsZRIqCgdlbnRyaWVzGAEgAygLMhkuUmVNYXN0ZXJz",
-            "TGliLk1vbnN0ZXJCYXNlYgZwcm90bzM="));
+            "CgN1MTMYDSABKAUSCwoDdTE0GA4gASgFEg8KB2Zvcm1faWQYDyABKAUSFwoP",
+            "bW9uc3Rlcl9uYW1lX2lkGBAgASgFEhAKCGlzX3NoaW55GBEgASgIIj4KEE1v",
+            "bnN0ZXJCYXNlVGFibGUSKgoHZW50cmllcxgBIAMoCzIZLlJlTWFzdGVyc0xp",
+            "Yi5Nb25zdGVyQmFzZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.MonsterBase), global::ReMastersLib.MonsterBase.Parser, new[]{ "MonsterBaseId", "ActorId", "ActorNumber", "ActorVariant", "U5", "JpName", "U7", "Gender", "U9", "Strength", "U11", "FormPassiveId", "U13", "U14", "FormId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.MonsterBase), global::ReMastersLib.MonsterBase.Parser, new[]{ "MonsterBaseId", "ActorId", "ActorNumber", "ActorVariant", "U5", "JpName", "U7", "Gender", "U9", "Strength", "U11", "FormPassiveId", "U13", "U14", "FormId", "MonsterNameId", "IsShiny" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.MonsterBaseTable), global::ReMastersLib.MonsterBaseTable.Parser, new[]{ "Entries" }, null, null, null, null)
           }));
     }
@@ -93,6 +94,8 @@ namespace ReMastersLib {
       u13_ = other.u13_;
       u14_ = other.u14_;
       formId_ = other.formId_;
+      monsterNameId_ = other.monsterNameId_;
+      isShiny_ = other.isShiny_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -291,6 +294,33 @@ namespace ReMastersLib {
       }
     }
 
+    /// <summary>Field number for the "monster_name_id" field.</summary>
+    public const int MonsterNameIdFieldNumber = 16;
+    private int monsterNameId_;
+    /// <summary>
+    /// monster_name_xx.json
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MonsterNameId {
+      get { return monsterNameId_; }
+      set {
+        monsterNameId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_shiny" field.</summary>
+    public const int IsShinyFieldNumber = 17;
+    private bool isShiny_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsShiny {
+      get { return isShiny_; }
+      set {
+        isShiny_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -321,6 +351,8 @@ namespace ReMastersLib {
       if (U13 != other.U13) return false;
       if (U14 != other.U14) return false;
       if (FormId != other.FormId) return false;
+      if (MonsterNameId != other.MonsterNameId) return false;
+      if (IsShiny != other.IsShiny) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -343,6 +375,8 @@ namespace ReMastersLib {
       if (U13 != 0) hash ^= U13.GetHashCode();
       if (U14 != 0) hash ^= U14.GetHashCode();
       if (FormId != 0) hash ^= FormId.GetHashCode();
+      if (MonsterNameId != 0) hash ^= MonsterNameId.GetHashCode();
+      if (IsShiny != false) hash ^= IsShiny.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -421,6 +455,14 @@ namespace ReMastersLib {
         output.WriteRawTag(120);
         output.WriteInt32(FormId);
       }
+      if (MonsterNameId != 0) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt32(MonsterNameId);
+      }
+      if (IsShiny != false) {
+        output.WriteRawTag(136, 1);
+        output.WriteBool(IsShiny);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -491,6 +533,14 @@ namespace ReMastersLib {
         output.WriteRawTag(120);
         output.WriteInt32(FormId);
       }
+      if (MonsterNameId != 0) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt32(MonsterNameId);
+      }
+      if (IsShiny != false) {
+        output.WriteRawTag(136, 1);
+        output.WriteBool(IsShiny);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -545,6 +595,12 @@ namespace ReMastersLib {
       }
       if (FormId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(FormId);
+      }
+      if (MonsterNameId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(MonsterNameId);
+      }
+      if (IsShiny != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -602,6 +658,12 @@ namespace ReMastersLib {
       }
       if (other.FormId != 0) {
         FormId = other.FormId;
+      }
+      if (other.MonsterNameId != 0) {
+        MonsterNameId = other.MonsterNameId;
+      }
+      if (other.IsShiny != false) {
+        IsShiny = other.IsShiny;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -678,6 +740,14 @@ namespace ReMastersLib {
             FormId = input.ReadInt32();
             break;
           }
+          case 128: {
+            MonsterNameId = input.ReadInt32();
+            break;
+          }
+          case 136: {
+            IsShiny = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -751,6 +821,14 @@ namespace ReMastersLib {
           }
           case 120: {
             FormId = input.ReadInt32();
+            break;
+          }
+          case 128: {
+            MonsterNameId = input.ReadInt32();
+            break;
+          }
+          case 136: {
+            IsShiny = input.ReadBool();
             break;
           }
         }

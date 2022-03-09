@@ -21,6 +21,9 @@ message MonsterBase {
 	int32 u13 = 13;
 	int32 u14 = 14;
 	int32 form_id = 15;			// monster_form_xx.json
+	int32 monster_name_id = 16;	// monster_name_xx.json
+
+	bool is_shiny = 17;
 }
 
 message MonsterBaseTable {

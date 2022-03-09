@@ -4,7 +4,7 @@ package ReMastersLib;
 
 message MissionItem {
 	uint64 item_id = 1;		// Item.pb
-	uint32 u2 = 2;	
+	uint32 mission_group_id = 2;	// MissionGroup.pb
 	uint32 u3 = 3;
 }
 

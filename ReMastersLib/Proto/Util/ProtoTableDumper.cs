@@ -34,11 +34,12 @@ namespace ReMastersLib
         {
             var s = new JsonFormatter.Settings(true);
             var f = new JsonFormatter(s);
-
-            yield return "{ \"entries\": [";
-            foreach (var m in messages)
-                yield return f.Format(m) + ",";
-            yield return "]}";
+            
+            var size = messages.Count();
+            yield return "{\"entries\": [";
+			for (int i = 0; i < size; i++)
+			  yield return f.Format(messages.ElementAt(i)) + (i == size - 1 ? "" : ",");
+			yield return "]}";
         }
 
         private static string Prettify(string json) => JToken.Parse(json).ToString(Formatting.Indented);

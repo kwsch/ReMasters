@@ -9,50 +9,83 @@ message Item {
 		sub_category = 3:	StoryQuest.pb
 		sub_category = 4:	other_item_name_xx.lsd
 		sub_category = 5:	???
-		sub_category = 6:	???
+		sub_category = 6:	other_item_name_xx.lsd
+		sub_category = 7:	other_item_name_xx.lsd
+		sub_category = 9:	other_item_name_xx.lsd
+		sub_category = 10:	other_item_name_xx.lsd
 		sub_category = 41:	other_item_name_xx.lsd
 		sub_category = 45:	other_item_name_xx.lsd
 		sub_category = 51:	breakthrough_item_name_xx.lsd
 		sub_category = 52:	training_item_name_xx.lsd
 		sub_category = 53:	other_item_name_xx.lsd
 		sub_category = 54:	potential_item_name_xx.lsd
-		sub_category = 55:	???
+		sub_category = 55:	TrainerBuildupItem.pb
 		sub_category = 56:	AbilityItem.pb
+		sub_category = 57:	MoveLevelUpItem.pb
+		sub_category = 58:	other_item_name_xx.lsd
 		sub_category = 61:	MonsterEvolution.pb
 		sub_category = 65:	other_item_name_xx.lsd
 		sub_category = 66:	other_item_name_xx.lsd
 		sub_category = 67:	other_item_name_xx.lsd
+		sub_category = 68:	trainer_rarity_up_item_name_xx.lsd
+		sub_category = 69:	trainer_rarity_up_item_name_xx.lsd
 		sub_category = 73:	bardge_item_name_xx.lsd
 		sub_category = 74:	villa_item_description_xx.lsd
 		sub_category = 75:	event_item_name_xx.lsd
 		sub_category = 81:	deck_item_name_xx.lsd
 		sub_category = 82:	deck_item_lvup_item_name_xx.lsd
+		sub_category = 83:	packed_item_name_xx.lsd
+		sub_category = 85:	EggItem.pb
+		sub_category = 86:	treat_item_name_xx.lsd
+		sub_category = 89:	scout_ticket_item_name_xx.lsd
+		sub_category = 90:	scout_server_ticket_item_name_xx.lsd
 		sub_category = 91:	???
+		sub_category = 92:	monster_enhancement_item_description_xx.lsd
+		sub_category = 101:	MissionItem.pb
+		sub_category = 111:	other_item_name_xx.lsd
+		sub_category = 120:	jukebox_music_key_item_name_xx.lsd
 	*/
 	uint32 sub_category = 2;
 	/*
-		1:	Sync Pairs
-		3:	Area Info
-		4:	Coins
-		5:	???
-		6:	???
-		41:	Gems
-		45:	Daily Voucher / Pearl / Big Pearl
-		51:	Level Cap Items
-		52:	Level-Up Manuals
-		53:	Sync Move Level-up
-		55:	Star Power-Up?
-		56:	Sync Orbs
-		61:	Evolution
-		65:	Replay Ticket
-		66:	Evolution Shard / Crystal
-		67:	Move Jauge Slot
-		73:	Badges
-		74: Villa Treats
-		75:	Event Items
-		81:	Gear
-		82:	Gear-Upgrade Items
-		91:	???
+		1:		Sync Pairs
+		3:		Area Info
+		4:		Coins
+		5:		???
+		6:		Rank Points
+		7:		Stamina
+		9:		Prestige Points
+		10:		Battle Points
+		41:		Gems
+		45:		Daily Voucher / Pearl / Big Pearl
+		51:		Level Cap Items
+		52:		Level-Up Manuals
+		53:		Sync Move Level-up
+		54:		Cookies
+		55:		Star Power-Up
+		56:		Sync Orbs
+		57:		Move Candies
+		58:		Move Candy Coins
+		61:		Evolution
+		65:		Replay Ticket
+		66:		Evolution Shard / Crystal
+		67:		Move Jauge Slot
+		68:		Champion Spirit
+		69:		Legendary Spirit
+		73:		Badges
+		74:		Villa Treats
+		75:		Event Items
+		81:		Gear
+		82:		Gear-Upgrade Items
+		83:		Packs
+		85:		Eggs
+		86:		Tarts
+		89:		Scout Tickets
+		90:		Grat Scout Ticket
+		91:		???
+		92:		Monster Enhancement
+		101:	Mission
+		111:	Sync Orbs Reward Boost
+		120:	Jukebox
 	*/
 }
 

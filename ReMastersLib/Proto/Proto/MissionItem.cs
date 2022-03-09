@@ -24,14 +24,15 @@ namespace ReMastersLib {
     static MissionItemReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdQcm90by9NaXNzaW9uSXRlbS5wcm90bxIMUmVNYXN0ZXJzTGliIjYKC01p",
-            "c3Npb25JdGVtEg8KB2l0ZW1faWQYASABKAQSCgoCdTIYAiABKA0SCgoCdTMY",
-            "AyABKA0iPgoQTWlzc2lvbkl0ZW1UYWJsZRIqCgdlbnRyaWVzGAEgAygLMhku",
-            "UmVNYXN0ZXJzTGliLk1pc3Npb25JdGVtYgZwcm90bzM="));
+            "ChdQcm90by9NaXNzaW9uSXRlbS5wcm90bxIMUmVNYXN0ZXJzTGliIkQKC01p",
+            "c3Npb25JdGVtEg8KB2l0ZW1faWQYASABKAQSGAoQbWlzc2lvbl9ncm91cF9p",
+            "ZBgCIAEoDRIKCgJ1MxgDIAEoDSI+ChBNaXNzaW9uSXRlbVRhYmxlEioKB2Vu",
+            "dHJpZXMYASADKAsyGS5SZU1hc3RlcnNMaWIuTWlzc2lvbkl0ZW1iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.MissionItem), global::ReMastersLib.MissionItem.Parser, new[]{ "ItemId", "U2", "U3" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.MissionItem), global::ReMastersLib.MissionItem.Parser, new[]{ "ItemId", "MissionGroupId", "U3" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReMastersLib.MissionItemTable), global::ReMastersLib.MissionItemTable.Parser, new[]{ "Entries" }, null, null, null, null)
           }));
     }
@@ -74,7 +75,7 @@ namespace ReMastersLib {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MissionItem(MissionItem other) : this() {
       itemId_ = other.itemId_;
-      u2_ = other.u2_;
+      missionGroupId_ = other.missionGroupId_;
       u3_ = other.u3_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -100,15 +101,18 @@ namespace ReMastersLib {
       }
     }
 
-    /// <summary>Field number for the "u2" field.</summary>
-    public const int U2FieldNumber = 2;
-    private uint u2_;
+    /// <summary>Field number for the "mission_group_id" field.</summary>
+    public const int MissionGroupIdFieldNumber = 2;
+    private uint missionGroupId_;
+    /// <summary>
+    /// MissionGroup.pb
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint U2 {
-      get { return u2_; }
+    public uint MissionGroupId {
+      get { return missionGroupId_; }
       set {
-        u2_ = value;
+        missionGroupId_ = value;
       }
     }
 
@@ -140,7 +144,7 @@ namespace ReMastersLib {
         return true;
       }
       if (ItemId != other.ItemId) return false;
-      if (U2 != other.U2) return false;
+      if (MissionGroupId != other.MissionGroupId) return false;
       if (U3 != other.U3) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -150,7 +154,7 @@ namespace ReMastersLib {
     public override int GetHashCode() {
       int hash = 1;
       if (ItemId != 0UL) hash ^= ItemId.GetHashCode();
-      if (U2 != 0) hash ^= U2.GetHashCode();
+      if (MissionGroupId != 0) hash ^= MissionGroupId.GetHashCode();
       if (U3 != 0) hash ^= U3.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -174,9 +178,9 @@ namespace ReMastersLib {
         output.WriteRawTag(8);
         output.WriteUInt64(ItemId);
       }
-      if (U2 != 0) {
+      if (MissionGroupId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(U2);
+        output.WriteUInt32(MissionGroupId);
       }
       if (U3 != 0) {
         output.WriteRawTag(24);
@@ -196,9 +200,9 @@ namespace ReMastersLib {
         output.WriteRawTag(8);
         output.WriteUInt64(ItemId);
       }
-      if (U2 != 0) {
+      if (MissionGroupId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(U2);
+        output.WriteUInt32(MissionGroupId);
       }
       if (U3 != 0) {
         output.WriteRawTag(24);
@@ -217,8 +221,8 @@ namespace ReMastersLib {
       if (ItemId != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(ItemId);
       }
-      if (U2 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(U2);
+      if (MissionGroupId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MissionGroupId);
       }
       if (U3 != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(U3);
@@ -238,8 +242,8 @@ namespace ReMastersLib {
       if (other.ItemId != 0UL) {
         ItemId = other.ItemId;
       }
-      if (other.U2 != 0) {
-        U2 = other.U2;
+      if (other.MissionGroupId != 0) {
+        MissionGroupId = other.MissionGroupId;
       }
       if (other.U3 != 0) {
         U3 = other.U3;
@@ -264,7 +268,7 @@ namespace ReMastersLib {
             break;
           }
           case 16: {
-            U2 = input.ReadUInt32();
+            MissionGroupId = input.ReadUInt32();
             break;
           }
           case 24: {
@@ -291,7 +295,7 @@ namespace ReMastersLib {
             break;
           }
           case 16: {
-            U2 = input.ReadUInt32();
+            MissionGroupId = input.ReadUInt32();
             break;
           }
           case 24: {
