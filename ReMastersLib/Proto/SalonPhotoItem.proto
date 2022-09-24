@@ -1,0 +1,18 @@
+syntax = "proto3";
+package ReMastersLib;
+
+message SalonPhotoItem {
+	int32 salon_photo_item_id = 1;
+	int64 trainer_id = 2;
+	int32 photo_type = 3;
+	int32 item_frame_id = 4;
+	int32 u5 = 5;
+	int32 u6 = 6;
+	string image_id = 7;
+	string schedule_id = 8;
+	uint64 u9 = 9;
+}
+
+message SalonPhotoItemTable {
+	repeated SalonPhotoItem entries = 1;
+}

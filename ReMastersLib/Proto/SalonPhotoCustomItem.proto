@@ -1,0 +1,12 @@
+syntax = "proto3";
+package ReMastersLib;
+
+message SalonPhotoCustomItem {
+	int32 id = 1;
+	int32 condition = 2;
+	int32 salon_photo_item_id = 3;
+}
+
+message SalonPhotoCustomItemTable {
+	repeated SalonPhotoCustomItem entries = 1;
+}

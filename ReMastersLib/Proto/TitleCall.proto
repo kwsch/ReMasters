@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package ReMastersLib;
+
+message TitleCall {
+    string schedule_id = 1;
+    int32 u2 = 2;
+    string actorId = 3;
+	string u4 = 4;
+}
+
+message TitleCallTable {
+    repeated TitleCall entries = 1;
+}

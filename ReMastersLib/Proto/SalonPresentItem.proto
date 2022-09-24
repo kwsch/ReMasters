@@ -1,0 +1,16 @@
+syntax = "proto3";
+package ReMastersLib;
+
+message SalonPresentItem {
+	int32 salon_present_item_id = 1;
+	int32 salon_guest_id = 2;
+	int32 u3 = 3;
+	string image_id = 4;
+	int32 u5 = 5;
+	int32 item_frame_id = 6;
+	repeated int32 u7 = 7;
+}
+
+message SalonPresentItemTable {
+	repeated SalonPresentItem entries = 1;
+}
